@@ -21,21 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="preferences.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="preferences.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/windows/ui/preferences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7427101">
+            <state vertical-scroll-proportion="0.0">
               <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/windows/ui/qdvgrab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.1578045">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#1058#1068#0" expanded="true" />
               </folding>
@@ -108,7 +108,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../dialogxmlttest.py" />
-        <option value="$PROJECT_DIR$/src/windows/ui/qdvgrab.py" />
         <option value="$PROJECT_DIR$/src/windows/ui/kviso.py" />
         <option value="$PROJECT_DIR$/../openshot-qt/src/windows/export_video.py" />
         <option value="$PROJECT_DIR$/../openshot-qt/src/windows/main_window.py" />
@@ -116,6 +115,7 @@
         <option value="$PROJECT_DIR$/../kviso/kvisosauvegarde.py" />
         <option value="$PROJECT_DIR$/../kviso/kviso.py" />
         <option value="$PROJECT_DIR$/src/windows/ui/preferences.py" />
+        <option value="$PROJECT_DIR$/src/windows/ui/qdvgrab.py" />
       </list>
     </option>
   </component>
@@ -178,7 +178,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="str&#9;null&#9;null&#10;GetSelecteddata&#9;null&#9;null" />
   </component>
-  <component name="RunManager" selected="Python.preferences">
+  <component name="RunManager" selected="Python.qdvgrab">
     <configuration default="false" name="qdvgrab" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,8 +405,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.preferences" />
-        <item index="1" class="java.lang.String" itemvalue="Python.qdvgrab" />
+        <item index="0" class="java.lang.String" itemvalue="Python.qdvgrab" />
+        <item index="1" class="java.lang.String" itemvalue="Python.preferences" />
         <item index="2" class="java.lang.String" itemvalue="Python.kviso (1)" />
         <item index="3" class="java.lang.String" itemvalue="Python.kviso" />
         <item index="4" class="java.lang.String" itemvalue="Python.streamcap" />
@@ -876,16 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/windows/ui/qdvgrab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="e#1058#1068#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../openshot-qt/src/windows/export_video.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -896,9 +886,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/windows/ui/preferences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7427101">
+        <state vertical-scroll-proportion="0.0">
           <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/windows/ui/qdvgrab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1578045">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#1058#1068#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

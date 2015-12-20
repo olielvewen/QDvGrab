@@ -34,10 +34,10 @@ import os.path
 import shutil
 # Need for create command line
 import subprocess
-# need for display gui
-from tempfile import TemporaryDirectory
 #need for create temporary file in the temp folder
+from tempfile import TemporaryDirectory
 
+# need for display gui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -85,12 +85,12 @@ class QdvGrab(QMainWindow):
         ##size_screen = QDesktopWidget().screenGeometry()
         ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
 
-    # ===========================================================================
+    # ==================================================================================================================
     def createWidgets(self):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-    # ===========================================================================
+    # ==================================================================================================================
     def connectActions(self):
         """ Function doing connection not done by Qt Designer """
         self.ui.btnacquisitiondv.clicked.connect(self.Recording)
@@ -100,41 +100,61 @@ class QdvGrab(QMainWindow):
         self.ui.btnhelp.clicked.connect(self.Help)
         self.ui.btnquit.clicked.connect(self.Quit)
 
-    # ===========================================================================
+        self.ui.actionOpen_Directory.triggered.connect(self.openDirectory)
+        self.ui.actionQuit.triggered.connect(self.Quit)
+        self.ui.actionPreferences.triggered.connect(self.run_preferences_screen)
+        self.ui.actionAbout_Qt.triggered.connect(self.AboutQt)
+        self.ui.actionAbout_QdvGrab.triggered.connect(self.AboutQdvgrab)
+
+    # ==================================================================================================================
     def setupUi(self):
         pass
 
-    # ===========================================================================
+    # ==================================================================================================================
     def Recording(self):
         """ Run the type of acquisition asked """
         pass
 
-    # ===========================================================================
+    # ==================================================================================================================
     def Acquisition(self):
         """ Run the acquisition process i.e run dvgrab """
         pass
 
-    # ===========================================================================
+    # ==================================================================================================================
     def Help(self):
         """ Call the help webpage """
         self.windo = KvIso()
         self.windo.exec_()
 
-    # ===========================================================================
+    # ==================================================================================================================
     def Quit(self):
         """ Close the application """
-        pass
+        application.quit()
 
-    # ===========================================================================
+    # ==================================================================================================================
     def run_preferences_screen(self):
         """ Run the Preferences Dialog """
         self.windo = PreFerences()
         self.windo.exec_()
 
-    # ===========================================================================
+    # ==================================================================================================================
     def closeEvent(self, event):
-        """ function run when the mainwindow is closed """
+        """ function run just before the mainwindow is closed and stop all work in progress and save settings """
         event.accept()
+
+    #===================================================================================================================
+    def openDirectory(self):
+        pass
+
+    #===================================================================================================================
+    def AboutQt(self):
+        pass
+
+    #===================================================================================================================
+    def AboutQdvgrab(self):
+        pass
+
+    #===================================================================================================================
 
 
 if __name__ == "__main__":
