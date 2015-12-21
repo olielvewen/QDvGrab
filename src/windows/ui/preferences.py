@@ -41,7 +41,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
 from preferencesui import Ui_Dialog
-from kviso import KvIso
+from credits import Credits
 
 
 
@@ -100,7 +100,7 @@ class PreFerences(QDialog):
     #===================================================================================================================
     def Credits(self):
         " run the Credits dialog "
-        self.windo = KvIso()
+        self.windo = Credits()
         self.windo.exec_()
 
     #===================================================================================================================

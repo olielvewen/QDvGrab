@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1edcf57-509b-4139-a86b-6b7a0fff6b19" name="Default" comment="" />
+    <list default="true" id="e1edcf57-509b-4139-a86b-6b7a0fff6b19" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/windows/ui/preferences.py" afterPath="$PROJECT_DIR$/src/windows/ui/preferences.py" />
+    </list>
     <ignored path="QDvgrab.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +27,16 @@
         <entry file="file://$PROJECT_DIR$/src/windows/ui/preferences.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="credits.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="credits.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/windows/ui/credits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40823328">
+            <state vertical-scroll-proportion="0.0">
               <caret line="49" column="93" selection-start-line="49" selection-start-column="93" selection-end-line="49" selection-end-column="93" />
               <folding>
                 <element signature="e#1051#1061#0" expanded="true" />
@@ -43,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/windows/ui/qdvgrab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.5180103">
               <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
                 <element signature="e#1058#1068#0" expanded="true" />
@@ -136,9 +138,9 @@
         <option value="$PROJECT_DIR$/../StreamCap/src/windows/streamcap.py" />
         <option value="$PROJECT_DIR$/../kviso/kvisosauvegarde.py" />
         <option value="$PROJECT_DIR$/../kviso/kviso.py" />
-        <option value="$PROJECT_DIR$/src/windows/ui/preferences.py" />
         <option value="$PROJECT_DIR$/src/windows/ui/qdvgrab.py" />
         <option value="$PROJECT_DIR$/src/windows/ui/credits.py" />
+        <option value="$PROJECT_DIR$/src/windows/ui/preferences.py" />
       </list>
     </option>
   </component>
@@ -275,7 +277,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="str&#9;null&#9;null&#10;GetSelecteddata&#9;null&#9;null" />
   </component>
-  <component name="RunManager" selected="Python.credits">
+  <component name="RunManager" selected="Python.qdvgrab">
     <configuration default="false" name="qdvgrab" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -498,8 +500,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.credits" />
-        <item index="1" class="java.lang.String" itemvalue="Python.qdvgrab" />
+        <item index="0" class="java.lang.String" itemvalue="Python.qdvgrab" />
+        <item index="1" class="java.lang.String" itemvalue="Python.credits" />
         <item index="2" class="java.lang.String" itemvalue="Python.preferences" />
         <item index="3" class="java.lang.String" itemvalue="Python.kviso (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python.kviso" />
@@ -957,16 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/windows/ui/qdvgrab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <element signature="e#1058#1068#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../openshot-qt/src/windows/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -977,20 +969,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/windows/ui/credits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="93" selection-start-line="49" selection-start-column="93" selection-end-line="49" selection-end-column="93" />
+          <folding>
+            <element signature="e#1051#1061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/windows/ui/preferences.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/windows/ui/credits.py">
+    <entry file="file://$PROJECT_DIR$/src/windows/ui/qdvgrab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40823328">
-          <caret line="49" column="93" selection-start-line="49" selection-start-column="93" selection-end-line="49" selection-end-column="93" />
+        <state vertical-scroll-proportion="-0.5180103">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
-            <element signature="e#1051#1061#0" expanded="true" />
+            <element signature="e#1058#1068#0" expanded="true" />
           </folding>
         </state>
       </provider>
