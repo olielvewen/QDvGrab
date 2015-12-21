@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'QDvgrab.ui'
 #
-# Created: Sun Nov  9 17:16:56 2014
-#      by: PyQt5 UI code generator 5.3.2
+# Created: Mon Dec 21 17:59:22 2015
+#      by: PyQt5 UI code generator 5.2.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -93,7 +93,7 @@ class Ui_MainWindow(object):
         self.lnecapturename.setObjectName("lnecapturename")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 620, 19))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 620, 27))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -148,10 +148,15 @@ class Ui_MainWindow(object):
         self.menuSettings.setTitle(_translate("MainWindow", "Settings"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
         self.actionOpen_Directory.setText(_translate("MainWindow", "Open Directory"))
+        self.actionOpen_Directory.setShortcut(_translate("MainWindow", "Ctrl+F"))
         self.actionQuit.setText(_translate("MainWindow", "Quit"))
+        self.actionQuit.setShortcut(_translate("MainWindow", "Ctrl+Q"))
         self.actionPreferences.setText(_translate("MainWindow", "Preferences"))
+        self.actionPreferences.setShortcut(_translate("MainWindow", "Ctrl+P"))
         self.actionAbout_QdvGrab.setText(_translate("MainWindow", "About QDvGrab"))
+        self.actionAbout_QdvGrab.setShortcut(_translate("MainWindow", "Ctrl+A"))
         self.actionAbout_Qt.setText(_translate("MainWindow", "About Qt"))
+        self.actionAbout_Qt.setShortcut(_translate("MainWindow", "Ctrl+B"))
 
 
 if __name__ == "__main__":
