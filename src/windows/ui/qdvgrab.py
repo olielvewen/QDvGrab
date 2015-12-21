@@ -44,7 +44,7 @@ from PyQt5.QtWidgets import *
 # Used for call ui files
 from qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
-from kviso import KvIso
+from credits import Credits
 
 app_name = "QDvGrab"
 app_version = "0.10"
@@ -123,7 +123,7 @@ class QdvGrab(QMainWindow):
     # ==================================================================================================================
     def Help(self):
         """ Call the help webpage """
-        self.windo = KvIso()
+        self.windo = Credits()
         self.windo.exec_()
 
     # ==================================================================================================================
