@@ -55,8 +55,8 @@ QualityList = {} #dico quality audio
 FpsList = {} #dico fps
 Variables = {"Cmd: " " #command to execute",
              "CmdList: [] #list commands to execute",
-             "ConfigFile: os.path.join(QDir.homepath(), .qdvgrab/logfile)",
-             "ConfigFolder: os.path.join(QDir.homepath(), .qdvgrab)",
+             "ConfigFile: os.path.join(QDir.homePath(), .qdvgrab/logfile)",
+             "ConfigFolder: os.path.join(QDir.homePath(), .qdvgrab)",
              "FileNameOutput: "" #filename output os.path.basename()",
              "DeviceOutput: "" #Device name Camecorder",
              "DirectNameOutput: " " #name of output folder os.path.direname()",
@@ -139,7 +139,9 @@ class QdvGrab(QMainWindow):
 
     # ==================================================================================================================
     def closeEvent(self, event):
-        """ function run just before the mainwindow is closed and stop all work in progress and save settings """
+        """
+        function run just before the mainwindow is closed and stop all work in progress and save settings
+         """
         event.accept()
 
     #===================================================================================================================
@@ -148,7 +150,10 @@ class QdvGrab(QMainWindow):
 
     #===================================================================================================================
     def AboutQt(self):
-        pass
+        """
+        Method helping you to know which version of Qt you are using displaying an nice window
+         """
+        QMessageBox.aboutQt(QdvGrab)
 
     #===================================================================================================================
     def AboutQdvgrab(self):
