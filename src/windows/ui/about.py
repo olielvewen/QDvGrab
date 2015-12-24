@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  @file
- @brief This file contains the QDvGrab Credits dialog (i.e Credits for QdvGrab Project)
+ @brief This file contains the QDvGrab About dialog (i.e About for QdvGrab Project)
  @author Olivier Girard <olivier@openshot.org>
 
  @section LICENSE
@@ -31,11 +31,6 @@ import os
 # Need for path
 import os.path
 # Need for find library
-import shutil
-# Need for create command line
-import subprocess
-#need for create temporary file in the temp folder
-from tempfile import TemporaryDirectory
 
 # need for display gui
 from PyQt5.QtGui import *
@@ -43,29 +38,69 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 # Used for call ui files
 
-from creditsui import Ui_creditscreen
+from aboutui import Ui_aboutscreen
+from credits import Credits
 
-class Credits(QDialog):
+app_name = "QDvGrab"
+app_version = "0.10"
+app_author = "Olivier Girard"
+author_mail = "olivier@openshot.org"
+
+class About(QDialog):
     """
-    This screen shows who has developed,documented, translated and the licence of the project
+    This screen shows the resume of the project
     """
     def __init__(self, parent=None):
-        super(Credits, self).__init__(parent)
+        super(About, self).__init__(parent)
         self.setupUi()
+        self.connectActions()
 
+        #self.app_projectname = [(app_name, app_version)]
     #===================================================================================================================
     def setupUi(self):
-        self.ui = Ui_creditscreen()
+        self.ui = Ui_aboutscreen()
         self.ui.setupUi(self)
 
+        self.ui.lblimageicon.setPixmap(QPixmap("tool-animator.png"))
+        self.ui.lblimageicon.setMaximumSize(QSize(220, 340))
+        self.ui.lblimageicon.setScaledContents(True)
+
+        #self.ui.lblprojectname.setText(About.version)
+        #self.ui.lblversionplateform.setText(text)
+
     #===================================================================================================================
-    def showCredits(self):
+    def connectActions(self):
+        """
+
+        :return:
+        """
+        self.ui.btncredits.clicked.connect(self.runCredits)
+
+    #===================================================================================================================
+    def showAbout(self):
         pass
+
+    #===================================================================================================================
+    def version(self):
+        """
+        Display version application
+        :return:
+        """
+        return app_version
+
+    #===================================================================================================================
+    def runCredits(self):
+        """
+        Run the Credits Dialog
+        :return:
+        """
+        self.windo = Credits()
+        self.windo.exec_()
 
     #===================================================================================================================
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
-    Credits = Credits()
-    Credits.show()
+    About = About()
+    About.show()
     application.exec_()

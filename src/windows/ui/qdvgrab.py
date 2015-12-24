@@ -45,6 +45,7 @@ from PyQt5.QtWidgets import *
 from qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
 from credits import Credits
+from about import About
 
 app_name = "QDvGrab"
 app_version = "0.10"
@@ -157,7 +158,12 @@ class QdvGrab(QMainWindow):
 
     #===================================================================================================================
     def AboutQdvgrab(self):
-        pass
+        """
+        Run the About Dialog
+        :return:
+        """
+        self.windo = About()
+        self.windo.show()
 
     #===================================================================================================================
 
