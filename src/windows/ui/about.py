@@ -56,6 +56,7 @@ class About(QDialog):
         self.connectActions()
 
         #self.app_projectname = [(app_name, app_version)]
+        self.parent = parent
     #===================================================================================================================
     def setupUi(self):
         self.ui = Ui_aboutscreen()
