@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file 'QDvgrab.ui'
 #
-# Created: Mon Dec 21 17:59:22 2015
-#      by: PyQt5 UI code generator 5.2.1
+# Created by: PyQt5 UI code generator 5.5.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -66,7 +65,7 @@ class Ui_MainWindow(object):
         self.btnpreferences = QtWidgets.QPushButton(self.centralwidget)
         self.btnpreferences.setGeometry(QtCore.QRect(320, 560, 200, 45))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../../images/tools-wizard.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("../images/tools-wizard.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnpreferences.setIcon(icon2)
         self.btnpreferences.setIconSize(QtCore.QSize(48, 48))
         self.btnpreferences.setObjectName("btnpreferences")
@@ -74,14 +73,14 @@ class Ui_MainWindow(object):
         self.btnhelp.setGeometry(QtCore.QRect(70, 680, 200, 45))
         self.btnhelp.setLayoutDirection(QtCore.Qt.LeftToRight)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../../images/system-help.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("../images/system-help.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnhelp.setIcon(icon3)
         self.btnhelp.setIconSize(QtCore.QSize(48, 48))
         self.btnhelp.setObjectName("btnhelp")
         self.btnquit = QtWidgets.QPushButton(self.centralwidget)
         self.btnquit.setGeometry(QtCore.QRect(350, 680, 200, 45))
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../../images/application-exit.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("../images/application-exit.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btnquit.setIcon(icon4)
         self.btnquit.setIconSize(QtCore.QSize(48, 48))
         self.btnquit.setObjectName("btnquit")
@@ -93,7 +92,7 @@ class Ui_MainWindow(object):
         self.lnecapturename.setObjectName("lnecapturename")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 620, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 620, 22))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
