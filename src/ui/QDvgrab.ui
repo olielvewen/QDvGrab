@@ -141,14 +141,33 @@
       <height>50</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>DV Acquisition</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../images/media-optical-video.png</normaloff>../images/media-optical-video.png</iconset>
     </property>
     <property name="iconSize">
      <size>
       <width>48</width>
       <height>48</height>
      </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="btnrecordmpeg">
@@ -162,6 +181,10 @@
     </property>
     <property name="text">
      <string>Record MPEG</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../images/tools-media-optical-burn.png</normaloff>../images/tools-media-optical-burn.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -184,7 +207,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../images/media-tape.png</normaloff>../../images/media-tape.png</iconset>
+      <normaloff>../images/media-tape.png</normaloff>../images/media-tape.png</iconset>
     </property>
     <property name="iconSize">
      <size>
