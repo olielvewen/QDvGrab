@@ -42,7 +42,6 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 # Used for call ui files
-
 from creditsui import Ui_creditscreen
 
 class Credits(QDialog):
@@ -60,7 +59,13 @@ class Credits(QDialog):
 
     #===================================================================================================================
     def showCredits(self):
-        pass
+        PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+        path_license = os.path.join(PATH, 'LICENSE')
+
+        with open('path_license', 'r') as my_license:
+            text = my_license.read()
+
+            self.ui.textBrowserlicense.append(text)
 
     #===================================================================================================================
 

@@ -29,7 +29,7 @@
 import sys
 import os
 # Need for path
-import os.path
+import platform
 # Need for find library
 
 # need for display gui
@@ -55,7 +55,6 @@ class About(QDialog):
         self.setupUi()
         self.connectActions()
 
-        #self.app_projectname = [(app_name, app_version)]
         self.parent = parent
     #===================================================================================================================
     def setupUi(self):
@@ -66,8 +65,11 @@ class About(QDialog):
         self.ui.lblimageicon.setMaximumSize(QSize(220, 340))
         self.ui.lblimageicon.setScaledContents(True)
 
-        #self.ui.lblprojectname.setText(About.version)
-        #self.ui.lblversionplateform.setText(text)
+        project_name = ("<b>{} - {}</b>".format(app_name, app_version))
+        self.ui.lblprojectname.setText(project_name)
+
+        version_program = ("<b>Python {} - Qt {} - PyQt {}</b>".format(platform.python_version(), QT_VERSION_STR, PYQT_VERSION_STR))
+        self.ui.lblversionplateform.setText(version_program)
 
     #===================================================================================================================
     def connectActions(self):
@@ -76,18 +78,6 @@ class About(QDialog):
         :return:
         """
         self.ui.btncredits.clicked.connect(self.runCredits)
-
-    #===================================================================================================================
-    def showAbout(self):
-        pass
-
-    #===================================================================================================================
-    def version(self):
-        """
-        Display version application
-        :return:
-        """
-        return app_version
 
     #===================================================================================================================
     def runCredits(self):
