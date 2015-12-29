@@ -9,8 +9,7 @@
 
  Copyright (c) 2014-2015 QDvGrab Team. This file is part of
  QDvGrab (http://www.qdvgrab.org), an open-source project
- dedicated to delivering high quality video editing and animation solutions
- to the world.
+ dedicated to delivering ha tiny and easy tool for dvgrab.
 
  QDvGrab is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
