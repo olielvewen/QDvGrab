@@ -41,6 +41,10 @@ from PyQt5.QtWidgets import *
 from aboutui import Ui_aboutscreen
 from credits import Credits
 
+#Need others settings files
+#from classes import info
+
+
 app_name = "QDvGrab"
 app_version = "0.10"
 app_author = "Olivier Girard"

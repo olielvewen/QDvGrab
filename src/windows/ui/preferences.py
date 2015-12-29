@@ -43,6 +43,9 @@ from PyQt5.QtCore import *
 from preferencesui import Ui_Dialog
 from credits import Credits
 
+#Need others settings file
+#from classes import info
+
 
 
 class PreFerences(QDialog):
