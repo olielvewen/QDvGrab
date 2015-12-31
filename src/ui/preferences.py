@@ -68,11 +68,7 @@ class PreFerences(QDialog):
         self.ui.btntranscode.clicked.connect(self.transcodepath)
         self.ui.btnchoosefile.clicked.connect(self.outputpath)
         self.ui.cmblanguages.activated.connect(self.languages)
-        self.ui.rdbdvraw.toggled.connect(self.choosedvformat)
-        self.ui.rdbdv2.toggled.connect(self.choosedvformat)
-        self.ui.rdbdv.toggled.connect(self.choosedvformat)
-        self.ui.rdbhdv.toggled.connect(self.choosehdvformat)
-        self.ui.rdbmpeg2.toggled.connect(self.choosehdvformat)
+        self.ui.cmbformatcapture.activated.connect(self.chooseformatcapture)
         self.ui.chknone.toggled.connect(self.chooseautomaticconversion)
         self.ui.chkdvraw.toggled.connect(self.chooseautomaticconversion)
         self.ui.chkdv2.toggled.connect(self.chooseautomaticconversion)
@@ -94,8 +90,6 @@ class PreFerences(QDialog):
         self.ui.btntranscode.setEnabled(False)
         self.ui.chkactivepreview.setVisible(True)
         self.ui.chknone.setChecked(True)
-        self.ui.rdbdvraw.setChecked(True)
-        self.ui.rdbhdv.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
 
@@ -140,12 +134,12 @@ class PreFerences(QDialog):
         pass
 
     #===================================================================================================================
-    def choosedvformat(self):
+    def chooseformatcapture(self):
         pass
 
     #===================================================================================================================
-    def choosehdvformat(self):
-        pass
+    #def choosehdvformat(self):
+        #pass
 
     #===================================================================================================================
     def chooseautomaticconversion(self):
