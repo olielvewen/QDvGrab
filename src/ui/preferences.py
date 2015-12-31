@@ -51,10 +51,13 @@ class PreFerences(QDialog):
     def __init__(self):
         super(PreFerences, self).__init__()
         self.setupUi()
-        #self.createWidgets()
         self.connectActions()
         self.updateUi()
 
+        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
+        for format in format_capture:
+            self.ui.cmbformatcapture.addItem(format)
+            self.ui.cmbformatcapture.setCurrentIndex(0)
     #===================================================================================================================
     def setupUi(self):
         self.ui = Ui_Dialog()
@@ -92,6 +95,9 @@ class PreFerences(QDialog):
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
+        self.ui.lneoutputfile.setText("My Awesome Movie")
+        self.ui.lneoutputfile.setFocus()
+        self.ui.lneoutputfile.selectAll()
 
         #3 tab
         self.ui.chkmanualrecord.setEnabled(False)
