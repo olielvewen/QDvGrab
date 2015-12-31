@@ -106,7 +106,12 @@ class PreFerences(QDialog):
         self.ui.label_4.setEnabled(False)
         self.ui.label_5.setEnabled(False)
         self.ui.chkactivepreview.setEnabled(False)
-        
+
+        #2 tab
+        self.ui.chkautomatic.setEnabled(False)
+        self.ui.chkscene.setEnabled(False)
+        self.ui.spbscene.setEnabled(False)
+        self.ui.label_3.setEnabled(False)
 
     #===================================================================================================================
     def Credits(self):
