@@ -71,9 +71,9 @@ Variables = {"Cmd: " " #command to execute",
 class QdvGrab(QMainWindow):
     def __init__(self, parent=None):
         super(QdvGrab, self).__init__(parent)
-        self.createWidgets()
-        self.connectActions()
         self.setupUi()
+        self.connectActions()
+        self.updateUi()
         # self.centerScreen()
 
         # def centerScreen(self):
@@ -89,7 +89,7 @@ class QdvGrab(QMainWindow):
         ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
 
     # ==================================================================================================================
-    def createWidgets(self):
+    def setupUi(self):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -110,8 +110,10 @@ class QdvGrab(QMainWindow):
         self.ui.actionAbout_QdvGrab.triggered.connect(self.AboutQdvgrab)
 
     # ==================================================================================================================
-    def setupUi(self):
-        pass
+    def updateUi(self):
+        self.ui.lnecapturename.setText("My Awesome Movie")
+        self.ui.lnecapturename.setFocus()
+        self.ui.lnecapturename.selectAll()
 
     # ==================================================================================================================
     def Recording(self):
