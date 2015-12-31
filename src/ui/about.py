@@ -41,7 +41,7 @@ from aboutui import Ui_aboutscreen
 from credits import Credits
 
 #Need others settings files
-#from classes import info
+import info
 
 
 app_name = "QDvGrab"

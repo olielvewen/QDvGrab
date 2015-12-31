@@ -47,7 +47,7 @@ from credits import Credits
 from about import About
 
 #others settings file
-#from classes import info
+import info
 
 app_name = "QDvGrab"
 app_version = "0.10"

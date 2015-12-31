@@ -43,7 +43,7 @@ from preferencesui import Ui_Dialog
 from credits import Credits
 
 #Need others settings file
-#from classes import info
+#import info
 
 
 

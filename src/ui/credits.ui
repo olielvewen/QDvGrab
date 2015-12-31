@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>700</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QTextBrowser" name="textBrowser_2"/>
+        <widget class="QTextBrowser" name="textBrowserwritten"/>
        </item>
       </layout>
      </widget>
@@ -38,7 +38,7 @@
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QTextBrowser" name="textBrowser_3"/>
+        <widget class="QTextBrowser" name="textBrowserdocumented"/>
        </item>
       </layout>
      </widget>
@@ -48,7 +48,7 @@
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QTextBrowser" name="textBrowser_4"/>
+        <widget class="QTextBrowser" name="textBrowsertranslated"/>
        </item>
       </layout>
      </widget>
@@ -58,7 +58,7 @@
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QTextBrowser" name="textBrowser"/>
+        <widget class="QTextBrowser" name="textBrowserlicense"/>
        </item>
       </layout>
      </widget>
