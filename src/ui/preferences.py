@@ -99,6 +99,15 @@ class PreFerences(QDialog):
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
 
+        #3 tab
+        self.ui.chkmanualrecord.setEnabled(False)
+        self.ui.lnehours.setEnabled(False)
+        self.ui.lneminutes.setEnabled(False)
+        self.ui.label_4.setEnabled(False)
+        self.ui.label_5.setEnabled(False)
+        self.ui.chkactivepreview.setEnabled(False)
+        
+
     #===================================================================================================================
     def Credits(self):
         " run the Credits dialog "
