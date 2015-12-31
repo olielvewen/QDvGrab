@@ -113,6 +113,10 @@ class PreFerences(QDialog):
         self.ui.spbscene.setEnabled(False)
         self.ui.label_3.setEnabled(False)
 
+        self.ui.chkdvraw.setEnabled(False)
+        self.ui.chkdv2.setEnabled(False)
+        self.ui.chkhdv.setEnabled(False)
+
     #===================================================================================================================
     def Credits(self):
         " run the Credits dialog "
