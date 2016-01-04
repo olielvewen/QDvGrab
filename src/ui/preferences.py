@@ -43,7 +43,7 @@ from preferencesui import Ui_Dialog
 from credits import Credits
 
 #Need others settings file
-#import info
+import info
 
 
 
@@ -54,10 +54,15 @@ class PreFerences(QDialog):
         self.connectActions()
         self.updateUi()
 
+        self.loadsettings()
+
         format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
         for format in format_capture:
             self.ui.cmbformatcapture.addItem(format)
             self.ui.cmbformatcapture.setCurrentIndex(0)
+
+
+
     #===================================================================================================================
     def setupUi(self):
         self.ui = Ui_Dialog()
@@ -65,7 +70,9 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def connectActions(self):
-        """ connection of all events """
+        """
+        connection of all events
+        """
         self.ui.btncredits.clicked.connect(self.Credits)
         self.ui.btndvgrab.clicked.connect(self.dvgrabpath)
         self.ui.btntranscode.clicked.connect(self.transcodepath)
@@ -119,33 +126,67 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def Credits(self):
-        " run the Credits dialog "
+        """
+        run the Credits dialog
+        :return:
+        """
         self.windo = Credits()
         self.windo.exec_()
 
     #===================================================================================================================
     def dvgrabpath(self):
+        """
+        Display the path of dvgrab
+        :return:
+        """
         pass
 
     #===================================================================================================================
     def transcodepath(self):
+        """
+        Display the path of transcode
+        :return:
+        """
         pass
 
     #===================================================================================================================
     def outputpath(self):
-        pass
+        """
+        Display the output path by default and after this one choose by the user
+        :return:
+        """
+        filePath = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), QDir.homePath())
 
+        if filePath:
+            self.ui.lneoutputfile.setText(filePath)
     #===================================================================================================================
     def languages(self):
+        """
+        Display the language by default and if not or if the user would like to change it do it here
+        :return:
+        """
         pass
 
     #===================================================================================================================
     def chooseformatcapture(self):
+        """
+        Choose the capture format i.e either dv format or hdv format. And the main interface change thanks to this choice
+        :return:
+        """
         pass
 
     #===================================================================================================================
-    #def choosehdvformat(self):
-        #pass
+    def loadsettings(self):
+        """
+        :return: Here we load user settings and if none a basic config by default is loaded
+        """
+        settings = QSettings()
+
+        filePath = settings.value('filePath')
+
+
+        if filePath:
+            self.ui.btnchoosefile.setText(filePath)
 
     #===================================================================================================================
     def chooseautomaticconversion(self):
