@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=QDvgrab 0.10
+GenericName =GUI for dvgrab
+X-GNOME-FullName=QDvGrab 0.10
+Comment=Grab your film from your Dv Camecorder
+Exec=python3 /home/olivier/Developpement/QdvGrab/src/ui/qdvgrab.py %F
+Terminal=false
+Type=Application
+Icon=qdvgrab
+Categories=GNOME;GTK;AudioVideo;Video;AudioVideo;
+MimeType=application/vnd.qdvgrab-project;
+X-AppInstall-Package=qdvgrab

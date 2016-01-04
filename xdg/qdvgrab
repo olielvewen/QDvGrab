@@ -1,0 +1,1 @@
+application/vnd.qdvgrab-project; /usr/bin/qdvgrab '%s'; test=test -n "$DISPLAY"; priority=5
