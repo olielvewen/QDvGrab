@@ -66,7 +66,10 @@ Variables = {"Cmd: " " #command to execute",
              "TempFolderName: " " #name of temporary folder",
              "TempFolderOutput: "" #name of folder output"
              }
-
+#check if we are on Linux either exit
+if (os.name != "posix"):
+    print("You are not under Linux system")
+    sys.exit(2)
 
 class QdvGrab(QMainWindow):
     def __init__(self, parent=None):

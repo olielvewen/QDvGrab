@@ -58,3 +58,4 @@ target/
 
 # divers
 *.idea
+*.xml
