@@ -48,20 +48,32 @@ import info
 
 
 class PreFerences(QDialog):
-    def __init__(self):
+    def __init__(self, parent=None):
         super(PreFerences, self).__init__()
+
+        self.parent = parent
+
         self.setupUi()
         self.connectActions()
         self.updateUi()
 
-        self.loadsettings()
+        QTimer.singleShot(0, self.loadsettings)
+        #QTimer.singleShot(1000, self.dvgrabpath)
 
         format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
         for format in format_capture:
             self.ui.cmbformatcapture.addItem(format)
             self.ui.cmbformatcapture.setCurrentIndex(0)
 
+        #populate the dvgrab path
+        dvgrab_path = shutil.which('dvgrab')
+        if dvgrab_path is not None:
+            self.ui.lnedvgrab.setText(dvgrab_path)
+        else:
+            QMessageBox.information(self, self.tr("QDvGrab"), self.tr("Dvgrab is not installed"))
 
+        transcode_path = shutil.which('transcode')
+        self.ui.lnetranscode.setText(transcode_path)
 
     #===================================================================================================================
     def setupUi(self):
@@ -134,12 +146,21 @@ class PreFerences(QDialog):
         self.windo.exec_()
 
     #===================================================================================================================
-    def dvgrabpath(self):
+    def dvgrabpath(self, result=""):
         """
         Display the path of dvgrab
         :return:
         """
-        pass
+        direct_repository = "/usr/bin"
+        base_repository = QDir(direct_repository).absolutePath()
+
+        dvgrab_path = QFileDialog.getOpenFileName(self, self.tr('QdvGrab - Choose a different path '), (QDir.rootPath() + base_repository))
+
+        if dvgrab_path is not None:
+            dvgrab_path =""
+            result = QDir.absolutePath(dvgrab_path)
+            #result = self.ui.lnedvgrab.text(base_repository)
+            self.ui.lnedvgrab.append(result)
 
     #===================================================================================================================
     def transcodepath(self):
