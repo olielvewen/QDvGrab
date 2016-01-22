@@ -35,6 +35,7 @@ import shutil
 import subprocess
 #need for create temporary file in the temp folder
 from tempfile import TemporaryDirectory
+import webbrowser
 
 # need for display gui
 from PyQt5.QtGui import *
@@ -130,9 +131,13 @@ class QdvGrab(QMainWindow):
 
     # ==================================================================================================================
     def Help(self):
-        """ Call the help webpage """
-        self.windo = Credits()
-        self.windo.exec_()
+        """ Call the help webpage on Github"""
+        try:
+            webbrowser.open("https://github.com/olielvewen/QDvGrab/wiki")
+            print("Website wiki project is opened")
+        except:
+            QMessageBox.information(self, self.tr("QdvGrab - Error"), self.tr("Unable to open the Wiki page"))
+            print("Impossible to open the wiki page")
 
     # ==================================================================================================================
     def Quit(self):
