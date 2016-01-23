@@ -57,25 +57,26 @@ author_mail = "olivier@openshot.org"
 
 QualityList = {} #dico quality audio
 FpsList = {} #dico fps
-Variables = {"Cmd: " " #command to execute",
-             "CmdList: [] #list commands to execute",
-             "ConfigFolder: os.path.join(QDir.homePath(), .qdvgrab)",
-             "ConfigFile: os.path.join(QDir.homePath(), .qdvgrab/logfile)",
-             "FileNameOutput: "" #filename output os.path.basename()",
-             "DeviceOutput: "" #Device name Camecorder",
-             "DirectNameOutput: " " #name of output folder os.path.direname()",
-             "TempFolderName: " " #name of temporary folder",
-             "TempFolderOutput: "" #name of folder output"
+Variables = {"Cmd" :"",
+             "CmdList" :[], #list commands to execute"
+             "ConfigFolder" :os.path.join(QDir.homePath(), ".qdvgrab"),
+             "ConfigFile" :os.path.join(QDir.homePath(), ".qdvgrab/logfile"),
+             "FileNameOutput" :"", #filename output os.path.basename()
+             "DeviceOutput" :"", #Device name Camecorder
+             "DirectNameOutput" :"", #name of output folder os.path.direname()
+             "TempFolderName" :"", #name of temporary folder
+             "TempFolderOutput" :"" #name of folder output
              }
+
 #check if we are on Linux either exit
 if (os.name != "posix"):
     print("You are not under Linux system")
     sys.exit(2)
 
-#check if the hidden project folder is created by default, if not is created
-if not os.path.exists(Variables['ConfigFolder']):
-    os.mkdir(Variables['ConfigFolder'])
-    
+#check if the hidden project folder is created by default, if not it is created
+if not os.path.exists(Variables["ConfigFolder"]):
+    os.mkdir(Variables["ConfigFolder"])
+
 
 class QdvGrab(QMainWindow):
     def __init__(self, parent=None):
