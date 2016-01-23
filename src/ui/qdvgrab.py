@@ -72,6 +72,11 @@ if (os.name != "posix"):
     print("You are not under Linux system")
     sys.exit(2)
 
+#check if the hidden project folder is created by default, if not is created
+if not os.path.exists(Variables['ConfigFolder']):
+    os.mkdir(Variables['ConfigFolder'])
+    
+
 class QdvGrab(QMainWindow):
     def __init__(self, parent=None):
         super(QdvGrab, self).__init__(parent)
