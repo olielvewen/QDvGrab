@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/QDvgrab.iml" filepath="$PROJECT_DIR$/.idea/QDvgrab.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../StreamCap/.idea/StreamCap.iml" filepath="$PROJECT_DIR$/../StreamCap/.idea/StreamCap.iml" />
     </modules>
   </component>
 </project>
