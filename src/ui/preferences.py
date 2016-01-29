@@ -57,7 +57,7 @@ class PreFerences(QDialog):
         self.connectActions()
         self.updateUi()
 
-        QTimer.singleShot(0, self.loadsettings)
+        QTimer.singleShot(0, self.loadSettings)
         #QTimer.singleShot(1000, self.dvgrabpath)
 
         format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
@@ -86,24 +86,24 @@ class PreFerences(QDialog):
         connection of all events
         """
         self.ui.btncredits.clicked.connect(self.Credits)
-        self.ui.btndvgrab.clicked.connect(self.dvgrabpath)
-        self.ui.btntranscode.clicked.connect(self.transcodepath)
-        self.ui.btnchoosefile.clicked.connect(self.outputpath)
+        self.ui.btndvgrab.clicked.connect(self.dvgrabPath)
+        self.ui.btntranscode.clicked.connect(self.transcodePath)
+        self.ui.btnchoosefile.clicked.connect(self.outputPath)
         self.ui.cmblanguages.activated.connect(self.languages)
-        self.ui.cmbformatcapture.activated.connect(self.chooseformatcapture)
-        self.ui.chknone.toggled.connect(self.chooseautomaticconversion)
-        self.ui.chkdvraw.toggled.connect(self.chooseautomaticconversion)
-        self.ui.chkdv2.toggled.connect(self.chooseautomaticconversion)
-        self.ui.chkhdv.toggled.connect(self.chooseautomaticconversion)
-        self.ui.chkdetection.toggled.connect(self.choosedetectionscene)
-        self.ui.chkautomatic.toggled.connect(self.choosedetectionscene)
-        self.ui.chkscene.toggled.connect(self.choosedetectionscene)
-        self.ui.spbscene.valueChanged.connect(self.choosedetectionscene)
-        self.ui.chkautomaticrecord.toggled.connect(self.captureextraparameters)
-        self.ui.chkmanualrecord.toggled.connect(self.captureextraparameters)
-        self.ui.lnehours.textChanged.connect(self.captureextraparameters)
-        self.ui.lneminutes.textChanged.connect(self.captureextraparameters)
-        self.ui.chkactivepreview.toggled.connect(self.runactivepreview)
+        self.ui.cmbformatcapture.activated.connect(self.chooseFormatCapture)
+        self.ui.chknone.toggled.connect(self.chooseAutomaticConversion)
+        self.ui.chkdvraw.toggled.connect(self.chooseAutomaticConversion)
+        self.ui.chkdv2.toggled.connect(self.chooseAutomaticConversion)
+        self.ui.chkhdv.toggled.connect(self.chooseAutomaticConversion)
+        self.ui.chkdetection.toggled.connect(self.chooseDetectionScene)
+        self.ui.chkautomatic.toggled.connect(self.chooseDetectionScene)
+        self.ui.chkscene.toggled.connect(self.chooseDetectionScene)
+        self.ui.spbscene.valueChanged.connect(self.chooseDetectionScene)
+        self.ui.chkautomaticrecord.toggled.connect(self.captureExtraParameters)
+        self.ui.chkmanualrecord.toggled.connect(self.captureExtraParameters)
+        self.ui.lnehours.textChanged.connect(self.captureExtraParameters)
+        self.ui.lneminutes.textChanged.connect(self.captureExtraParameters)
+        self.ui.chkactivepreview.toggled.connect(self.runActivePreview)
 
     #===================================================================================================================
     def updateUi(self):
@@ -114,9 +114,9 @@ class PreFerences(QDialog):
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
-        self.ui.lneoutputfile.setText("My Awesome Movie")
-        self.ui.lneoutputfile.setFocus()
-        self.ui.lneoutputfile.selectAll()
+        #self.ui.lneoutputfile.setText("My Awesome Movie")
+        #self.ui.lneoutputfile.setFocus()
+        #self.ui.lneoutputfile.selectAll()
 
         #3 tab
         self.ui.chkmanualrecord.setEnabled(False)
@@ -146,7 +146,7 @@ class PreFerences(QDialog):
         self.windo.exec_()
 
     #===================================================================================================================
-    def dvgrabpath(self, result=""):
+    def dvgrabPath(self, result=""):
         """
         Display the path of dvgrab
         :return:
@@ -163,7 +163,7 @@ class PreFerences(QDialog):
             self.ui.lnedvgrab.append(result)
 
     #===================================================================================================================
-    def transcodepath(self):
+    def transcodePath(self):
         """
         Display the path of transcode
         :return:
@@ -171,15 +171,15 @@ class PreFerences(QDialog):
         pass
 
     #===================================================================================================================
-    def outputpath(self):
+    def outputPath(self):
         """
         Display the output path by default and after this one choose by the user
         :return:
         """
-        filePath = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), QDir.homePath())
+        new_output_path = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
 
-        if filePath:
-            self.ui.lneoutputfile.setText(filePath)
+        if new_output_path:
+            self.ui.lneoutputfile.setText(new_output_path)
     #===================================================================================================================
     def languages(self):
         """
@@ -189,7 +189,7 @@ class PreFerences(QDialog):
         pass
 
     #===================================================================================================================
-    def chooseformatcapture(self):
+    def chooseFormatCapture(self):
         """
         Choose the capture format i.e either dv format or hdv format. And the main interface change thanks to this choice
         :return:
@@ -197,32 +197,66 @@ class PreFerences(QDialog):
         pass
 
     #===================================================================================================================
-    def loadsettings(self):
+    def loadSettings(self):
         """
         :return: Here we load user settings and if none a basic config by default is loaded
         """
+
         settings = QSettings()
 
-        filePath = settings.value('filePath')
+        new_output_path = settings.value("output_default_path")
+        name_camecorder = settings.value("name_camecorder")
+        formats_choose = settings.value("formats_choose")
+        automatic_conversion = settings.value("automatic_conversion")
+        detection_scene = settings.value("detection_scene")
+        automatic_record = settings.value("automatic_record")
 
-
-        if filePath:
-            self.ui.btnchoosefile.setText(filePath)
+        if new_output_path:
+            self.ui.lneoutputfile.setText(new_output_path)
+        if name_camecorder:
+            self.ui.lnenamecamecorder.setText(name_camecorder)
+        if formats_choose:
+            self.ui.cmbformatcapture.setCurrentIndex(formats_choose)
+        if automatic_conversion:
+            self.ui.chknone.setChecked(True)
+        if detection_scene:
+            self.ui.chkdetection.setChecked(True)
+        if automatic_record:
+            self.ui.chkautomaticrecord.setChecked(True)
 
     #===================================================================================================================
-    def chooseautomaticconversion(self):
+    def saveSettings(self):
+        """
+        Here we save users setting when the application is closed and if none a basic config by default is loaded
+        :return:
+        """
+
+        output_default_path = os.path.join(QDir.homePath() + "/Videos/")
+        name_camecorder = ""
+
+        settings = QSettings()
+
+        settings.setValue("output_default_path", self.ui.lneoutputfile.text())
+        settings.setValue("name_camecorder", self.ui.lnenamecamecorder.text())
+        settings.setValue("formats", self.ui.cmbformatcapture.setCurrentIndex())
+        settings.setValue("automatic_conversion", self.ui.chknone.isChecked())
+        settings.setValue("detection_scene", self.ui.chkdetection.isChecked())
+        settings.setValue("automatic_record", self.ui.chkautomaticrecord.isChecked())
+
+    #===================================================================================================================
+    def chooseAutomaticConversion(self):
         pass
 
     #===================================================================================================================
-    def choosedetectionscene(self):
+    def chooseDetectionScene(self):
         pass
 
     #===================================================================================================================
-    def runactivepreview(self):
+    def runActivePreview(self):
         pass
 
     #===================================================================================================================
-    def captureextraparameters(self):
+    def captureExtraParameters(self):
         pass
 
     #===================================================================================================================
