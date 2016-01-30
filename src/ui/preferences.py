@@ -150,18 +150,18 @@ class PreFerences(QDialog):
         self.windo.exec_()
 
     #===================================================================================================================
-    def dvgrabPath(self, result=""):
+    def dvgrabPath(self):
         """
         Display the new path of dvgrab if he is not displayed by default
         """
         direct_repository = "/usr/bin"
         base_repository = QDir(direct_repository).absolutePath()
 
-        dvgrab_path = QFileDialog.getOpenFileName(self, self.tr('QdvGrab - Choose a different path '), (QDir.rootPath() + base_repository))
+        new_dvgrab_path = QFileDialog.getOpenFileName(self, self.tr('QdvGrab - Choose a different path '), (QDir.rootPath() + base_repository))
 
-        if dvgrab_path is not None:
-            dvgrab_path =""
-            result = QDir.absolutePath(dvgrab_path)
+        if new_dvgrab_path is not None:
+            new_dvgrab_path =""
+            result = QDir.absolutePath(new_dvgrab_path)
             #result = self.ui.lnedvgrab.text(base_repository)
             self.ui.lnedvgrab.append(result)
 
