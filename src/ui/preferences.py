@@ -241,7 +241,7 @@ class PreFerences(QDialog):
         settings = QSettings()
 
         new_output_path = settings.value("output_default_path")
-        name_camecorder = settings.value("name_camecorder")
+        name_camcorder = settings.value("name_camcorder")
         formats_choose = settings.value("formats_choose")
         automatic_conversion = settings.value("automatic_conversion")
         detection_scene = settings.value("detection_scene")
@@ -249,8 +249,8 @@ class PreFerences(QDialog):
 
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
-        if name_camecorder:
-            self.ui.lnenamecamecorder.setText(name_camecorder)
+        if name_camcorder:
+            self.ui.lnenamecamecorder.setText(name_camcorder)
         if formats_choose:
             self.ui.cmbformatcapture.setCurrentIndex(formats_choose)
         if automatic_conversion:
@@ -269,12 +269,12 @@ class PreFerences(QDialog):
         """
 
         output_default_path = os.path.join(QDir.homePath() + "/Videos/")
-        name_camecorder = ""
+        name_camcorder = ""
 
         settings = QSettings()
 
         settings.setValue("output_default_path", self.ui.lneoutputfile.text())
-        settings.setValue("name_camecorder", self.ui.lnenamecamecorder.text())
+        settings.setValue("name_camcorder", self.ui.lnenamecamecorder.text())
         settings.setValue("formats_choose", self.ui.cmbformatcapture.setCurrentIndex())
         settings.setValue("automatic_conversion", self.ui.chknone.isChecked())
         settings.setValue("detection_scene", self.ui.chkdetection.isChecked())
@@ -282,18 +282,41 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def chooseAutomaticConversion(self):
+
+        """
+        Several choices if the user would like to get directly his file in mpeg2 (not passing by a conversion tool after
+        grabbing his film
+
+        """
         pass
 
     #===================================================================================================================
     def chooseDetectionScene(self):
+
+        """
+        The user can choose if he would like one file or severals
+
+        """
         pass
 
     #===================================================================================================================
     def runActivePreview(self):
+
+        """
+        the user can run the active preview here
+
+        """
         pass
 
     #===================================================================================================================
     def captureExtraParameters(self):
+
+        """
+        The user can choose several parameters that he can't do anywhere like:
+        - stop the grab if not enought space disks
+        - program a time for the grab i.e for 50 minutes
+
+        """
         pass
 
     #===================================================================================================================
