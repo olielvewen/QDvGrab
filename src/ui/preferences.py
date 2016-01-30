@@ -87,15 +87,15 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def connectActions(self):
-        
+
         """
         connection of all events
         """
-        self.ui.btncredits.clicked.connect(self.Credits)
+        self.ui.btncredits.clicked.connect(self.creDits)
         self.ui.btndvgrab.clicked.connect(self.dvgrabPath)
         self.ui.btntranscode.clicked.connect(self.transcodePath)
         self.ui.btnchoosefile.clicked.connect(self.outputPath)
-        self.ui.cmblanguages.activated.connect(self.languages)
+        self.ui.cmblanguages.activated.connect(self.languageSelected)
         self.ui.cmbformatcapture.activated.connect(self.chooseFormatCapture)
         self.ui.chknone.toggled.connect(self.chooseAutomaticConversion)
         self.ui.chkdvraw.toggled.connect(self.chooseAutomaticConversion)
@@ -148,7 +148,7 @@ class PreFerences(QDialog):
         self.ui.chkhdv.setEnabled(False)
 
     #===================================================================================================================
-    def Credits(self):
+    def creDits(self):
 
         """
         run the Credits dialog
@@ -213,9 +213,10 @@ class PreFerences(QDialog):
             self.ui.lneoutputfile.setText(new_output_path)
 
     #===================================================================================================================
-    def languages(self):
+    def languageSelected(self):
         """
-        Display the language by default and if not or if the user would like to change it do it here
+        Display the language by default and if not or if the user would like to change it do it here without changing
+        this one of his desktop
 
         """
         pass
