@@ -81,11 +81,13 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def setupUi(self):
+
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
 
     #===================================================================================================================
     def connectActions(self):
+        
         """
         connection of all events
         """
@@ -111,6 +113,11 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def updateUi(self):
+
+        """
+        Update the ui and desactive all widgets that we don't need for the moment
+
+        """
         self.ui.lbltranscode.setEnabled(False)
         self.ui.lnetranscode.setEnabled(False)
         self.ui.btntranscode.setEnabled(False)
@@ -142,66 +149,92 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def Credits(self):
+
         """
         run the Credits dialog
-        :return:
+
         """
         self.windo = Credits()
         self.windo.exec_()
 
     #===================================================================================================================
     def dvgrabPath(self):
+
         """
         Display the new path of dvgrab if he is not displayed by default
+
         """
+
+        # select this folder by default when the QFileDialog is opened
         direct_repository = "/usr/bin"
         base_repository = QDir(direct_repository).absolutePath()
 
         new_dvgrab_path = QFileDialog.getOpenFileName(self, self.tr('QdvGrab - Choose a different path '), (QDir.rootPath() + base_repository))
 
         if new_dvgrab_path is not None:
-            new_dvgrab_path =""
-            result = QDir.absolutePath(new_dvgrab_path)
+            new_dvgrab_path = ""
+            # clear the lineedit
+            self.ui.lnedvgrab.clear()
+            result = QDir(new_dvgrab_path).absolutePath()
             #result = self.ui.lnedvgrab.text(base_repository)
-            self.ui.lnedvgrab.append(result)
+            self.ui.lnedvgrab.setText(result)
 
     #===================================================================================================================
     def transcodePath(self):
+
         """
         Display the new path of transcode if he is not displayed by default
+
         """
-        pass
+
+        # select this folder by default when the QFileDialog is opened
+        direct_repository = "/usr/bin"
+        base_repository = QDir(direct_repository).absolutePath()
+
+        new_transcode_path = QFileDialog.getOpenFileName(self, self.tr('QdvGrab - Choose a different path'), (QDir.rootPath() + base_repository))
+
+        if new_transcode_path is not None:
+            new_transcode_path = ""
+            # clear the lineedit
+            self.ui.lnetranscode.clear()
+            result = QDir(new_transcode_path).absolutePath()
+            self.ui.lnetranscode.setText(result)
 
     #===================================================================================================================
     def outputPath(self):
+
         """
         Display the output path by default and after this one choose by the user
-        :return:
+
         """
         new_output_path = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
 
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
+
     #===================================================================================================================
     def languages(self):
         """
         Display the language by default and if not or if the user would like to change it do it here
-        :return:
+
         """
         pass
 
     #===================================================================================================================
     def chooseFormatCapture(self):
+
         """
         Choose the capture format i.e either dv format or hdv format. And the main interface change thanks to this choice
-        :return:
+
         """
         pass
 
     #===================================================================================================================
     def loadSettings(self):
+
         """
-        :return: Here we load user settings and if none a basic config by default is loaded
+        Here we load user settings and if none a basic config by default is loaded
+
         """
 
         settings = QSettings()
@@ -228,9 +261,10 @@ class PreFerences(QDialog):
 
     #===================================================================================================================
     def saveSettings(self):
+
         """
         Here we save users setting when the application is closed and if none a basic config by default is loaded
-        :return:
+
         """
 
         output_default_path = os.path.join(QDir.homePath() + "/Videos/")

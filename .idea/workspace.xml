@@ -66,8 +66,8 @@
       <file leaf-file-name="preferences.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7005988">
-              <caret line="167" column="82" selection-start-line="167" selection-start-column="82" selection-end-line="167" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.3488024">
+              <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
               <folding>
                 <element signature="e#1001#1011#0" expanded="true" />
               </folding>
@@ -980,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7005988">
-          <caret line="167" column="82" selection-start-line="167" selection-start-column="82" selection-end-line="167" selection-end-column="82" />
+        <state vertical-scroll-proportion="0.3488024">
+          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
           <folding>
             <element signature="e#1001#1011#0" expanded="true" />
           </folding>
