@@ -58,7 +58,7 @@ class PreFerences(QDialog):
         self.updateUi()
 
         QTimer.singleShot(0, self.loadSettings)
-        #QTimer.singleShot(1000, self.dvgrabpath)
+        #QTimer.singleShot(1000, self.dvgrabPath)
 
         format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
         for format in format_capture:
@@ -72,8 +72,12 @@ class PreFerences(QDialog):
         else:
             QMessageBox.information(self, self.tr("QDvGrab"), self.tr("Dvgrab is not installed"))
 
+        # populate the transcode path
         transcode_path = shutil.which('transcode')
-        self.ui.lnetranscode.setText(transcode_path)
+        if transcode_path is not None:
+            self.ui.lnetranscode.setText(transcode_path)
+        else:
+            QMessageBox.information(self, self.tr("QDvGrab"), self.tr("Transcode is not installed"))
 
     #===================================================================================================================
     def setupUi(self):
@@ -114,9 +118,9 @@ class PreFerences(QDialog):
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
-        #self.ui.lneoutputfile.setText("My Awesome Movie")
-        #self.ui.lneoutputfile.setFocus()
-        #self.ui.lneoutputfile.selectAll()
+        self.ui.lneoutputfile.setText("My Awesome Movie")
+        self.ui.lneoutputfile.setFocus()
+        self.ui.lneoutputfile.selectAll()
 
         #3 tab
         self.ui.chkmanualrecord.setEnabled(False)
@@ -148,8 +152,7 @@ class PreFerences(QDialog):
     #===================================================================================================================
     def dvgrabPath(self, result=""):
         """
-        Display the path of dvgrab
-        :return:
+        Display the new path of dvgrab if he is not displayed by default
         """
         direct_repository = "/usr/bin"
         base_repository = QDir(direct_repository).absolutePath()
@@ -165,8 +168,7 @@ class PreFerences(QDialog):
     #===================================================================================================================
     def transcodePath(self):
         """
-        Display the path of transcode
-        :return:
+        Display the new path of transcode if he is not displayed by default
         """
         pass
 
