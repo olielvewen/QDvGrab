@@ -275,7 +275,7 @@ class PreFerences(QDialog):
 
         settings.setValue("output_default_path", self.ui.lneoutputfile.text())
         settings.setValue("name_camecorder", self.ui.lnenamecamecorder.text())
-        settings.setValue("formats", self.ui.cmbformatcapture.setCurrentIndex())
+        settings.setValue("formats_choose", self.ui.cmbformatcapture.setCurrentIndex())
         settings.setValue("automatic_conversion", self.ui.chknone.isChecked())
         settings.setValue("detection_scene", self.ui.chkdetection.isChecked())
         settings.setValue("automatic_record", self.ui.chkautomaticrecord.isChecked())
