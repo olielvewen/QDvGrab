@@ -95,7 +95,7 @@ class QdvGrab(QMainWindow):
         self.connectActions()
         self.updateUi()
 
-        #QTimer.singleShot(0, self.PreFerences.loadSettings)
+        QTimer.singleShot(0, self.loadSettings)
 
         # def centerScreen(self):
         ##geometry_window = ""
@@ -108,6 +108,9 @@ class QdvGrab(QMainWindow):
 
         ##size_screen = QDesktopWidget().screenGeometry()
         ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
+
+    def loadSettings(self):
+
 
         settings = QSettings()
 
@@ -224,6 +227,13 @@ class QdvGrab(QMainWindow):
         """
         function run just before the mainwindow is closed and stop all work in progress and save settings
          """
+
+        #stop work in progress if there are one
+
+
+        #Save all settings if they have done modified
+        preferences.PreFerences.saveSettings()
+
         event.accept()
 
     #===================================================================================================================
