@@ -237,9 +237,17 @@ class QdvGrab(QMainWindow):
         event.accept()
 
     #===================================================================================================================
-    def openDirectory(self):
+    def openDirectory(self,new_output_path):
 
-        pass
+        """
+        Open the directory choose by the user either open this one by default
+        :param new_output_path:
+        :return:
+        """
+        if new_output_path:
+            preferences.PreFerences.outputPath()
+        else:
+            new_output = QFileDialog.getExistingDirectory(self, self.tr("QDvGrab - Choose a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
 
     #===================================================================================================================
     def AboutQt(self):
