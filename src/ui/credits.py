@@ -7,7 +7,7 @@
 
  @section LICENSE
 
- Copyright (c) 2014-2015 QDvGrab Team. This file is part of
+ Copyright (c) 2014-2016 QDvGrab Team. This file is part of
  QDvGrab (http://www.qdvgrab.org), an open-source project
  dedicated to delivering a tiny and easy tool for dvgrab.
 
@@ -24,29 +24,28 @@
  You should have received a copy of the GNU General Public License
  along with QDVgrab.  If not, see <http://www.gnu.org/licenses/>.
  """
+
 # Used to run it
 import sys
 import os
+
 # Need for path
 import os.path
-# Need for find library
-import shutil
-# Need for create command line
-import subprocess
-#need for create temporary file in the temp folder
-from tempfile import TemporaryDirectory
 
 # need for display gui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
+
 # Used for call ui files
 from creditsui import Ui_creditscreen
 import info
 
 class Credits(QDialog):
+
     """
     This screen shows who has developed,documented, translated and the licence of the project
+
     """
     def __init__(self, parent=None):
         super(Credits, self).__init__(parent)
@@ -54,11 +53,13 @@ class Credits(QDialog):
 
     #===================================================================================================================
     def setupUi(self):
+
         self.ui = Ui_creditscreen()
         self.ui.setupUi(self)
 
     #===================================================================================================================
     def showCredits(self):
+
         #PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         #path_license = os.path.join(info.PATH, 'LICENSE')
 

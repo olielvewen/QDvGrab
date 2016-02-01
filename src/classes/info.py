@@ -7,7 +7,7 @@
 
  @section LICENSE
 
- Copyright (c) 2014-2015 QDvGrab Team. This file is part of
+ Copyright (c) 2014-2016 QDvGrab Team. This file is part of
  QDvGrab (http://www.qdvgrab.org), an open-source project
  dedicated to delivering a tiny and easy tool for dvgrab.
 
@@ -31,7 +31,7 @@ app_name = "QDvGrab"
 app_version = "0.10"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
-app_date_version = "2016012200000"
+app_date_version = "2016020200000"
 gpl_version = '3'
 SUPPORTED_LANGUAGES = ['English', 'French']
 CWD = os.getcwd()
@@ -41,7 +41,7 @@ USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
 TEMP_PATH = os.path.join(USER_PATH, "Temp")
 
 #name of all contributors to the project
-OG = {'name': u'Olivier Girard', 'email': 'olivier@openshot.org'}
+OG = {'name': 'Olivier Girard', 'email': 'olivier@openshot.org'}
 
 #credits
 CREDITS = {

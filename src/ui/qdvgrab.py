@@ -7,7 +7,7 @@
 
  @section LICENSE
 
- Copyright (c) 2014-2015 QDvGrab Team. This file is part of
+ Copyright (c) 2014-2016 QDvGrab Team. This file is part of
  QDvGrab (http://www.qdvgrab.org), an open-source project
  dedicated to delivering a tiny and easy tool for dvgrab.
 
@@ -24,23 +24,31 @@
  You should have received a copy of the GNU General Public License
  along with QDVgrab.  If not, see <http://www.gnu.org/licenses/>.
  """
+
 # Used to run it
 import sys
 import os
+
 # Need for path
 import os.path
+
 # Need for find library
 import shutil
+
 # Need for create command line
 import subprocess
+
 #need for create temporary file in the temp folder
 from tempfile import TemporaryDirectory
+
+#Need for run the default webbrowser when the help page is called
 import webbrowser
 
 # need for display gui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
+
 # Used for call ui files
 from qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
@@ -79,6 +87,8 @@ if not os.path.exists(Variables["ConfigFolder"]):
 
 
 class QdvGrab(QMainWindow):
+
+
     def __init__(self, parent=None):
         super(QdvGrab, self).__init__(parent)
         self.setupUi()
@@ -98,14 +108,21 @@ class QdvGrab(QMainWindow):
         ##size_screen = QDesktopWidget().screenGeometry()
         ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
 
+
+
     # ==================================================================================================================
     def setupUi(self):
+
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
     # ==================================================================================================================
     def connectActions(self):
-        """ Function doing connection not done by Qt Designer """
+
+        """
+        Function making connections not done by Qt Designer
+
+        """
         self.ui.btnacquisitiondv.clicked.connect(self.Recording)
         self.ui.btnrecordmpeg.clicked.connect(self.Recording)
         self.ui.btnstartrecord.clicked.connect(self.Acquisition)
@@ -121,23 +138,37 @@ class QdvGrab(QMainWindow):
 
     # ==================================================================================================================
     def updateUi(self):
+
         self.ui.lnecapturename.setText("My Awesome Movie")
         self.ui.lnecapturename.setFocus()
         self.ui.lnecapturename.selectAll()
 
     # ==================================================================================================================
     def Recording(self):
-        """ Run the type of acquisition asked """
+
+        """
+        Run the type of acquisition asked
+
+        """
         pass
 
     # ==================================================================================================================
     def Acquisition(self):
-        """ Run the acquisition process i.e run dvgrab """
+
+        """
+        Run the acquisition process i.e run dvgrab
+
+        """
         pass
 
     # ==================================================================================================================
     def Help(self):
-        """ Call the help webpage on Github"""
+
+        """
+        Call the help webpage on Github
+
+        """
+
         try:
             webbrowser.open("https://github.com/olielvewen/QDvGrab/wiki")
             print("Website wiki project is opened")
@@ -147,17 +178,28 @@ class QdvGrab(QMainWindow):
 
     # ==================================================================================================================
     def Quit(self):
-        """ Close the application """
+
+        """
+        Close properly the application
+
+        """
+
         application.quit()
 
     # ==================================================================================================================
     def run_preferences_screen(self):
-        """ Run the Preferences Dialog """
+
+        """
+        Run the Preferences Dialog
+
+        """
+
         self.windo = PreFerences()
         self.windo.exec_()
 
     # ==================================================================================================================
     def closeEvent(self, event):
+
         """
         function run just before the mainwindow is closed and stop all work in progress and save settings
          """
@@ -165,21 +207,27 @@ class QdvGrab(QMainWindow):
 
     #===================================================================================================================
     def openDirectory(self):
+
         pass
 
     #===================================================================================================================
     def AboutQt(self):
+
         """
         Method helping you to know which version of Qt you are using displaying an nice window
+
          """
+
         QMessageBox.aboutQt(QdvGrab)
 
     #===================================================================================================================
     def AboutQdvgrab(self):
+
         """
         Run the About Dialog
-        :return:
+
         """
+
         self.windo = About()
         self.windo.show()
 

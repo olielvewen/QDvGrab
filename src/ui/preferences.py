@@ -7,7 +7,7 @@
 
  @section LICENSE
 
- Copyright (c) 2014-2015 QDvGrab Team. This file is part of
+ Copyright (c) 2014-2016 QDvGrab Team. This file is part of
  QDvGrab (http://www.qdvgrab.org), an open-source project
  dedicated to delivering a tiny and easy tool for dvgrab.
 
@@ -27,10 +27,13 @@
 
 import sys
 import os
+
 # Need for path
 import os.path
+
 #Need for find library
 import shutil
+
 #Need for create command line
 import subprocess
 
