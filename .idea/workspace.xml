@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1edcf57-509b-4139-a86b-6b7a0fff6b19" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classes/info.py" afterPath="$PROJECT_DIR$/src/classes/info.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/about.py" afterPath="$PROJECT_DIR$/src/ui/about.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/credits.py" afterPath="$PROJECT_DIR$/src/ui/credits.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/preferences.py" afterPath="$PROJECT_DIR$/src/ui/preferences.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/qdvgrab.py" afterPath="$PROJECT_DIR$/src/ui/qdvgrab.py" />
     </list>
     <ignored path="QDvgrab.iws" />
@@ -72,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/qdvgrab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.059880238">
+              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
               <folding>
                 <element signature="e#1026#1036#0" expanded="true" />
               </folding>
@@ -84,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preferences.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="preferences.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2020958">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
               <folding>
                 <element signature="e#1001#1011#0" expanded="true" />
               </folding>
@@ -134,8 +129,8 @@
         <option value="$PROJECT_DIR$/src/classes/info.py" />
         <option value="$PROJECT_DIR$/src/ui/credits.py" />
         <option value="$PROJECT_DIR$/src/ui/about.py" />
-        <option value="$PROJECT_DIR$/src/ui/qdvgrab.py" />
         <option value="$PROJECT_DIR$/src/ui/preferences.py" />
+        <option value="$PROJECT_DIR$/src/ui/qdvgrab.py" />
       </list>
     </option>
   </component>
@@ -517,7 +512,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="49" width="1922" height="1152" extended-state="7" />
+    <frame x="-1" y="49" width="1922" height="1152" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848838" sideWeight="0.49209693" order="10" side_tool="false" content_ui="tabs" />
@@ -975,14 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Programmation/Git/FF-Multi-Converter/ffmulticonverter/preferences_dlg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/about.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1011,22 +998,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/qdvgrab.py">
+    <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
           <folding>
-            <element signature="e#1026#1036#0" expanded="true" />
+            <element signature="e#1001#1011#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
+    <entry file="file://$USER_HOME$/Programmation/Git/FF-Multi-Converter/ffmulticonverter/preferences_dlg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2020958">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/qdvgrab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.059880238">
+          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
           <folding>
-            <element signature="e#1001#1011#0" expanded="true" />
+            <element signature="e#1026#1036#0" expanded="true" />
           </folding>
         </state>
       </provider>

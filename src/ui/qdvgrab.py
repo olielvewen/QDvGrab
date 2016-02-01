@@ -94,7 +94,8 @@ class QdvGrab(QMainWindow):
         self.setupUi()
         self.connectActions()
         self.updateUi()
-        # self.centerScreen()
+
+        #QTimer.singleShot(0, self.PreFerences.loadSettings)
 
         # def centerScreen(self):
         ##geometry_window = ""
@@ -108,7 +109,27 @@ class QdvGrab(QMainWindow):
         ##size_screen = QDesktopWidget().screenGeometry()
         ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
 
+        settings = QSettings()
 
+        new_output_path = settings.value("output_default_path")
+        name_camcorder = settings.value("name_camcorder")
+        formats_choose = settings.value("formats_choose")
+        automatic_conversion = settings.value("automatic_conversion")
+        detection_scene = settings.value("detection_scene")
+        automatic_record = settings.value("automatic_record")
+
+        if new_output_path:
+            self.ui.lneoutputfile.setText(new_output_path)
+        if name_camcorder:
+            self.ui.lnenamecamecorder.setText(name_camcorder)
+        if formats_choose:
+            self.ui.cmbformatcapture.setCurrentIndex(formats_choose)
+        if automatic_conversion:
+            self.ui.chknone.setChecked(True)
+        if detection_scene:
+            self.ui.chkdetection.setChecked(True)
+        if automatic_record:
+            self.ui.chkautomaticrecord.setChecked(True)
 
     # ==================================================================================================================
     def setupUi(self):
