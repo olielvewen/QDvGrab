@@ -88,6 +88,24 @@ class PreFerences(QDialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
 
+        #Set Tooltips for preferences
+        self.ui.cmblanguages.setToolTip(self.tr(" Change languages here "))
+        self.ui.btnchoosefile.setToolTip(self.tr(" Choose here another directory other than this one by default "))
+        self.ui.btndvgrab.setToolTip(self.tr(" Choose here another path other than this one by default if this one has failed "))
+        self.ui.btntranscode.setToolTip(self.tr(" Choose here another path other than this one by default if this one has failed "))
+        self.ui.btncredits.setToolTip(self.tr(" Set the Credits Screen "))
+        self.ui.cmbformatcapture.setToolTip(self.tr(" Select another format than this one by default"))
+        self.ui.chknone.setToolTip(self.tr(" Select no conversion when acquisition is done "))
+        self.ui.chkdvraw.setToolTip(self.tr(" Select Raw conversion when acquisition is done "))
+        self.ui.chkdv2.setToolTip(self.tr(" Select Dv2 conversion when acquisition is done "))
+        self.ui.chkhdv.setToolTip(self.tr(" Select Dv conversion when acquisition is done "))
+        self.ui.chkdetection.setToolTip(self.tr(" Select only file when acquisition is done "))
+        self.ui.chkautomatic.setToolTip(self.tr(" Set several files following hour and date when acquisition is done "))
+        self.ui.chkscene.setToolTip(self.tr(" Creation of a scene when acquisition is done "))
+        self.ui.chkautomaticrecord.setToolTip(self.tr("  Stop acquisition if not enought free space disk "))
+        self.ui.chkmanualrecord.setToolTip(self.tr(" Planning the time of acquisition "))
+        self.ui.chkactivepreview.setToolTip(self.tr(" See in real time when acquisition is done "))
+
     #===================================================================================================================
     def connectActions(self):
 
