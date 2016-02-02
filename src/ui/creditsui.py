@@ -13,6 +13,7 @@ class Ui_creditscreen(object):
         creditscreen.setObjectName("creditscreen")
         creditscreen.resize(700, 480)
         creditscreen.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedKingdom))
+        creditscreen.setModal(True)
         self.verticalLayout = QtWidgets.QVBoxLayout(creditscreen)
         self.verticalLayout.setObjectName("verticalLayout")
         self.tabWidget = QtWidgets.QTabWidget(creditscreen)
@@ -67,7 +68,7 @@ class Ui_creditscreen(object):
 
     def retranslateUi(self, creditscreen):
         _translate = QtCore.QCoreApplication.translate
-        creditscreen.setWindowTitle(_translate("creditscreen", "Dialog"))
+        creditscreen.setWindowTitle(_translate("creditscreen", "Credits"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("creditscreen", "Written by"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("creditscreen", "Documented by"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("creditscreen", "Translated by"))
