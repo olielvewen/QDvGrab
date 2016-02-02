@@ -7,7 +7,7 @@
 
  @section LICENSE
 
- Copyright (c) 2014-2015 QDvGrab Team. This file is part of
+ Copyright (c) 2014-2016 QDvGrab Team. This file is part of
  QDvGrab (http://www.qdvgrab.org), an open-source project
  dedicated to delivering ha tiny and easy tool for dvgrab.
 
@@ -27,16 +27,16 @@
 # Used to run it
 import sys
 import os
+
 # Need for path
 import platform
-# Need for find library
 
-# need for display gui
+# Need for display gui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-# Used for call ui files
 
+# Used for call ui files
 from aboutui import Ui_aboutscreen
 from credits import Credits
 
@@ -50,9 +50,11 @@ app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
 class About(QDialog):
+
     """
     This screen shows the resume of the project
     """
+
     def __init__(self, parent=None):
         super(About, self).__init__(parent)
         self.setupUi()
@@ -61,6 +63,7 @@ class About(QDialog):
         self.parent = parent
     #===================================================================================================================
     def setupUi(self):
+
         self.ui = Ui_aboutscreen()
         self.ui.setupUi(self)
 
@@ -76,18 +79,22 @@ class About(QDialog):
 
     #===================================================================================================================
     def connectActions(self):
+
+        """
+        Connect actions to the ui file
+
         """
 
-        :return:
-        """
         self.ui.btncredits.clicked.connect(self.runCredits)
 
     #===================================================================================================================
     def runCredits(self):
+
         """
         Run the Credits Dialog
-        :return:
+
         """
+
         self.windo = Credits()
         self.windo.exec_()
 
