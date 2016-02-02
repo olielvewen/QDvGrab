@@ -149,8 +149,20 @@ class QdvGrab(QMainWindow):
         self.ui.btnrecordmpeg.setToolTip(self.tr(" Choose the HDV Acquisition mode "))
         self.ui.btnstartrecord.setToolTip(self.tr(" Run the film acquisition "))
         self.ui.btnpreferences.setToolTip(self.tr(" Set the Preferences Screen "))
-        self.ui.btnhelp.setToolTip(self.tr(" Open the web help oneline "))
+        self.ui.btnhelp.setToolTip(self.tr("  "))
         self.ui.btnquit.setToolTip(self.tr(" Exit the application "))
+
+        #Set Status Tips for the main gui in the statusBar()
+        self.ui.lblcamcorder.setStatusTip(self.tr('The camcorder name is '))
+        self.ui.lblfree.setStatusTip(self.tr('The free space disk available is of '))
+        self.ui.lblused.setStatusTip(self.tr('The space disk used is of '))
+        self.ui.lbltotal.setStatusTip(self.tr('The total space disk is of '))
+        self.ui.btnacquisitiondv.setStatusTip(self.tr('Dv Acquisition mode is used'))
+        self.ui.btnrecordmpeg.setStatusTip(self.tr('HDV Acquisition mode is used'))
+        self.ui.btnstartrecord.setStatusTip(self.tr('The process is run'))
+        self.ui.btnpreferences.setStatusTip(self.tr('Preferences Screen has been called'))
+        self.ui.btnhelp.setStatusTip(self.tr('The web help oneline is opened'))
+        self.ui.btnquit.setStatusTip(self.tr('Exit'))
 
     # ==================================================================================================================
     def connectActions(self):
