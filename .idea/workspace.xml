@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1edcf57-509b-4139-a86b-6b7a0fff6b19" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/about.py" afterPath="$PROJECT_DIR$/src/ui/about.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/about.ui" afterPath="$PROJECT_DIR$/src/ui/about.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/aboutui.py" afterPath="$PROJECT_DIR$/src/ui/aboutui.py" />
     </list>
     <ignored path="QDvgrab.iws" />
     <ignored path=".idea/workspace.xml" />

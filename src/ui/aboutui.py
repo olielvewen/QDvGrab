@@ -13,6 +13,7 @@ class Ui_aboutscreen(object):
         aboutscreen.setObjectName("aboutscreen")
         aboutscreen.resize(550, 450)
         aboutscreen.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedKingdom))
+        aboutscreen.setModal(True)
         self.lblimageicon = QtWidgets.QLabel(aboutscreen)
         self.lblimageicon.setGeometry(QtCore.QRect(20, 40, 221, 341))
         self.lblimageicon.setMinimumSize(QtCore.QSize(221, 281))
@@ -61,7 +62,7 @@ class Ui_aboutscreen(object):
 
     def retranslateUi(self, aboutscreen):
         _translate = QtCore.QCoreApplication.translate
-        aboutscreen.setWindowTitle(_translate("aboutscreen", "Dialog"))
+        aboutscreen.setWindowTitle(_translate("aboutscreen", "About"))
         self.lblresume.setText(_translate("aboutscreen", "<html><head/><body><p>Gui for grabbing film from an DV or HDV </p><p>Camecorder in the simpliest way on the </p><p>Hard Drive.</p><p><br/></p><p>QDvGrab - <a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#0000ff;\">Home Page</span></a></p><p><a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#000000;\">Copyright 2014-2016 Olivier Girard</span></a><br/><a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#000000;\">License: GNU GPL v3</span></a></p></body></html>"))
         self.btncredits.setText(_translate("aboutscreen", "Credits"))
         self.btnclose.setText(_translate("aboutscreen", "Close"))
