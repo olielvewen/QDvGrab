@@ -140,6 +140,18 @@ class QdvGrab(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        #Set Tooltips for the main gui
+        self.ui.btnacquisitiondv.setToolTip(self.tr(" Choose the Dv Acquisition mode "))
+        self.ui.lblcamcorder.setToolTip(self.tr(" Set the Camcorder Name "))
+        self.ui.lblfree.setToolTip(self.tr(" Set the free space disk available "))
+        self.ui.lblused.setToolTip(self.tr(" Set the used space disk "))
+        self.ui.lbltotal.setToolTip(self.tr(" Set the total space disk not and available "))
+        self.ui.btnrecordmpeg.setToolTip(self.tr(" Choose the HDV Acquisition mode "))
+        self.ui.btnstartrecord.setToolTip(self.tr(" Run the film acquisition "))
+        self.ui.btnpreferences.setToolTip(self.tr(" Set the Preferences Screen "))
+        self.ui.btnhelp.setToolTip(self.tr(" Open the web help oneline "))
+        self.ui.btnquit.setToolTip(self.tr(" Exit the application "))
+
     # ==================================================================================================================
     def connectActions(self):
 

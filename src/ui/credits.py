@@ -32,7 +32,7 @@ import os
 # Need for path
 import os.path
 
-# need for display gui
+# Need for display gui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
