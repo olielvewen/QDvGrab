@@ -29,7 +29,7 @@
       <attribute name="title">
        <string>Written by</string>
       </attribute>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QTextBrowser" name="textBrowserwritten"/>
        </item>
