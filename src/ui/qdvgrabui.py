@@ -125,12 +125,15 @@ class Ui_MainWindow(object):
         self.actionAbout_QdvGrab.setObjectName("actionAbout_QdvGrab")
         self.actionAbout_Qt = QtWidgets.QAction(MainWindow)
         self.actionAbout_Qt.setObjectName("actionAbout_Qt")
+        self.actionHelp = QtWidgets.QAction(MainWindow)
+        self.actionHelp.setObjectName("actionHelp")
         self.menuFile.addAction(self.actionOpen_Directory)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionQuit)
         self.menuSettings.addAction(self.actionPreferences)
         self.menuHelp.addAction(self.actionAbout_QdvGrab)
         self.menuHelp.addAction(self.actionAbout_Qt)
+        self.menuHelp.addAction(self.actionHelp)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuSettings.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
@@ -167,6 +170,8 @@ class Ui_MainWindow(object):
         self.actionAbout_QdvGrab.setShortcut(_translate("MainWindow", "Ctrl+A"))
         self.actionAbout_Qt.setText(_translate("MainWindow", "About Qt"))
         self.actionAbout_Qt.setShortcut(_translate("MainWindow", "Ctrl+B"))
+        self.actionHelp.setText(_translate("MainWindow", "Help"))
+        self.actionHelp.setShortcut(_translate("MainWindow", "Ctrl+H"))
 
 
 if __name__ == "__main__":

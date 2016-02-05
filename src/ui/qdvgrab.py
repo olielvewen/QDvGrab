@@ -183,6 +183,7 @@ class QdvGrab(QMainWindow):
         self.ui.actionPreferences.triggered.connect(self.run_preferences_screen)
         self.ui.actionAbout_Qt.triggered.connect(self.AboutQt)
         self.ui.actionAbout_QdvGrab.triggered.connect(self.AboutQdvgrab)
+        self.ui.actionHelp.triggered.connect(self.Help)
 
     # ==================================================================================================================
     def updateUi(self):
