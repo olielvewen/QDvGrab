@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>50</y>
+      <y>20</y>
       <width>250</width>
       <height>20</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QLabel" name="lblcamcorder">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>50</y>
+      <x>330</x>
+      <y>20</y>
       <width>250</width>
       <height>20</height>
      </rect>
@@ -50,8 +50,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>100</y>
+      <x>210</x>
+      <y>70</y>
       <width>250</width>
       <height>20</height>
      </rect>
@@ -64,7 +64,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>150</y>
+      <y>120</y>
       <width>90</width>
       <height>14</height>
      </rect>
@@ -87,7 +87,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>190</y>
+      <y>160</y>
       <width>90</width>
       <height>14</height>
      </rect>
@@ -310,6 +310,41 @@
       <height>35</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>130</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>130</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>130</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="pixmap">
+      <pixmap>../images/drive-harddisk.png</pixmap>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
