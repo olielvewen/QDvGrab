@@ -176,7 +176,7 @@ class PreFerences(QDialog):
 
         """
         self.windo = Credits()
-        self.windo.exec_()
+        self.windo.show()
 
     #===================================================================================================================
     def dvgrabPath(self):
@@ -347,4 +347,4 @@ if __name__ == "__main__":
     application = QApplication(sys.argv)
     PreFerences = PreFerences()
     PreFerences.show()
-    application.exec_()
+    sys.exit(application.exec_())

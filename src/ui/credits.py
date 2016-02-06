@@ -98,4 +98,4 @@ if __name__ == "__main__":
     application = QApplication(sys.argv)
     Credits = Credits()
     Credits.show()
-    application.exec_()
+    sys.exit(application.exec_())

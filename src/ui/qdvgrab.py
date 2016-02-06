@@ -244,7 +244,7 @@ class QdvGrab(QMainWindow):
         """
 
         self.windo = PreFerences()
-        self.windo.exec_()
+        self.windo.show()
 
     # ==================================================================================================================
     def closeEvent(self, event):
@@ -304,4 +304,4 @@ if __name__ == "__main__":
     QdvGrab.show()
     print("Welcome to QDvGrab {}. \nHope you'll enjoy it. \nPlease report all bugs,"
           "features request and comments at {}\n".format(app_version, author_mail))
-    application.exec_()
+    sys.exit(application.exec_())
