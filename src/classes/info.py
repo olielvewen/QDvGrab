@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  @file
- @brief This file contains a global settings file for the QDvGrab project
+ @brief info.py - This file contains a global settings file for the QDvGrab project
  @author Olivier Girard <olivier@openshot.org>
 
  @section LICENSE

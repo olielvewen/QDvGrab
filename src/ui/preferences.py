@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  @file
- @brief This file contains the QDvGrab Preferences dialog (i.e Preferences of QDvgrab)
+ @brief preferences.py - This file contains the QDvGrab Preferences dialog (i.e Preferences of QDvgrab)
  @author Olivier Girard <olivier@openshot.org>
 
  @section LICENSE

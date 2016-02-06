@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  @file
- @brief This file contains the QDvGrab dialog (i.e A tool for grab videos from Dv Camecorders)
+ @brief qdvgrab.py - This file contains the QDvGrab dialog (i.e A tool for grab videos from Dv Camecorders)
  @author Olivier Girard <olivier@openshot.org>
 
  @section LICENSE

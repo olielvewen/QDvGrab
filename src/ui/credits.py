@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  @file
- @brief This file contains the QDvGrab Credits dialog (i.e Credits for QdvGrab Project)
+ @brief credits.py - This file contains the QDvGrab Credits dialog (i.e Credits for QdvGrab Project)
  @author Olivier Girard <olivier@openshot.org>
 
  @section LICENSE

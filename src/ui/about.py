@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  @file
- @brief This file contains the QDvGrab About dialog (i.e About for QdvGrab Project)
+ @brief about.py - This file contains the QDvGrab About dialog (i.e About for QdvGrab Project)
  @author Olivier Girard <olivier@openshot.org>
 
  @section LICENSE
