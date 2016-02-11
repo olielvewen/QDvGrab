@@ -82,8 +82,8 @@
       <file leaf-file-name="qdvgrab.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/qdvgrab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8558559">
-              <caret line="311" column="12" selection-start-line="311" selection-start-column="12" selection-end-line="311" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.6846847">
+              <caret line="319" column="12" selection-start-line="319" selection-start-column="12" selection-end-line="319" selection-end-column="12" />
               <folding>
                 <element signature="e#1039#1049#0" expanded="true" />
               </folding>
@@ -1041,8 +1041,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/qdvgrab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8558559">
-          <caret line="311" column="12" selection-start-line="311" selection-start-column="12" selection-end-line="311" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.6846847">
+          <caret line="319" column="12" selection-start-line="319" selection-start-column="12" selection-end-line="319" selection-end-column="12" />
           <folding>
             <element signature="e#1039#1049#0" expanded="true" />
           </folding>
