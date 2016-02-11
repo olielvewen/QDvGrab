@@ -294,6 +294,15 @@ class QdvGrab(QMainWindow):
         self.windo.show()
 
     #===================================================================================================================
+    def logInfo(self):
+
+        """
+        method for getting info about what user have done  in the configfile - necessary for debugging - probably will be
+        replace in the future by logging function
+
+        """
+        pass
+    #===================================================================================================================
 
 
 if __name__ == "__main__":
