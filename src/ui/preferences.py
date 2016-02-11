@@ -37,6 +37,7 @@ import shutil
 #Need for create command line
 import subprocess
 
+
 #need for display gui
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -47,7 +48,6 @@ from credits import Credits
 
 #Need others settings file
 import info
-
 
 
 class PreFerences(QDialog):
@@ -249,6 +249,7 @@ class PreFerences(QDialog):
         Choose the capture format i.e either dv format or hdv format. And the main interface change thanks to this choice
 
         """
+        
         pass
 
     #===================================================================================================================

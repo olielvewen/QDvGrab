@@ -63,8 +63,6 @@ app_version = "0.10"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
-FormatdvList = {} #dico format dv list
-FormathdvList = {} #dico format hdv list
 Variables = {"Cmd" :"",
              "CmdList" :[], #list commands to execute"
              "ConfigFolder" :os.path.join(QDir.homePath(), ".qdvgrab"),
