@@ -313,8 +313,18 @@ class QdvGrab(QMainWindow):
 
     #===================================================================================================================
     def checkSizeDisk(self):
+
         """
         method for getting the size (free or not) of the hard drive
+
+        """
+        pass
+
+    #===================================================================================================================
+    def getDevice(self):
+
+        """
+        method for getting the mounting point and the name (?) of the camcorder
 
         """
         pass
