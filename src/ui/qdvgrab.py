@@ -55,7 +55,7 @@ from preferences import PreFerences
 from about import About
 
 #others settings file
-from classes.info import *
+#from classes.info import *
 
 
 app_name = "QDvGrab"
