@@ -58,6 +58,7 @@ from about import About
 #others settings file
 import info
 
+
 app_name = "QDvGrab"
 app_version = "0.10"
 app_author = "Olivier Girard"
