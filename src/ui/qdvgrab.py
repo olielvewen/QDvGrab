@@ -52,11 +52,10 @@ from PyQt5.QtWidgets import *
 # Used for call ui files
 from qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
-from credits import Credits
 from about import About
 
 #others settings file
-import info
+from classes.info import *
 
 
 app_name = "QDvGrab"

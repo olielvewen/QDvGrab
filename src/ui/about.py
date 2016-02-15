@@ -26,7 +26,6 @@
  """
 # Used to run it
 import sys
-import os
 
 # Need for path
 import platform
@@ -41,7 +40,7 @@ from aboutui import Ui_aboutscreen
 from credits import Credits
 
 #Need others settings files
-import info
+from classes.info import *
 
 
 app_name = "QDvGrab"
