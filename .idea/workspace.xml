@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1edcf57-509b-4139-a86b-6b7a0fff6b19" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/about.py" afterPath="$PROJECT_DIR$/src/ui/about.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/credits.py" afterPath="$PROJECT_DIR$/src/ui/credits.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/preferences.py" afterPath="$PROJECT_DIR$/src/ui/preferences.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/qdvgrab.py" afterPath="$PROJECT_DIR$/src/ui/qdvgrab.py" />
     </list>
     <ignored path="QDvgrab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="launch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="launch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/windows/launch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91791046">
-              <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding>
                 <element signature="e#46#55#0" expanded="true" />
               </folding>
@@ -104,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preferences.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="preferences.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.51492536">
+              <caret line="65" column="112" selection-start-line="65" selection-start-column="112" selection-end-line="65" selection-end-column="112" />
               <folding>
                 <element signature="e#1018#1028#0" expanded="true" />
               </folding>
@@ -159,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/ui/about.py" />
         <option value="$PROJECT_DIR$/src/ui/credits.py" />
         <option value="$PROJECT_DIR$/src/ui/qdvgrab.py" />
+        <option value="$PROJECT_DIR$/src/windows/launch.py" />
         <option value="$PROJECT_DIR$/src/ui/preferences.py" />
       </list>
     </option>
@@ -1015,16 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="e#1018#1028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/info.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1035,10 +1024,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/windows/launch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91791046">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding>
             <element signature="e#46#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/preferences.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51492536">
+          <caret line="65" column="112" selection-start-line="65" selection-start-column="112" selection-end-line="65" selection-end-column="112" />
+          <folding>
+            <element signature="e#1018#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>

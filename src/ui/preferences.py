@@ -63,7 +63,7 @@ class PreFerences(QDialog):
         QTimer.singleShot(0, self.loadSettings)
         #QTimer.singleShot(1000, self.dvgrabPath)
 
-        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
+        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Hdv (.m2t)', 'Mpeg 2 (.mpg)', 'Mov (.mov)']
         for format in format_capture:
             self.ui.cmbformatcapture.addItem(format)
             self.ui.cmbformatcapture.setCurrentIndex(0)
