@@ -305,7 +305,7 @@ class PreFerences(QDialog):
         #CaptureSettings
         automatic_record = self.ui.chkautomaticrecord.isChecked()
 
-        settings = QSettings()
+        settings = QSettings(QSettings.SystemScope, 'eCreate', 'qdvgrab')
 
         #settings.beginGroup('MainWindowSettings')
         #settings.setValue()
