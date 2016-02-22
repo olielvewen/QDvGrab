@@ -290,17 +290,43 @@ class PreFerences(QDialog):
 
         """
 
+        #MainWindowSettings
+        language = QLocale.system().name()
+
+        #GeneralSettings
         output_default_path = os.path.join(QDir.homePath() + "/Videos/")
-        name_camcorder = ""
+        name_camcorder = self.ui.lnenamecamecorder.text()
+        formats_choose = self.ui.cmbformatcapture.setCurrentIndex()
+
+        #ConversionSettings
+        automatic_conversion = self.ui.chknone.isChecked()
+        detection_scene = self.ui.chkdetection.isChecked()
+
+        #CaptureSettings
+        automatic_record = self.ui.chkautomaticrecord.isChecked()
 
         settings = QSettings()
 
-        settings.setValue("output_default_path", self.ui.lneoutputfile.text())
-        settings.setValue("name_camcorder", self.ui.lnenamecamecorder.text())
-        settings.setValue("formats_choose", self.ui.cmbformatcapture.setCurrentIndex())
-        settings.setValue("automatic_conversion", self.ui.chknone.isChecked())
-        settings.setValue("detection_scene", self.ui.chkdetection.isChecked())
-        settings.setValue("automatic_record", self.ui.chkautomaticrecord.isChecked())
+        #settings.beginGroup('MainWindowSettings')
+        #settings.setValue()
+        #settings.setValue()
+        #settings.endGroup()
+
+        settings.beginGroup('GeneralSettings')
+        settings.setValue('language', language)
+        settings.setValue('output_default_path', output_default_path)
+        settings.setValue('name_camcorder', name_camcorder)
+        settings.endGroup()
+
+        settings.beginGroup('ConversionSettings')
+        settings.setValue('formats_choose', formats_choose)
+        settings.setValue('automatic_conversion', automatic_conversion)
+        settings.setValue('detection_scene', detection_scene)
+        settings.endGroup()
+
+        settings.beginGroup('CaptureSettings')
+        settings.setValue('automatic_record', automatic_record)
+        settings.endGroup()
 
     #===================================================================================================================
     def chooseAutomaticConversion(self):
