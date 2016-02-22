@@ -116,8 +116,8 @@ class PreFerences(QDialog):
         self.ui.btndvgrab.clicked.connect(self.dvgrabPath)
         self.ui.btntranscode.clicked.connect(self.transcodePath)
         self.ui.btnchoosefile.clicked.connect(self.outputPath)
-        self.ui.cmblanguages.activated.connect(self.languageSelected)
-        self.ui.cmbformatcapture.activated.connect(self.chooseFormatCapture)
+        self.ui.cmblanguages.currentIndexChanged.connect(self.languageSelected)
+        self.ui.cmbformatcapture.currentIndexChanged.connect(self.chooseFormatCapture)
         self.ui.chknone.toggled.connect(self.chooseAutomaticConversion)
         self.ui.chkdvraw.toggled.connect(self.chooseAutomaticConversion)
         self.ui.chkdv2.toggled.connect(self.chooseAutomaticConversion)
@@ -229,6 +229,7 @@ class PreFerences(QDialog):
 
         """
         new_output_path = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
+        new_output_path = str(self.ui.lneoutputfile.text())
 
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
@@ -262,18 +263,30 @@ class PreFerences(QDialog):
 
         settings = QSettings()
 
-        new_output_path = settings.value("output_default_path")
-        name_camcorder = settings.value("name_camcorder")
-        formats_choose = settings.value("formats_choose")
-        automatic_conversion = settings.value("automatic_conversion")
-        detection_scene = settings.value("detection_scene")
-        automatic_record = settings.value("automatic_record")
+        language = settings.value('language').toString()
 
+        new_output_path = settings.value('new_output_path').toString()
+        name_camcorder = settings.value('name_camcorder').toString()
+
+        formats_choose = settings.value('formats_choose').toString()
+        automatic_conversion = settings.value('automatic_conversion').toBool()
+        detection_scene = settings.value('detection_scene').toBool()
+
+        automatic_record = settings.value('automatic_record').toBool()
+
+        if language:
+            index = self.ui.cmblanguages.itemText(language)
+            self.ui.cmblanguages.setCurrentIndex(index)
+        else:
+            self.ui.cmblanguages.setCurrentIndex(language)
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
         if name_camcorder:
             self.ui.lnenamecamecorder.setText(name_camcorder)
         if formats_choose:
+            index = self.ui.cmbformatcapture.itemText(formats_choose)
+            self.ui.cmbformatcapture.setCurrentIndex(index)
+        else:
             self.ui.cmbformatcapture.setCurrentIndex(formats_choose)
         if automatic_conversion:
             self.ui.chknone.setChecked(True)
@@ -294,7 +307,7 @@ class PreFerences(QDialog):
         language = QLocale.system().name()
 
         #GeneralSettings
-        output_default_path = os.path.join(QDir.homePath() + "/Videos/")
+        new_output_path = os.path.join(QDir.homePath() + "/Videos/")
         name_camcorder = self.ui.lnenamecamecorder.text()
         formats_choose = self.ui.cmbformatcapture.setCurrentIndex()
 
@@ -314,7 +327,7 @@ class PreFerences(QDialog):
 
         settings.beginGroup('GeneralSettings')
         settings.setValue('language', language)
-        settings.setValue('output_default_path', output_default_path)
+        settings.setValue('new_output_path', new_output_path)
         settings.setValue('name_camcorder', name_camcorder)
         settings.endGroup()
 
