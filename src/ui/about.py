@@ -26,6 +26,7 @@
  """
 # Used to run it
 import sys
+import os
 
 # Need for path
 import platform
@@ -60,13 +61,15 @@ class About(QDialog):
         self.connectActions()
 
         self.parent = parent
+
     #===================================================================================================================
     def setupUi(self):
 
         self.ui = Ui_aboutscreen()
         self.ui.setupUi(self)
 
-        self.ui.lblimageicon.setPixmap(QPixmap("tool-animator.png"))
+        icon_path = os.path.join(os.path.dirname(__file__), "../images/tool-animator.png")
+        self.ui.lblimageicon.setPixmap(QPixmap(icon_path))
         self.ui.lblimageicon.setMaximumSize(QSize(220, 340))
         self.ui.lblimageicon.setScaledContents(True)
 
