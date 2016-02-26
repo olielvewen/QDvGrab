@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>tool-animator.png</file>
+    <file>EN.png</file>
+    <file>folder-blue.png</file>
+    <file>folder-video.png</file>
+    <file>FR.png</file>
+    <file>system-log-out.png</file>
+    <file>user-home.png</file>
+    <file>media-optical-video.png</file>
+    <file>drive-harddisk.png</file>
+    <file>media-tape.png</file>
+    <file>application-exit.png</file>
+    <file>system-help.png</file>
+    <file>tools-media-optical-burn.png</file>
+    <file>tools-wizard.png</file>
+  </qresource>
+</RCC>

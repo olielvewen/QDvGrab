@@ -49,6 +49,9 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
+#need to display icon anywhere the program is called
+import qdvgrabressources_rc
+
 # Used for call ui files
 from qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
