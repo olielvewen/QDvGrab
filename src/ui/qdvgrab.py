@@ -266,7 +266,7 @@ class QdvGrab(QMainWindow):
 
 
         #Save all settings if they have done modified
-        preferences.PreFerences.saveSettings()
+        PreFerences.saveSettings()
 
         event.accept()
 
