@@ -235,7 +235,7 @@ class PreFerences(QDialog):
             self.ui.lneoutputfile.setText(new_output_path)
 
     #===================================================================================================================
-    def languageSelected(self):
+    def languageSelected(self, value):
         """
         Display the language by default and if not or if the user would like to change it do it here without changing
         this one of his desktop
@@ -253,6 +253,8 @@ class PreFerences(QDialog):
         
         pass
 
+
+
     #===================================================================================================================
     def loadSettings(self):
 
@@ -263,31 +265,31 @@ class PreFerences(QDialog):
 
         settings = QSettings()
 
-        language = settings.value('language').toString()
+        language = settings.value('language', type=str)
 
-        new_output_path = settings.value('new_output_path').toString()
-        name_camcorder = settings.value('name_camcorder').toString()
+        new_output_path = settings.value('new_output_path', type=str)
+        name_camcorder = settings.value('name_camcorder', type=str)
 
-        formats_choose = settings.value('formats_choose').toString()
-        automatic_conversion = settings.value('automatic_conversion').toBool()
-        detection_scene = settings.value('detection_scene').toBool()
+        formats_choose = settings.value('formats_choose', True, type=str)
+        automatic_conversion = settings.value('automatic_conversion', True, type=bool)
+        detection_scene = settings.value('detection_scene', True, type=bool)
 
-        automatic_record = settings.value('automatic_record').toBool()
+        automatic_record = settings.value('automatic_record', True, type=bool)
 
         if language:
-            index = self.ui.cmblanguages.itemText(language)
-            self.ui.cmblanguages.setCurrentIndex(index)
+            value = self.ui.cmblanguages.addItem(language)
+            self.ui.cmblanguages.setCurrentText(value)
         else:
-            self.ui.cmblanguages.setCurrentIndex(language)
+            self.ui.cmblanguages.setCurrentText(language)
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
         if name_camcorder:
-            self.ui.lnenamecamecorder.setText(name_camcorder)
+            self.ui.lnenamecamcorder.setText(name_camcorder)
         if formats_choose:
-            index = self.ui.cmbformatcapture.itemText(formats_choose)
-            self.ui.cmbformatcapture.setCurrentIndex(index)
+            format = self.ui.cmbformatcapture.addItem(formats_choose)
+            self.ui.cmbformatcapture.setCurrentText(format)
         else:
-            self.ui.cmbformatcapture.setCurrentIndex(formats_choose)
+            self.ui.cmbformatcapture.setCurrentText(formats_choose)
         if automatic_conversion:
             self.ui.chknone.setChecked(True)
         if detection_scene:
