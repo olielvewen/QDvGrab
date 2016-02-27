@@ -47,7 +47,7 @@ from preferencesui import Ui_Dialog
 from credits import Credits
 
 #Need others settings file
-import info
+#from classes.info import *
 
 
 class PreFerences(QDialog):
@@ -63,7 +63,7 @@ class PreFerences(QDialog):
         QTimer.singleShot(0, self.loadSettings)
         #QTimer.singleShot(1000, self.dvgrabPath)
 
-        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Dv Raw (.dv)', 'Mpeg 2 (.mpg)']
+        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Hdv (.m2t)', 'Mpeg 2 (.mpg)', 'Mov (.mov)']
         for format in format_capture:
             self.ui.cmbformatcapture.addItem(format)
             self.ui.cmbformatcapture.setCurrentIndex(0)
@@ -116,8 +116,8 @@ class PreFerences(QDialog):
         self.ui.btndvgrab.clicked.connect(self.dvgrabPath)
         self.ui.btntranscode.clicked.connect(self.transcodePath)
         self.ui.btnchoosefile.clicked.connect(self.outputPath)
-        self.ui.cmblanguages.activated.connect(self.languageSelected)
-        self.ui.cmbformatcapture.activated.connect(self.chooseFormatCapture)
+        self.ui.cmblanguages.currentIndexChanged.connect(self.languageSelected)
+        self.ui.cmbformatcapture.currentIndexChanged.connect(self.chooseFormatCapture)
         self.ui.chknone.toggled.connect(self.chooseAutomaticConversion)
         self.ui.chkdvraw.toggled.connect(self.chooseAutomaticConversion)
         self.ui.chkdv2.toggled.connect(self.chooseAutomaticConversion)
@@ -229,12 +229,13 @@ class PreFerences(QDialog):
 
         """
         new_output_path = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
+        new_output_path = str(self.ui.lneoutputfile.text())
 
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
 
     #===================================================================================================================
-    def languageSelected(self):
+    def languageSelected(self, value):
         """
         Display the language by default and if not or if the user would like to change it do it here without changing
         this one of his desktop
@@ -252,6 +253,8 @@ class PreFerences(QDialog):
         
         pass
 
+
+
     #===================================================================================================================
     def loadSettings(self):
 
@@ -262,19 +265,31 @@ class PreFerences(QDialog):
 
         settings = QSettings()
 
-        new_output_path = settings.value("output_default_path")
-        name_camcorder = settings.value("name_camcorder")
-        formats_choose = settings.value("formats_choose")
-        automatic_conversion = settings.value("automatic_conversion")
-        detection_scene = settings.value("detection_scene")
-        automatic_record = settings.value("automatic_record")
+        language = settings.value('language', type=str)
 
+        new_output_path = settings.value('new_output_path', type=str)
+        name_camcorder = settings.value('name_camcorder', type=str)
+
+        formats_choose = settings.value('formats_choose', True, type=str)
+        automatic_conversion = settings.value('automatic_conversion', True, type=bool)
+        detection_scene = settings.value('detection_scene', True, type=bool)
+
+        automatic_record = settings.value('automatic_record', True, type=bool)
+
+        if language:
+            value = self.ui.cmblanguages.addItem(language)
+            self.ui.cmblanguages.setCurrentText(value)
+        else:
+            self.ui.cmblanguages.setCurrentText(language)
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
         if name_camcorder:
-            self.ui.lnenamecamecorder.setText(name_camcorder)
+            self.ui.lnenamecamcorder.setText(name_camcorder)
         if formats_choose:
-            self.ui.cmbformatcapture.setCurrentIndex(formats_choose)
+            format = self.ui.cmbformatcapture.addItem(formats_choose)
+            self.ui.cmbformatcapture.setCurrentText(format)
+        else:
+            self.ui.cmbformatcapture.setCurrentText(formats_choose)
         if automatic_conversion:
             self.ui.chknone.setChecked(True)
         if detection_scene:
@@ -290,17 +305,43 @@ class PreFerences(QDialog):
 
         """
 
-        output_default_path = os.path.join(QDir.homePath() + "/Videos/")
-        name_camcorder = ""
+        #MainWindowSettings
+        language = QLocale.system().name()
 
-        settings = QSettings()
+        #GeneralSettings
+        new_output_path = os.path.join(QDir.homePath() + "/Videos/")
+        name_camcorder = self.ui.lnenamecamecorder.text()
+        formats_choose = self.ui.cmbformatcapture.setCurrentIndex()
 
-        settings.setValue("output_default_path", self.ui.lneoutputfile.text())
-        settings.setValue("name_camcorder", self.ui.lnenamecamecorder.text())
-        settings.setValue("formats_choose", self.ui.cmbformatcapture.setCurrentIndex())
-        settings.setValue("automatic_conversion", self.ui.chknone.isChecked())
-        settings.setValue("detection_scene", self.ui.chkdetection.isChecked())
-        settings.setValue("automatic_record", self.ui.chkautomaticrecord.isChecked())
+        #ConversionSettings
+        automatic_conversion = self.ui.chknone.isChecked()
+        detection_scene = self.ui.chkdetection.isChecked()
+
+        #CaptureSettings
+        automatic_record = self.ui.chkautomaticrecord.isChecked()
+
+        settings = QSettings(QSettings.SystemScope, 'eCreate', 'qdvgrab')
+
+        #settings.beginGroup('MainWindowSettings')
+        #settings.setValue()
+        #settings.setValue()
+        #settings.endGroup()
+
+        settings.beginGroup('GeneralSettings')
+        settings.setValue('language', language)
+        settings.setValue('new_output_path', new_output_path)
+        settings.setValue('name_camcorder', name_camcorder)
+        settings.endGroup()
+
+        settings.beginGroup('ConversionSettings')
+        settings.setValue('formats_choose', formats_choose)
+        settings.setValue('automatic_conversion', automatic_conversion)
+        settings.setValue('detection_scene', detection_scene)
+        settings.endGroup()
+
+        settings.beginGroup('CaptureSettings')
+        settings.setValue('automatic_record', automatic_record)
+        settings.endGroup()
 
     #===================================================================================================================
     def chooseAutomaticConversion(self):

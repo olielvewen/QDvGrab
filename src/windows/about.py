@@ -41,7 +41,7 @@ from aboutui import Ui_aboutscreen
 from credits import Credits
 
 #Need others settings files
-import info
+#from classes.info import *
 
 
 app_name = "QDvGrab"
@@ -61,13 +61,15 @@ class About(QDialog):
         self.connectActions()
 
         self.parent = parent
+
     #===================================================================================================================
     def setupUi(self):
 
         self.ui = Ui_aboutscreen()
         self.ui.setupUi(self)
 
-        self.ui.lblimageicon.setPixmap(QPixmap("tool-animator.png"))
+        icon_path = os.path.join(os.path.dirname(__file__), "../images/tool-animator.png")
+        self.ui.lblimageicon.setPixmap(QPixmap(icon_path))
         self.ui.lblimageicon.setMaximumSize(QSize(220, 340))
         self.ui.lblimageicon.setScaledContents(True)
 

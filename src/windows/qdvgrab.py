@@ -49,14 +49,17 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
+#need to display icon anywhere the program is called
+import qdvgrabressources_rc
+
 # Used for call ui files
 from qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
-from credits import Credits
 from about import About
 
 #others settings file
-import info
+#from classes.info import *
+
 
 app_name = "QDvGrab"
 app_version = "0.10"
@@ -71,7 +74,8 @@ Variables = {"Cmd" :"",
              "DeviceOutput" :"", #Device name Camecorder
              "DirectNameOutput" :"", #name of output folder os.path.direname()
              "TempFolderName" :"", #name of temporary folder
-             "TempFolderOutput" :"" #name of folder output
+             "TempFolderOutput" :"", #name of folder output
+             "geometry_window" :"",#
              }
 
 #check if we are on Linux either exit
@@ -95,17 +99,24 @@ class QdvGrab(QMainWindow):
 
         QTimer.singleShot(0, self.loadSettings)
 
-        # def centerScreen(self):
-        ##geometry_window = ""
-        ##self.geometry_window = geometry_window
+        def centerScreen(self):
+            """
+            We keep the windows geometry modified by the user either this one by default
+            :param self:
+            :return:
+            """
+            geometry_window = ""
 
-        # if self.geometry_window:
-        # self.resize(geometry_window[0], geometry_window[1])
-        # else:
-        # self.geometry_window = (self.geometry().width(), self.geometry().height())
+            #we catch variables (width/height)
+            if geometry_window:
+                self.resize(geometry_window[0], geometry_window[1])
+            else:
+                geometry_window = (self.geometry().width(), self.geometry().height())
 
-        ##size_screen = QDesktopWidget().screenGeometry()
-        ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
+            #we catch the window size on the screen
+            size_screen = QDesktopWidget().screenGeometry()
+            self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
+    #===================================================================================================================
 
     def loadSettings(self):
 
@@ -255,7 +266,7 @@ class QdvGrab(QMainWindow):
 
 
         #Save all settings if they have done modified
-        preferences.PreFerences.saveSettings()
+        PreFerences.saveSettings()
 
         event.accept()
 
@@ -293,6 +304,50 @@ class QdvGrab(QMainWindow):
         self.windo = About()
         self.windo.show()
 
+    #===================================================================================================================
+    def logInfo(self):
+
+        """
+        method for getting info about what user have done  in the configfile - necessary for debugging - probably will be
+        replace in the future by logging function
+
+        """
+        pass
+    #===================================================================================================================
+    def onCaptureProgress(self):
+
+        """
+        update the progression of the progressbar
+
+        """
+        pass
+
+    #===================================================================================================================
+    def checkSizeDisk(self):
+
+        """
+        method for getting the size (free or not) of the hard drive
+
+        """
+        pass
+
+    #===================================================================================================================
+    def getDevice(self):
+
+        """
+        method for getting the mounting point and the name (?) of the camcorder
+
+        """
+        pass
+
+    #===================================================================================================================
+    def creationProcess(self):
+
+        """
+        method for create the command line
+
+        """
+        pass
     #===================================================================================================================
 
 
