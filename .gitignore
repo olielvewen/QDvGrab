@@ -58,5 +58,5 @@ target/
 
 # divers
 .idea
-idea*/
+.idea*/
 *.xml
