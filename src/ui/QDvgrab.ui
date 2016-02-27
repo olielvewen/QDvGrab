@@ -58,7 +58,7 @@
         <item>
          <widget class="QLabel" name="label_5">
           <property name="pixmap">
-           <pixmap>../images/drive-harddisk.png</pixmap>
+           <pixmap resource="../images/qdvgrabressources.qrc">:/newPrefix/drive-harddisk.png</pixmap>
           </property>
          </widget>
         </item>
@@ -205,8 +205,8 @@
              <string>DV Acquisition</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../images/media-optical-video.png</normaloff>../images/media-optical-video.png</iconset>
+             <iconset resource="../images/qdvgrabressources.qrc">
+              <normaloff>:/newPrefix/media-optical-video.png</normaloff>:/newPrefix/media-optical-video.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -237,8 +237,8 @@
              <string>HDV Acquisition</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../images/tools-media-optical-burn.png</normaloff>../images/tools-media-optical-burn.png</iconset>
+             <iconset resource="../images/qdvgrabressources.qrc">
+              <normaloff>:/newPrefix/tools-media-optical-burn.png</normaloff>:/newPrefix/tools-media-optical-burn.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -270,8 +270,8 @@
              <string>Start Record</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../images/media-tape.png</normaloff>../images/media-tape.png</iconset>
+             <iconset resource="../images/qdvgrabressources.qrc">
+              <normaloff>:/newPrefix/media-tape.png</normaloff>:/newPrefix/media-tape.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -306,8 +306,8 @@
              <string>Preferences</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../images/tools-wizard.png</normaloff>../images/tools-wizard.png</iconset>
+             <iconset resource="../images/qdvgrabressources.qrc">
+              <normaloff>:/newPrefix/tools-wizard.png</normaloff>:/newPrefix/tools-wizard.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -358,8 +358,8 @@
              <string>Help</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../images/system-help.png</normaloff>../images/system-help.png</iconset>
+             <iconset resource="../images/qdvgrabressources.qrc">
+              <normaloff>:/newPrefix/system-help.png</normaloff>:/newPrefix/system-help.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -394,8 +394,8 @@
              <string>Quit</string>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>../images/application-exit.png</normaloff>../images/application-exit.png</iconset>
+             <iconset resource="../images/qdvgrabressources.qrc">
+              <normaloff>:/newPrefix/application-exit.png</normaloff>:/newPrefix/application-exit.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -498,7 +498,9 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../images/qdvgrabressources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>btnquit</sender>

@@ -60,10 +60,10 @@ class Credits(QDialog):
     #===================================================================================================================
     def showCredits(self):
 
-        #PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-        #path_license = os.path.join(info.PATH, 'LICENSE')
+        #path_license = os.path.join(os.path.dirname(os.path.dirname(os.path.basename(__file__))))
+        #path_license = os.path.join(os.path.dirname("../../"), "LICENSE")
 
-        with open("(os.path.join(info.PATH, 'LICENSE'))", 'r') as my_license:
+        with open('path_license', 'r') as my_license:
             text = my_license.read()
 
             self.ui.textBrowserlicense.append(text)
