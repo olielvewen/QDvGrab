@@ -39,15 +39,16 @@ except ImportError:
     sys.exit(1)
 
 try:
-    from src.windows.qdvgrabui import Ui_MainWindow
     from src.ui.qdvgrabui import Ui_MainWindow
-    from src.ui import QdvGrab
+    from src.ui.qdvgrab import QdvGrab
+    from src.windows.qdvgrab import QdvGrab
 except ImportError:
     print("unable to load main file of QDvGrab - an error is came")
+    sys.exit(1)
 
-    #We launch the GUI
-    application = QApplication(sys.argv)
-    QdvGrab = QdvGrab()
-    QdvGrab.show()
-    sys.exit(application.exec_())
+#We launch the GUI
+application = QApplication(sys.argv)
+QdvGrab = QdvGrab()
+QdvGrab.show()
+sys.exit(application.exec_())
 
