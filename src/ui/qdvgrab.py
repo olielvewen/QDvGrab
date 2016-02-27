@@ -71,7 +71,8 @@ Variables = {"Cmd" :"",
              "DeviceOutput" :"", #Device name Camecorder
              "DirectNameOutput" :"", #name of output folder os.path.direname()
              "TempFolderName" :"", #name of temporary folder
-             "TempFolderOutput" :"" #name of folder output
+             "TempFolderOutput" :"", #name of folder output
+             "geometry_window" :"",#
              }
 
 #check if we are on Linux either exit
@@ -95,17 +96,24 @@ class QdvGrab(QMainWindow):
 
         QTimer.singleShot(0, self.loadSettings)
 
-        # def centerScreen(self):
-        ##geometry_window = ""
-        ##self.geometry_window = geometry_window
+        def centerScreen(self):
+            """
+            We keep the windows geometry modified by the user either this one by default
+            :param self:
+            :return:
+            """
+            geometry_window = ""
 
-        # if self.geometry_window:
-        # self.resize(geometry_window[0], geometry_window[1])
-        # else:
-        # self.geometry_window = (self.geometry().width(), self.geometry().height())
+            #we catch variables (width/height)
+            if geometry_window:
+                self.resize(geometry_window[0], geometry_window[1])
+            else:
+                geometry_window = (self.geometry().width(), self.geometry().height())
 
-        ##size_screen = QDesktopWidget().screenGeometry()
-        ##self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
+            #we catch the window size on the screen
+            size_screen = QDesktopWidget().screenGeometry()
+            self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
+    #===================================================================================================================
 
     def loadSettings(self):
 
