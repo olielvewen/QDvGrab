@@ -38,12 +38,16 @@ if __name__ == "__main__":
         print("unable to import PyQt5 - you should install it if you want an functional version of qdvgrab")
         sys.exit(1)
 
+    try:
         from src.windows.qdvgrabui import Ui_MainWindow
         from src.ui.qdvgrabui import Ui_MainWindow
+        from src.ui import QdvGrab
+    except ImportError:
+        print("unable to load main file of QDvGrab - an error is came")
 
-        #We launch the GUI
-        application = QApplication(sys.argv)
-        QdvGrab = QdvGrab()
-        QdvGrab.show()
-        sys.exit(application.exec_())
+    #We launch the GUI
+    application = QApplication(sys.argv)
+    QdvGrab = QdvGrab()
+    QdvGrab.show()
+    sys.exit(application.exec_())
 
