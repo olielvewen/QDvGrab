@@ -11,13 +11,7 @@ if __name__ == "__main__":
     project_path = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, project_path)
     os.chdir(project_path)
-
-    #we are making qdvgrab folder in user home
-    #user_folder = QDir.homePath()
-    #configFolder = os.path.join(QDir.homePath(), ".qdvgrab")
-    #configFile = os.path.join(QDir.homePath(), ".qdvgrab/config.conf")
-    #configLog = os.path.join(QDir.homePath(), ".qdvgrab/logfile")
-
+    
     #we are making all other paths
     locale_path = os.path.join(project_path, 'src', 'locale')
     classes_path = os.path.join(project_path, 'src', 'classes')
@@ -25,6 +19,12 @@ if __name__ == "__main__":
     ui_path = os.path.join(project_path, 'src', 'ui')
     windows_path = os.path.join(project_path, 'src','windows')
     license_path = os.path.dirname(os.path.abspath('LICENSE'))
+
+    #we are making qdvgrab folder in user home
+    #user_folder = QDir.homePath()
+    #configFolder = os.path.join(QDir.homePath(), ".qdvgrab")
+    #configFile = os.path.join(QDir.homePath(), ".qdvgrab/config.conf")
+    #configLog = os.path.join(QDir.homePath(), ".qdvgrab/logfile")
 
     #we are creating a basic config file
 
