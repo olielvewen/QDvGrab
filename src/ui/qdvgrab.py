@@ -59,7 +59,7 @@ from about import About
 
 #others settings file
 #from classes.info import *
-
+#from src.classes.info import *
 
 app_name = "QDvGrab"
 app_version = "0.10"

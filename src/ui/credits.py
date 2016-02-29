@@ -39,6 +39,7 @@ from PyQt5.QtWidgets import *
 
 # Used for call ui files
 from creditsui import Ui_creditscreen
+#from src.classes import info
 #from classes.info import *
 
 class Credits(QDialog):
@@ -47,6 +48,7 @@ class Credits(QDialog):
     This screen shows who has developed,documented, translated and the licence of the project
 
     """
+
     def __init__(self, parent=None):
         super(Credits, self).__init__(parent)
         self.setupUi()

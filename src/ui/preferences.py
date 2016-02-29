@@ -47,7 +47,7 @@ from preferencesui import Ui_Dialog
 from credits import Credits
 
 #Need others settings file
-#from classes.info import *
+#from src.classes.info import *
 
 
 class PreFerences(QDialog):
