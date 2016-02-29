@@ -99,23 +99,28 @@ class QdvGrab(QMainWindow):
 
         QTimer.singleShot(0, self.loadSettings)
 
-        def centerScreen(self):
-            """
-            We keep the windows geometry modified by the user either this one by default
-            :param self:
-            :return:
-            """
-            geometry_window = ""
+        self.ui.statusbar = QStatusBar()
+        message = str("Welcome to DvGrab {}".format(app_version))
+        self.ui.statusbar.showMessage(message)
+        print(message)
 
-            #we catch variables (width/height)
-            if geometry_window:
-                self.resize(geometry_window[0], geometry_window[1])
-            else:
-                geometry_window = (self.geometry().width(), self.geometry().height())
+    def centerScreen(self):
+        """
+        We keep the windows geometry modified by the user either this one by default
+        :param self:
+        :return:
+        """
+        geometry_window = ""
 
-            #we catch the window size on the screen
-            size_screen = QDesktopWidget().screenGeometry()
-            self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
+        #we catch variables (width/height)
+        if geometry_window:
+            self.resize(geometry_window[0], geometry_window[1])
+        else:
+            geometry_window = (self.geometry().width(), self.geometry().height())
+
+        #we catch the window size on the screen
+        size_screen = QDesktopWidget().screenGeometry()
+        self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
     #===================================================================================================================
 
     def loadSettings(self):

@@ -11,7 +11,7 @@ if __name__ == "__main__":
     project_path = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, project_path)
     os.chdir(project_path)
-    
+
     #we are making all other paths
     locale_path = os.path.join(project_path, 'src', 'locale')
     classes_path = os.path.join(project_path, 'src', 'classes')

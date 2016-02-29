@@ -53,12 +53,15 @@ from PyQt5.QtWidgets import *
 import qdvgrabressources_rc
 
 # Used for call ui files
-from qdvgrabui import Ui_MainWindow
-from preferences import PreFerences
-from about import About
+from ui.qdvgrabui import Ui_MainWindow
+#from ui.qdvgrabui import *
+from ui.preferences import PreFerences
+from ui.about import About
 
 #others settings file
-#from classes.info import *
+from classes.info import *
+
+from src.launch import *
 
 
 app_name = "QDvGrab"
@@ -93,6 +96,8 @@ class QdvGrab(QMainWindow):
 
     def __init__(self, parent=None):
         super(QdvGrab, self).__init__(parent)
+
+        #Ui_MainWindow = uic.loadUi(self, ui_path)
         self.setupUi()
         self.connectActions()
         self.updateUi()
