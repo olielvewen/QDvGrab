@@ -40,7 +40,7 @@ from PyQt5.QtWidgets import *
 # Used for call ui files
 from creditsui import Ui_creditscreen
 #from src.classes import info
-#from classes.info import *
+
 
 class Credits(QDialog):
 
