@@ -31,10 +31,10 @@ app_name = "QDvGrab"
 app_version = "0.10"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
-app_date_version = "2015122900000"
+app_date_version = "2016030960000"
 gpl_version = '3'
 SUPPORTED_LANGUAGES = ['English', 'French']
-PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+PATH = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
 HOME_PATH = os.path.join(os.path.expanduser("~"))
 USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
 TEMP_PATH = os.path.join(USER_PATH, "Temp")
@@ -47,15 +47,4 @@ CREDITS = {
     'code'         : [OG],
     'documentation': [OG],
     'translation'  : [OG],
-}
-
-SETUP = {
-    'name' : app_name,
-    'version' : app_version,
-    'date'    : app_date_version,
-    'license' : 'GNU GPL v.' + gpl_version,
-    'author'  : app_author,
-    'email'   : author_mail,
-    'url'     : 'https://github.com/olielvewen/QDvGrab/',
-    'description' : "Grab film on the hard drive in a easy way from a DV or HDV camecorder",
 }
