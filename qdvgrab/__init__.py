@@ -1,1 +1,0 @@
-__path__ = ["classes", "images", "ui", "windows"]
