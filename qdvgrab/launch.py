@@ -7,20 +7,20 @@ import sys
 
 if __name__ == "__main__":
 
-    #we are going into the work folder of the project
+    #we are going into the work folder of the project and add it to python system path
     project_path = os.path.dirname(os.path.abspath(__file__))
-    sys.path.insert(0, project_path)
-    os.chdir(project_path)
+    windows_path = os.path.join(project_path, 'src','windows')
+    sys.path.insert(0, windows_path)
+    os.chdir(windows_path)
 
     #we are making all other paths
     locale_path = os.path.join(project_path, 'src', 'locale')
     classes_path = os.path.join(project_path, 'src', 'classes')
     images_path = os.path.join(project_path, 'src', 'images')
     ui_path = os.path.join(project_path, 'src', 'ui')
-    windows_path = os.path.join(project_path, 'src','windows')
     license_path = os.path.dirname(os.path.abspath('LICENSE'))
 
-    #we are making qdvgrab folder in user home
+    #we are making qdvgrab folder in the user home
     #user_folder = QDir.homePath()
     #configFolder = os.path.join(QDir.homePath(), ".qdvgrab")
     #configFile = os.path.join(QDir.homePath(), ".qdvgrab/config.conf")
