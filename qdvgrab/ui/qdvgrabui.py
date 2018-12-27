@@ -237,7 +237,7 @@ class Ui_MainWindow(object):
         self.actionHelp.setText(_translate("MainWindow", "Help"))
         self.actionHelp.setShortcut(_translate("MainWindow", "Ctrl+H"))
 
-import qdvgrabressources_rc
+from images import qdvgrabressources_rc
 
 if __name__ == "__main__":
     import sys
