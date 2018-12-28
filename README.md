@@ -22,19 +22,25 @@ Features
 Screenshots
 -----------
 
-###QDvGrab
+### QDvGrab
 
 <p align="center">
     <img src="qdvgrab/classes/qdvgrab.png" alt="QDvGrab" width="500">
 </p>
 
-###Preferences
+### Preferences
 
-<img src="qdvgrab/classes/preferences1.png" alt="Preferences" width="500">
+<p align="center">
+	<img src="qdvgrab/classes/preferences1.png" alt="Preferences" width="500">
+</p>
 
-<img src="qdvgrab/classes/preferences2.png" alt="Preferences" width="500">
+<p align="center">
+	<img src="qdvgrab/classes/preferences2.png" alt="Preferences" width="500">
+</p>
 
-<img src="qdvgrab/classes/preferences3.png" alt="Preferences" width="500">
+<p align="center">
+	<img src="qdvgrab/classes/preferences3.png" alt="Preferences" width="500">
+</p>
 
 
 Dependencies
