@@ -22,6 +22,21 @@ Features
 Screenshots
 -----------
 
+###QDvGrab
+
+<p align="center">
+    <img src="qdvgrab/classes/qdvgrab.png" alt="QDvGrab" width="500">
+</p>
+
+###Preferences
+
+<img src="qdvgrab/classes/preferences1.png" alt="Preferences" width="500">
+
+<img src="qdvgrab/classes/preferences2.png" alt="Preferences" width="500">
+
+<img src="qdvgrab/classes/preferences3.png" alt="Preferences" width="500">
+
+
 Dependencies
 ------------
 
@@ -33,7 +48,7 @@ Dependencies
 Installation
 ------------
 
-For the moment, just open a console in the src folder and type:
+For the moment, just open a console in the qdvgrab folder and type:
 
  ```
 python qdvgrab.py
