@@ -98,7 +98,6 @@ class QdvGrab(QMainWindow):
 
         QTimer.singleShot(0, self.loadSettings)
 
-        self.ui.statusbar = QStatusBar()
         message = str("Welcome to DvGrab {}".format(app_version))
         self.ui.statusbar.showMessage(message)
         print(message)
