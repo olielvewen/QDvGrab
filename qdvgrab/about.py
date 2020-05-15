@@ -27,7 +27,7 @@ import platform
 
 # Need for display gui
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QSize, QT_VERSION_STR, PYQT_VERSION_STR
+from PyQt5.QtCore import QSize, QT_VERSION_STR, PYQT_VERSION_STR, pyqtSlot
 from PyQt5.QtWidgets import QDialog, QApplication
 
 # Used for call ui files
@@ -83,7 +83,8 @@ class About(QDialog):
 
         self.ui.btncredits.clicked.connect(self.runCredits)
 
-    #===================================================================================================================
+    # ==================================================================================================================
+    @pyqtSlot()
     def runCredits(self):
 
         """
