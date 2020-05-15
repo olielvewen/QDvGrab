@@ -52,11 +52,10 @@ class About(QDialog):
     def __init__(self, parent=None):
         super(About, self).__init__(parent)
         self.setupUi()
-        self.connectActions()
 
         self.parent = parent
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def setupUi(self):
 
         self.ui = Ui_aboutscreen()
@@ -73,15 +72,6 @@ class About(QDialog):
         version_program = ("<b>Python {} - Qt {} - PyQt {}</b>".format(platform.python_version(), QT_VERSION_STR, PYQT_VERSION_STR))
         self.ui.lblversionplateform.setText(version_program)
 
-    #===================================================================================================================
-    def connectActions(self):
-
-        """
-        Connect actions to the ui file
-
-        """
-
-        self.ui.btncredits.clicked.connect(self.runCredits)
 
     # ==================================================================================================================
     @pyqtSlot()
@@ -95,7 +85,7 @@ class About(QDialog):
         self.windo = Credits()
         self.windo.exec_()
 
-    #===================================================================================================================
+    # ===================================================================================================================
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
