@@ -26,9 +26,9 @@ import os
 import platform
 
 # Need for display gui
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import QSize, QT_VERSION_STR, PYQT_VERSION_STR
+from PyQt5.QtWidgets import QDialog, QApplication
 
 # Used for call ui files
 from ui.aboutui import Ui_aboutscreen
