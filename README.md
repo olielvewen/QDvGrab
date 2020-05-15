@@ -1,6 +1,6 @@
 # QDvGrab
 
-QDvGrab is a Gui in Python 3 and QT5 for dvgrab. The only main purpose is to grab your films from a DV or HDV Camcorder
+QDvGrab is a Gui in PyQt5 (using Python 3 and QT5 in backend) for dvgrab. The only main purpose is to grab your films from a DV or HDV Camcorder
  in an easy way.
  
 About
@@ -76,3 +76,9 @@ python qdvgrab.py
     ```
     python3 qdvgrab.py
     ```
+** For Ubuntu 20.04 and after
+	Python3 is by default and shoud work fine just typing the following command (need to confirm) 
+	```
+	python qdvgrab.py
+	```
+
