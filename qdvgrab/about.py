@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # about.py - A About screen for QDvgrab
-# Copyright (c) 2019-2020 Olivier Girard <olivier@openshot.org>
+# Copyright (c) 2014-2016-2019-2020 Olivier Girard <olivier@openshot.org>
 #
 # QDvgrab is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
