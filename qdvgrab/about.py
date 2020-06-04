@@ -28,7 +28,7 @@ import platform
 # Need for display gui
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QSize, QT_VERSION_STR, PYQT_VERSION_STR, pyqtSlot
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.QtWidgets import QDialog
 
 # Used for call ui files
 from ui.aboutui import Ui_aboutscreen
@@ -82,8 +82,4 @@ class About(QDialog):
 
     # ===================================================================================================================
 
-if __name__ == "__main__":
-    application = QApplication(sys.argv)
-    About = About()
-    About.show()
-    sys.exit(application.exec_())
+
