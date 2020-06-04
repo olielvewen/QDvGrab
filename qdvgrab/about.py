@@ -34,14 +34,11 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from ui.aboutui import Ui_aboutscreen
 from credits import Credits
 
-#Need others settings files
-from classes import info
+app_name = "QDvGrab"
+app_version = "0.10"
+app_author = "Olivier Girard"
+author_mail = "olivier@openshot.org"
 
-
-#app_name = "QDvGrab"
-#app_version = "0.10"
-#app_author = "Olivier Girard"
-#author_mail = "olivier@openshot.org"
 
 class About(QDialog):
 
@@ -49,11 +46,9 @@ class About(QDialog):
     This screen shows the resume of the project
     """
 
-    def __init__(self, parent=None):
-        super(About, self).__init__(parent)
+    def __init__(self, *args, **kwargs):
+        super(About, self).__init__(*args, **kwargs)
         self.setupUi()
-
-        self.parent = parent
 
     # ==================================================================================================================
     def setupUi(self):
@@ -66,7 +61,7 @@ class About(QDialog):
         self.ui.lblimageicon.setMaximumSize(QSize(220, 340))
         self.ui.lblimageicon.setScaledContents(True)
 
-        project_name = ("<b>{} - {}</b>".format(info.app_name, info.app_version))
+        project_name = ("<b>{} - {}</b>".format(app_name, app_version))
         self.ui.lblprojectname.setText(project_name)
 
         version_program = ("<b>Python {} - Qt {} - PyQt {}</b>".format(platform.python_version(), QT_VERSION_STR, PYQT_VERSION_STR))
