@@ -35,7 +35,7 @@ from ui.aboutui import Ui_aboutscreen
 from credits import Credits
 
 app_name = "QDvGrab"
-app_version = "0.10"
+app_version = "0.11"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
@@ -66,7 +66,6 @@ class About(QDialog):
 
         version_program = ("<b>Python {} - Qt {} - PyQt {}</b>".format(platform.python_version(), QT_VERSION_STR, PYQT_VERSION_STR))
         self.ui.lblversionplateform.setText(version_program)
-
 
     # ==================================================================================================================
     @pyqtSlot()
