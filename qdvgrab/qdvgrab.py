@@ -61,7 +61,7 @@ from about import About
 from classes import info
 
 app_name = "QDvGrab"
-app_version = "0.10"
+app_version = "0.11"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 

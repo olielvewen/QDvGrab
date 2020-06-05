@@ -26,9 +26,7 @@ import os
 import os.path
 
 # Need for display gui
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import QDialog, QApplication
 
 # Used for call ui files
 from ui.creditsui import Ui_creditscreen
