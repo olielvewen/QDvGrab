@@ -27,6 +27,16 @@ from PyQt5.QtWidgets import QDialog, QApplication
 # Used for call ui files
 from ui.creditsui import Ui_creditscreen
 
+# name of all contributors to the project
+OG = {'name': u'Olivier Girard', 'email': 'olivier@openshot.org'}
+
+# credits
+CREDITS = {
+    'code': [OG],
+    'documentation': [OG],
+    'translation': [OG],
+}
+
 
 class Credits(QDialog):
 
@@ -39,13 +49,13 @@ class Credits(QDialog):
         super(Credits, self).__init__(parent)
         self.setupUi()
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def setupUi(self):
 
         self.ui = Ui_creditscreen()
         self.ui.setupUi(self)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def showCredits(self):
 
         #path_license = os.path.join(os.path.dirname(os.path.dirname(os.path.basename(__file__))))
@@ -67,7 +77,7 @@ class Credits(QDialog):
 
         #init documenters
             authors = []
-            for person in info.CREDITS['documentation']:
+            for person in CREDITS['documentation']:
                 name = person['name']
                 email = person['email']
                 authors.append("{} <{}>".format(name, email))
@@ -75,13 +85,14 @@ class Credits(QDialog):
 
         #init translator
             authors = []
-            for person in info.CREDITS['translation']:
+            for person in CREDITS['translation']:
                 name = person['name']
                 email = person['email']
                 authors.append("{} <{}>".format(name, email))
             self.ui.textBrowsertranslated.append(str(authors))
 
-    #===================================================================================================================
+    # ==================================================================================================================
+
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
