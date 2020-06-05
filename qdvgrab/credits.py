@@ -93,9 +93,3 @@ class Credits(QDialog):
 
     # ==================================================================================================================
 
-
-if __name__ == "__main__":
-    application = QApplication(sys.argv)
-    Credits = Credits()
-    Credits.show()
-    sys.exit(application.exec_())
