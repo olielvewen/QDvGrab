@@ -20,16 +20,8 @@
 
 import sys
 import os
-
-# Need for path
 import os.path
-
-#Need for find library
 import shutil
-
-#Need for create command line
-import subprocess
-
 
 # need for display gui
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QFileDialog
@@ -38,7 +30,7 @@ from PyQt5.QtCore import QDir, QSettings, QLocale
 from ui.preferencesui import Ui_Dialog
 from credits import Credits
 
-#Need others settings file
+# Need others settings file
 from classes.info import *
 
 
@@ -53,14 +45,13 @@ class PreFerences(QDialog):
         self.updateUi()
 
         QTimer.singleShot(0, self.loadSettings)
-        #QTimer.singleShot(1000, self.dvgrabPath)
 
         format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Hdv (.m2t)', 'Mpeg 2 (.mpg)', 'Mov (.mov)']
         for format in format_capture:
             self.ui.cmbformatcapture.addItem(format)
             self.ui.cmbformatcapture.setCurrentIndex(0)
 
-        #populate the dvgrab path
+        # populate the dvgrab path
         dvgrab_path = shutil.which('dvgrab')
         if dvgrab_path is not None:
             self.ui.lnedvgrab.setText(dvgrab_path)
@@ -74,13 +65,13 @@ class PreFerences(QDialog):
         else:
             QMessageBox.information(self, self.tr("QDvGrab"), self.tr("Transcode is not installed"))
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def setupUi(self):
 
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
 
-        #Set Tooltips for preferences
+        # Set Tooltips for preferences
         self.ui.cmblanguages.setToolTip(self.tr(" Change languages here "))
         self.ui.btnchoosefile.setToolTip(self.tr(" Choose here another directory other than this one by default "))
         self.ui.btndvgrab.setToolTip(self.tr(" Choose here another path other than this one by default if this one has failed "))
@@ -98,7 +89,7 @@ class PreFerences(QDialog):
         self.ui.chkmanualrecord.setToolTip(self.tr(" Planning the time of acquisition "))
         self.ui.chkactivepreview.setToolTip(self.tr(" See in real time when acquisition is done "))
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def connectActions(self):
 
         """
@@ -124,7 +115,7 @@ class PreFerences(QDialog):
         self.ui.lneminutes.textChanged.connect(self.captureExtraParameters)
         self.ui.chkactivepreview.toggled.connect(self.runActivePreview)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def updateUi(self):
 
         """
@@ -142,7 +133,7 @@ class PreFerences(QDialog):
         self.ui.lneoutputfile.setFocus()
         self.ui.lneoutputfile.selectAll()
 
-        #3 tab
+        # 3 tab
         self.ui.chkmanualrecord.setEnabled(False)
         self.ui.lnehours.setEnabled(False)
         self.ui.lneminutes.setEnabled(False)
@@ -150,7 +141,7 @@ class PreFerences(QDialog):
         self.ui.label_5.setEnabled(False)
         self.ui.chkactivepreview.setEnabled(False)
 
-        #2 tab
+        # 2 tab
         self.ui.chkautomatic.setEnabled(False)
         self.ui.chkscene.setEnabled(False)
         self.ui.spbscene.setEnabled(False)
@@ -160,7 +151,7 @@ class PreFerences(QDialog):
         self.ui.chkdv2.setEnabled(False)
         self.ui.chkhdv.setEnabled(False)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def creDits(self):
 
         """
@@ -170,7 +161,7 @@ class PreFerences(QDialog):
         self.windo = Credits()
         self.windo.show()
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def dvgrabPath(self):
 
         """
@@ -192,7 +183,7 @@ class PreFerences(QDialog):
             #result = self.ui.lnedvgrab.text(base_repository)
             self.ui.lnedvgrab.setText(result)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def transcodePath(self):
 
         """
@@ -213,7 +204,7 @@ class PreFerences(QDialog):
             result = QDir(new_transcode_path).absolutePath()
             self.ui.lnetranscode.setText(result)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def outputPath(self):
 
         """
@@ -226,7 +217,7 @@ class PreFerences(QDialog):
         if new_output_path:
             self.ui.lneoutputfile.setText(new_output_path)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def languageSelected(self, value):
         """
         Display the language by default and if not or if the user would like to change it do it here without changing
@@ -235,7 +226,7 @@ class PreFerences(QDialog):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def chooseFormatCapture(self):
 
         """
@@ -245,9 +236,7 @@ class PreFerences(QDialog):
         
         pass
 
-
-
-    #===================================================================================================================
+    # ==================================================================================================================
     def loadSettings(self):
 
         """
@@ -289,7 +278,7 @@ class PreFerences(QDialog):
         if automatic_record:
             self.ui.chkautomaticrecord.setChecked(True)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def saveSettings(self):
 
         """
@@ -297,19 +286,19 @@ class PreFerences(QDialog):
 
         """
 
-        #MainWindowSettings
+        # MainWindowSettings
         language = QLocale.system().name()
 
-        #GeneralSettings
+        # GeneralSettings
         new_output_path = os.path.join(QDir.homePath() + "/Videos/")
         name_camcorder = self.ui.lnenamecamecorder.text()
         formats_choose = self.ui.cmbformatcapture.setCurrentIndex()
 
-        #ConversionSettings
+        # ConversionSettings
         automatic_conversion = self.ui.chknone.isChecked()
         detection_scene = self.ui.chkdetection.isChecked()
 
-        #CaptureSettings
+        # CaptureSettings
         automatic_record = self.ui.chkautomaticrecord.isChecked()
 
         settings = QSettings(QSettings.SystemScope, 'eCreate', 'qdvgrab')
@@ -335,7 +324,7 @@ class PreFerences(QDialog):
         settings.setValue('automatic_record', automatic_record)
         settings.endGroup()
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def chooseAutomaticConversion(self):
 
         """
@@ -345,7 +334,7 @@ class PreFerences(QDialog):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def chooseDetectionScene(self):
 
         """
@@ -354,7 +343,7 @@ class PreFerences(QDialog):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def runActivePreview(self):
 
         """
@@ -363,7 +352,7 @@ class PreFerences(QDialog):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def captureExtraParameters(self):
 
         """
@@ -374,7 +363,7 @@ class PreFerences(QDialog):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
 
 
 if __name__ == "__main__":
