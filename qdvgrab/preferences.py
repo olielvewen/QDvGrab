@@ -31,10 +31,9 @@ import shutil
 import subprocess
 
 
-#need for display gui
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
+# need for display gui
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QFileDialog
+from PyQt5.QtCore import QDir, QSettings, QLocale
 
 from ui.preferencesui import Ui_Dialog
 from credits import Credits

@@ -22,7 +22,7 @@
 import sys
 
 # Need for display gui
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.QtWidgets import QDialog
 
 # Used for call ui files
 from ui.creditsui import Ui_creditscreen
