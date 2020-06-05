@@ -20,17 +20,12 @@
 
 # Used to run it
 import sys
-import os
-
-# Need for path
-import os.path
 
 # Need for display gui
 from PyQt5.QtWidgets import QDialog, QApplication
 
 # Used for call ui files
 from ui.creditsui import Ui_creditscreen
-from classes import info
 
 
 class Credits(QDialog):
