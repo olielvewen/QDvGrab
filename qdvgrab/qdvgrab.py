@@ -38,12 +38,6 @@ from ui.qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
 from about import About
 
-
-app_name = "QDvGrab"
-app_version = "0.13"
-app_author = "Olivier Girard"
-author_mail = "olivier@openshot.org"
-
 Variables = {"Cmd":"",
              "CmdList":[],  # list commands to execute"
              "ConfigFolder":os.path.join(QDir.homePath(), ".qdvgrab"),
@@ -325,12 +319,3 @@ class QdvGrab(QMainWindow):
         """
         pass
     # ==================================================================================================================
-
-
-if __name__ == "__main__":
-    application = QApplication(sys.argv)
-    QdvGrab = QdvGrab()
-    QdvGrab.show()
-    print("Welcome to QDvGrab {}. \nHope you'll enjoy it. \nPlease report all bugs,"
-          "features request and comments at {}\n".format(app_version, author_mail))
-    sys.exit(application.exec_())
