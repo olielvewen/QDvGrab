@@ -25,7 +25,7 @@ import shutil
 
 # need for display gui
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QFileDialog
-from PyQt5.QtCore import QDir, QSettings, QLocale
+from PyQt5.QtCore import QDir, QSettings, QLocale, QTimer
 
 from ui.preferencesui import Ui_Dialog
 from credits import Credits
@@ -359,12 +359,4 @@ class PreFerences(QDialog):
 
         """
         pass
-
     # ==================================================================================================================
-
-
-if __name__ == "__main__":
-    application = QApplication(sys.argv)
-    PreFerences = PreFerences()
-    PreFerences.show()
-    sys.exit(application.exec_())
