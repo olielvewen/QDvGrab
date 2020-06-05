@@ -28,7 +28,7 @@ import webbrowser
 
 # need for display gui
 from PyQt5.QtCore import QTimer, QDir, QSettings
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDesktopWidget, QMessageBox, QFileDialog
+from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog, QWidget
 
 # need to display icon anywhere the program is called
 from images import qdvgrabressources_rc
@@ -69,10 +69,6 @@ class QdvGrab(QMainWindow):
         self.updateUi()
 
         QTimer.singleShot(0, self.loadSettings)
-
-        message = str("Welcome to DvGrab {}".format(app_version))
-        self.ui.statusbar.showMessage(message)
-        print(message)
 
     def centerScreen(self):
         """
@@ -261,7 +257,7 @@ class QdvGrab(QMainWindow):
 
          """
 
-        QMessageBox.aboutQt(QdvGrab)
+        QMessageBox.aboutQt(self)
 
     # ==================================================================================================================
     def AboutQdvgrab(self):
