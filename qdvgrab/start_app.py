@@ -24,3 +24,17 @@ from PyQt5.QtWidgets import QApplication
 
 from qdvgrab import QdvGrab
 
+app_name = "QDvGrab"
+app_version = "0.13"
+app_author = "Olivier Girard"
+author_mail = "olivier@openshot.org"
+
+if __name__ == "__main__":
+    application = QApplication(sys.argv)
+    window = QdvGrab()
+    window.show()
+    print("Welcome to QDvGrab {}. \nHope you'll enjoy it. \nPlease report all bugs,"
+          "features request and comments at {}\n".format(app_version, author_mail))
+
+    rc = application.exec_()
+    sys.exit(rc)
