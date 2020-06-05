@@ -39,12 +39,4 @@ HOME_PATH = os.path.join(os.path.expanduser("~"))
 USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
 TEMP_PATH = os.path.join(USER_PATH, "Temp")
 
-#name of all contributors to the project
-OG = {'name': u'Olivier Girard', 'email': 'olivier@openshot.org'}
 
-#credits
-CREDITS = {
-    'code'         : [OG],
-    'documentation': [OG],
-    'translation'  : [OG],
-}
