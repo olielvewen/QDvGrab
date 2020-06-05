@@ -25,7 +25,7 @@ from PyQt5.QtWidgets import QApplication
 from qdvgrab import QdvGrab
 
 app_name = "QDvGrab"
-app_version = "0.14"
+app_version = "0.15"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
