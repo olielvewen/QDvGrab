@@ -21,27 +21,16 @@
 # Used to run it
 import sys
 import os
-
-# Need for path
 import os.path
 
-# Need for find library
-import shutil
-
-# Need for create command line
-import subprocess
-
-#need for create temporary file in the temp folder
-from tempfile import TemporaryDirectory
-
-#Need for run the default webbrowser when the help page is called
+# Need for run the default webbrowser when the help page is called
 import webbrowser
 
 # need for display gui
 from PyQt5.QtCore import QTimer, QDir, QSettings
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDesktopWidget, QMessageBox, QFileDialog
 
-#need to display icon anywhere the program is called
+# need to display icon anywhere the program is called
 from images import qdvgrabressources_rc
 
 # Used for calling ui files
@@ -49,7 +38,7 @@ from ui.qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
 from about import About
 
-#others settings file
+# others settings file
 from classes import info
 
 app_name = "QDvGrab"
@@ -58,29 +47,28 @@ app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
 Variables = {"Cmd" :"",
-             "CmdList" :[], #list commands to execute"
+             "CmdList" :[],  # list commands to execute"
              "ConfigFolder" :os.path.join(QDir.homePath(), ".qdvgrab"),
              "ConfigFile" :os.path.join(QDir.homePath(), ".qdvgrab/logfile"),
-             "FileNameOutput" :"", #filename output os.path.basename()
-             "DeviceOutput" :"", #Device name Camecorder
-             "DirectNameOutput" :"", #name of output folder os.path.direname()
-             "TempFolderName" :"", #name of temporary folder
-             "TempFolderOutput" :"", #name of folder output
-             "geometry_window" :"",#
+             "FileNameOutput" :"",  # filename output os.path.basename()
+             "DeviceOutput" :"",  # Device name Camecorder
+             "DirectNameOutput" :"",  # name of output folder os.path.direname()
+             "TempFolderName" :"",  # name of temporary folder
+             "TempFolderOutput" :"",  # name of folder output
+             "geometry_window" :"", #
              }
 
-#check if we are on Linux either exit
+# check if we are on Linux either exit
 if (os.name != "posix"):
     print("You are not under Linux system")
     sys.exit(2)
 
-#check if the hidden project folder is created by default, if not it is created
+# check if the hidden project folder is created by default, if not it is created
 if not os.path.exists(Variables["ConfigFolder"]):
     os.mkdir(Variables["ConfigFolder"])
 
 
 class QdvGrab(QMainWindow):
-
 
     def __init__(self, parent=None):
         super(QdvGrab, self).__init__(parent)
@@ -102,19 +90,18 @@ class QdvGrab(QMainWindow):
         """
         geometry_window = ""
 
-        #we catch variables (width/height)
+        # we catch variables (width/height)
         if geometry_window:
             self.resize(geometry_window[0], geometry_window[1])
         else:
             geometry_window = (self.geometry().width(), self.geometry().height())
 
-        #we catch the window size on the screen
+        # we catch the window size on the screen
         size_screen = QDesktopWidget().screenGeometry()
         self.move(((size_screen.width() - geometry_window.width())/2), ((size_screen.height() - geometry_window.height()))/2)
-    #===================================================================================================================
+    # ==================================================================================================================
 
     def loadSettings(self):
-
 
         settings = QSettings()
 
@@ -144,7 +131,7 @@ class QdvGrab(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        #Set Tooltips for the main gui
+        # Set Tooltips for the main gui
         self.ui.btnacquisitiondv.setToolTip(self.tr(" Choose the Dv Acquisition mode "))
         self.ui.lblcamcorder.setToolTip(self.tr(" Set the Camcorder Name "))
         self.ui.lblfree.setToolTip(self.tr(" Set the free space disk available "))
@@ -156,7 +143,7 @@ class QdvGrab(QMainWindow):
         self.ui.btnhelp.setToolTip(self.tr("  "))
         self.ui.btnquit.setToolTip(self.tr(" Exit the application "))
 
-        #Set Status Tips for the main gui in the statusBar()
+        # Set Status Tips for the main gui in the statusBar()
         self.ui.lblcamcorder.setStatusTip(self.tr('The camcorder name is '))
         self.ui.lblfree.setStatusTip(self.tr('The free space disk available is of '))
         self.ui.lblused.setStatusTip(self.tr('The space disk used is of '))
@@ -257,15 +244,11 @@ class QdvGrab(QMainWindow):
         function run just before the mainwindow is closed and stop all work in progress and save settings
          """
 
-        #stop work in progress if there are one
-
-
-        #Save all settings if they have done modified
         self.PreFerences.saveSettings()
 
         event.accept()
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def openDirectory(self,new_output_path):
 
         """
@@ -278,7 +261,7 @@ class QdvGrab(QMainWindow):
         else:
             new_output = QFileDialog.getExistingDirectory(self, self.tr("QDvGrab - Choose a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def AboutQt(self):
 
         """
@@ -288,7 +271,7 @@ class QdvGrab(QMainWindow):
 
         QMessageBox.aboutQt(QdvGrab)
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def AboutQdvgrab(self):
 
         """
@@ -299,7 +282,7 @@ class QdvGrab(QMainWindow):
         self.windo = About()
         self.windo.show()
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def logInfo(self):
 
         """
@@ -308,7 +291,7 @@ class QdvGrab(QMainWindow):
 
         """
         pass
-    #===================================================================================================================
+    # ==================================================================================================================
     def onCaptureProgress(self):
 
         """
@@ -317,7 +300,7 @@ class QdvGrab(QMainWindow):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def checkSizeDisk(self):
 
         """
@@ -326,7 +309,7 @@ class QdvGrab(QMainWindow):
         """
         pass
 
-    #===================================================================================================================
+    # ==================================================================================================================
     def getDevice(self):
 
         """
@@ -343,7 +326,7 @@ class QdvGrab(QMainWindow):
 
         """
         pass
-    #===================================================================================================================
+    # ==================================================================================================================
 
 
 if __name__ == "__main__":
