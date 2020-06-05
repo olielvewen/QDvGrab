@@ -30,9 +30,6 @@ from PyQt5.QtCore import QDir, QSettings, QLocale
 from ui.preferencesui import Ui_Dialog
 from credits import Credits
 
-# Need others settings file
-from classes.info import *
-
 
 class PreFerences(QDialog):
     def __init__(self, parent=None):
