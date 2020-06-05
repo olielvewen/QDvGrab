@@ -38,24 +38,22 @@ from ui.qdvgrabui import Ui_MainWindow
 from preferences import PreFerences
 from about import About
 
-# others settings file
-from classes import info
 
 app_name = "QDvGrab"
 app_version = "0.13"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
-Variables = {"Cmd" :"",
-             "CmdList" :[],  # list commands to execute"
-             "ConfigFolder" :os.path.join(QDir.homePath(), ".qdvgrab"),
-             "ConfigFile" :os.path.join(QDir.homePath(), ".qdvgrab/logfile"),
-             "FileNameOutput" :"",  # filename output os.path.basename()
-             "DeviceOutput" :"",  # Device name Camecorder
-             "DirectNameOutput" :"",  # name of output folder os.path.direname()
-             "TempFolderName" :"",  # name of temporary folder
-             "TempFolderOutput" :"",  # name of folder output
-             "geometry_window" :"", #
+Variables = {"Cmd":"",
+             "CmdList":[],  # list commands to execute"
+             "ConfigFolder":os.path.join(QDir.homePath(), ".qdvgrab"),
+             "ConfigFile":os.path.join(QDir.homePath(), ".qdvgrab/logfile"),
+             "FileNameOutput":"",  # filename output os.path.basename()
+             "DeviceOutput":"",  # Device name Camecorder
+             "DirectNameOutput":"",  # name of output folder os.path.direname()
+             "TempFolderName":"",  # name of temporary folder
+             "TempFolderOutput":"",  # name of folder output
+             "geometry_window":"", #
              }
 
 # check if we are on Linux either exit
