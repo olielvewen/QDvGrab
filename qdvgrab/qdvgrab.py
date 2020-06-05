@@ -38,9 +38,8 @@ from tempfile import TemporaryDirectory
 import webbrowser
 
 # need for display gui
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtCore import QTimer, QDir, QSettings
+from PyQt5.QtWidgets import QApplication, QMainWindow, QDesktopWidget, QMessageBox, QFileDialog
 
 #need to display icon anywhere the program is called
 from images import qdvgrabressources_rc
