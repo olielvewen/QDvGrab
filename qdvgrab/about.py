@@ -19,7 +19,6 @@
 #
 
 # Used to run it
-import sys
 import os
 
 # Need for path
@@ -27,7 +26,7 @@ import platform
 
 # Need for display gui
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QSize, QT_VERSION_STR, PYQT_VERSION_STR, pyqtSlot
+from PyQt5.QtCore import QSize, QT_VERSION_STR, PYQT_VERSION_STR
 from PyQt5.QtWidgets import QDialog
 
 # Used for call ui files
@@ -50,7 +49,6 @@ class About(QDialog):
         super(About, self).__init__(*args, **kwargs)
         self.setupUi()
 
-        self.btncredits.clicked.connect(self.runCredits)
 
     # ==================================================================================================================
     def setupUi(self):
@@ -69,8 +67,8 @@ class About(QDialog):
         version_program = ("<b>Python {} - Qt {} - PyQt {}</b>".format(platform.python_version(), QT_VERSION_STR, PYQT_VERSION_STR))
         self.ui.lblversionplateform.setText(version_program)
 
+        self.ui.btncredits.clicked.connect(self.runCredits)
     # ==================================================================================================================
-    @pyqtSlot()
     def runCredits(self):
 
         """
