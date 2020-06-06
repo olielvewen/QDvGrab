@@ -31,15 +31,15 @@ Screenshots
 ### Preferences
 
 <p align="center">
-	<img src="qdvgrab/classes/preferences1.png" alt="Preferences" width="500">
+    <img src="qdvgrab/classes/preferences1.png" alt="Preferences" width="500">
 </p>
 
 <p align="center">
-	<img src="qdvgrab/classes/preferences2.png" alt="Preferences" width="500">
+    <img src="qdvgrab/classes/preferences2.png" alt="Preferences" width="500">
 </p>
 
 <p align="center">
-	<img src="qdvgrab/classes/preferences3.png" alt="Preferences" width="500">
+    <img src="qdvgrab/classes/preferences3.png" alt="Preferences" width="500">
 </p>
 
 
@@ -57,14 +57,14 @@ Installation
 For the moment, just open a console in the qdvgrab folder and type:
 
  ```
-python qdvgrab.py
+python start_app.py
 ```
 
 * Manjaro
 
     Like explained above, python3 is the default version so type :
     ```
-    python qdvgrab.py
+    python start_app.py
     ```
     
 * Linux Mint/Ubuntu
@@ -74,11 +74,11 @@ python qdvgrab.py
     However, the python default version is the version 2 and not the 3. So you should type :
     
     ```
-    python3 qdvgrab.py
+    python3 start_app.py
     ```
 ** For Ubuntu 20.04 and after
-	Python3 is by default and shoud work fine just typing the following command (need to confirm) 
-	```
-	python qdvgrab.py
-	```
+    Python3 is by default and shoud work fine just typing the following command (need to confirm) 
+    ```
+    python start_app.py
+    ```
 
