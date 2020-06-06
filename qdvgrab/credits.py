@@ -18,9 +18,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# Used to run it
-import sys
-
 # Need for display gui
 from PyQt5.QtWidgets import QDialog
 
@@ -45,9 +42,11 @@ class Credits(QDialog):
 
     """
 
-    def __init__(self, parent=None):
-        super(Credits, self).__init__(parent)
+    def __init__(self, *args, **kwargs):
+        super(Credits, self).__init__(*args, **kwargs)
         self.setupUi()
+
+        self.showLicense()
 
     # ==================================================================================================================
     def setupUi(self):
@@ -58,16 +57,7 @@ class Credits(QDialog):
     # ==================================================================================================================
     def showCredits(self):
 
-        #path_license = os.path.join(os.path.dirname(os.path.dirname(os.path.basename(__file__))))
-        #path_license = os.path.join(os.path.dirname("../../"), "LICENSE")
-
-        with open('path_license', 'r') as my_license:
-            text = my_license.read()
-
-            self.ui.textBrowserlicense.append(text)
-            #self.ui.textBrowserlicense.setText(text)
-
-        #init authors
+        # init authors
             authors = []
             for person in info.CREDITS['code']:
                 name = person['name']
@@ -75,7 +65,7 @@ class Credits(QDialog):
                 authors.append("{} <{}>".format(name, email))
             self.ui.textBrowserwritten.append(str(authors))
 
-        #init documenters
+        # init documenters
             authors = []
             for person in CREDITS['documentation']:
                 name = person['name']
@@ -83,7 +73,7 @@ class Credits(QDialog):
                 authors.append("{} <{}>".format(name, email))
             self.ui.textBrowserdocumented.append(str(authors))
 
-        #init translator
+        # init translator
             authors = []
             for person in CREDITS['translation']:
                 name = person['name']
@@ -92,4 +82,10 @@ class Credits(QDialog):
             self.ui.textBrowsertranslated.append(str(authors))
 
     # ==================================================================================================================
+    def showLicense(self):
+        """Display the license"""
+
+        with open('../LICENSE', 'r') as my_licence:
+            text = my_licence.read()
+            self.ui.textBrowserlicense.setPlainText(text)
 
