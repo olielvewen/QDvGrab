@@ -50,6 +50,8 @@ class About(QDialog):
         super(About, self).__init__(*args, **kwargs)
         self.setupUi()
 
+        self.btncredits.clicked.connect(self.runCredits)
+
     # ==================================================================================================================
     def setupUi(self):
 
