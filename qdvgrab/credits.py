@@ -25,13 +25,13 @@ from PyQt5.QtWidgets import QDialog
 from ui.creditsui import Ui_creditscreen
 
 # name of all contributors to the project
-OG = {'name': u'Olivier Girard', 'email': 'olivier@openshot.org'}
+OG = {'name': 'Olivier Girard', 'email': 'olivier@openshot.org'}
 
 # credits
 CREDITS = {
-    'code': [OG],
-    'documentation': [OG],
-    'translation': [OG],
+    'code': [OG, ],
+    'documentation': [OG, ],
+    'translation': [OG, ],
 }
 
 
@@ -47,6 +47,9 @@ class Credits(QDialog):
         self.setupUi()
 
         self.showLicense()
+        self.showAuthors()
+        # self.showDocumenters()
+        # self.showTranslators()
 
     # ==================================================================================================================
     def setupUi(self):
@@ -55,31 +58,35 @@ class Credits(QDialog):
         self.ui.setupUi(self)
 
     # ==================================================================================================================
-    def showCredits(self):
+    def showAuthors(self):
 
         # init authors
-            authors = []
-            for person in info.CREDITS['code']:
-                name = person['name']
-                email = person['email']
-                authors.append("{} <{}>".format(name, email))
-            self.ui.textBrowserwritten.append(str(authors))
-
-        # init documenters
-            authors = []
-            for person in CREDITS['documentation']:
-                name = person['name']
-                email = person['email']
-                authors.append("{} <{}>".format(name, email))
-            self.ui.textBrowserdocumented.append(str(authors))
-
-        # init translator
-            authors = []
-            for person in CREDITS['translation']:
-                name = person['name']
-                email = person['email']
-                authors.append("{} <{}>".format(name, email))
-            self.ui.textBrowsertranslated.append(str(authors))
+        authors = []
+        for person in CREDITS['code']:
+            name = person['name']
+            email = person['email']
+            authors.append("{} - {}".format(name, email))
+        self.ui.textBrowserwritten.append(str(authors))
+ 
+    # def showDocumenters(self):
+    #
+    #     # init documenters
+    #     authors = []
+    #     for person in CREDITS['documentation']:
+    #         name = person['name']
+    #         email = person['email']
+    #         authors.append("{} <{}>".format(name, email))
+    #     self.ui.textBrowserdocumented.append(str(authors))
+    #
+    # def showTranslators(self):
+    #
+    #     # init translator
+    #     authors = []
+    #     for person in CREDITS['translation']:
+    #         name = person['name']
+    #         email = person['email']
+    #         authors.append("{} <{}>".format(name, email))
+    #     self.ui.textBrowsertranslated.append(str(authors))
 
     # ==================================================================================================================
     def showLicense(self):
