@@ -2,11 +2,13 @@
 
 # Form implementation generated from reading ui file 'about.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.14.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_aboutscreen(object):
     def setupUi(self, aboutscreen):
@@ -68,7 +70,7 @@ class Ui_aboutscreen(object):
     def retranslateUi(self, aboutscreen):
         _translate = QtCore.QCoreApplication.translate
         aboutscreen.setWindowTitle(_translate("aboutscreen", "About"))
-        self.lblresume.setText(_translate("aboutscreen", "<html><head/><body><p>Gui for grabbing film from an DV or HDV </p><p>Camecorder in the simpliest way on the </p><p>Hard Drive.</p><p><br/></p><p>QDvGrab - <a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#0000ff;\">Home Page</span></a></p><p><a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#000000;\">Copyright 2014-2016 Olivier Girard</span></a><br/><a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#000000;\">License: GNU GPL v3</span></a></p></body></html>"))
+        self.lblresume.setText(_translate("aboutscreen", "<html><head/><body><p>Gui for grabbing film from an DV or HDV </p><p>Camecorder in the simpliest way on the </p><p>Hard Drive.</p><p><br/></p><p>QDvGrab - <a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#0000ff;\">Home Page</span></a></p><p><a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#000000;\">Copyright 2014-2016- 2020 Olivier Girard</span></a><br/><a href=\"https://github.com/olielvewen/QDvGrab\"><span style=\" text-decoration: underline; color:#000000;\">License: GNU GPL v3</span></a></p></body></html>"))
         self.btncredits.setText(_translate("aboutscreen", "Credits"))
         self.btnclose.setText(_translate("aboutscreen", "Close"))
 
@@ -81,4 +83,3 @@ if __name__ == "__main__":
     ui.setupUi(aboutscreen)
     aboutscreen.show()
     sys.exit(app.exec_())
-
