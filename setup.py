@@ -1,7 +1,8 @@
-#!/usr/bin/env python
-#-*- coding: uft-8 -*-
+# !/usr/bin/env python
+# -*- coding: uft-8 -*-
 
-import src
+
+import qdvgrab
 from distutils.core import setup
 
 data_files = [('xdg/applications/', ['data/qdvgrab.desktop']),
@@ -10,7 +11,7 @@ data_files = [('xdg/applications/', ['data/qdvgrab.desktop']),
 setup(
     name='qdvgrab',
     packages=['qdvgrab'],
-    script_args=['qdvgrab/launch'],
+    script_args=['qdvgrab/start_app'],
     data_files='data_files',
     version='0.10',
     description='GUI for Dvgrab',
@@ -20,10 +21,10 @@ setup(
     download_url='https://github.com/olielvewen/QDvGrab/',
     license='GNU GPL3',
     platforms='Linux',
-    keywords=['transfert', 'grab', 'video', 'film'],
+    keywords=['transfer', 'grab', 'video', 'film'],
     classifiers=[
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Operating System :: POSIX :: Linux',
         'Development Status :: 3 - Alpha',
@@ -44,7 +45,7 @@ Simple Gui for dvgrab, QDvGrab is simple to use too. This is the main idea for t
 Features:
  - Nice interface
  - Simple utilisation
- - Modern programm
+ - Modern program
  - Complete Preferences
  - Essential features of dvgrab
  - No command lines for dvgrab

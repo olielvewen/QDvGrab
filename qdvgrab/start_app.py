@@ -19,6 +19,7 @@
 #
 
 import sys
+import os
 
 from PyQt5.QtWidgets import QApplication
 
@@ -28,6 +29,12 @@ app_name = "QDvGrab"
 app_version = "0.17"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
+
+SUPPORTED_LANGUAGES = ['English', 'French']
+PATH = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
+HOME_PATH = os.path.join(os.path.expanduser("~"))
+USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
+# TEMP_PATH = os.path.join(USER_PATH, "Temp")
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
