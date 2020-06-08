@@ -126,7 +126,7 @@ class PreFerences(QDialog):
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
-        self.ui.lneoutputfile.setText("My Awesome Movie")
+        self.ui.lneoutputfile.setText(self.tr("My Awesome Movie"))
         self.ui.lneoutputfile.setFocus()
         self.ui.lneoutputfile.selectAll()
 
@@ -177,7 +177,7 @@ class PreFerences(QDialog):
             # clear the lineedit
             self.ui.lnedvgrab.clear()
             result = QDir(new_dvgrab_path).absolutePath()
-            #result = self.ui.lnedvgrab.text(base_repository)
+            # result = self.ui.lnedvgrab.text(base_repository)
             self.ui.lnedvgrab.setText(result)
 
     # ==================================================================================================================

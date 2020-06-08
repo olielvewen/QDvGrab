@@ -128,7 +128,7 @@ class QdvGrab(QMainWindow):
         self.ui.btnrecordmpeg.setToolTip(self.tr(" Choose the HDV Acquisition mode "))
         self.ui.btnstartrecord.setToolTip(self.tr(" Run the film acquisition "))
         self.ui.btnpreferences.setToolTip(self.tr(" Set the Preferences Screen "))
-        self.ui.btnhelp.setToolTip(self.tr("  "))
+        self.ui.btnhelp.setToolTip(self.tr(" Set the website Project Page "))
         self.ui.btnquit.setToolTip(self.tr(" Exit the application "))
 
         # Set Status Tips for the main gui in the statusBar()
@@ -167,7 +167,7 @@ class QdvGrab(QMainWindow):
     # ==================================================================================================================
     def updateUi(self):
 
-        self.ui.lnecapturename.setText("My Awesome Movie")
+        self.ui.lnecapturename.setText(self.tr("My Awesome Movie"))
         self.ui.lnecapturename.setFocus()
         self.ui.lnecapturename.selectAll()
 
