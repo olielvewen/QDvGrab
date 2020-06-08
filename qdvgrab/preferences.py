@@ -112,7 +112,7 @@ class PreFerences(QDialog):
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
-        self.ui.lneoutputfile.setText("My Awesome Movie")
+        self.ui.lneoutputfile.setText(self.tr("My Awesome Movie"))
         self.ui.lneoutputfile.setFocus()
         self.ui.lneoutputfile.selectAll()
 
