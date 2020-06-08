@@ -49,7 +49,7 @@ class Credits(QDialog):
         self.showLicense()
         self.showAuthors()
         self.showDocumenters()
-        # self.showTranslators()
+        self.showTranslators()
 
     # ==================================================================================================================
     def setupUi(self):
@@ -65,7 +65,7 @@ class Credits(QDialog):
         for person in CREDITS['code']:
             name = person['name']
             email = person['email']
-            authors.append("{} - {}".format(name, email))
+            authors.append("{} - <{}>".format(name, email))
         self.ui.textBrowserwritten.append(str(authors))
  
     def showDocumenters(self):
@@ -75,18 +75,18 @@ class Credits(QDialog):
         for person in CREDITS['documentation']:
             name = person['name']
             email = person['email']
-            authors.append("{} <{}>".format(name, email))
+            authors.append("{} - <{}>".format(name, email))
         self.ui.textBrowserdocumented.append(str(authors))
 
-    # def showTranslators(self):
-    #
-    #     # init translator
-    #     authors = []
-    #     for person in CREDITS['translation']:
-    #         name = person['name']
-    #         email = person['email']
-    #         authors.append("{} <{}>".format(name, email))
-    #     self.ui.textBrowsertranslated.append(str(authors))
+    def showTranslators(self):
+
+        # init translator
+        authors = []
+        for person in CREDITS['translation']:
+            name = person['name']
+            email = person['email']
+            authors.append("{} - <{}>".format(name, email))
+        self.ui.textBrowsertranslated.append(str(authors))
 
     # ==================================================================================================================
     def showLicense(self):
