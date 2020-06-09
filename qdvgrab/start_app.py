@@ -22,6 +22,7 @@ import sys
 import os
 
 from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import QTranslator, QLocale
 
 from qdvgrab import QdvGrab
 
@@ -38,6 +39,16 @@ USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
+
+    # Translate application
+    translator = QTranslator()
+    if len(sys.argv) == 1:
+        locale = QLocale()
+        translator.load(locale, "qdvgrab", ".")
+    else:
+        translator.load("qdvgrab." + sys.argv[1])
+    application.installTranslator(translator)
+
     window = QdvGrab()
     window.show()
     print("Welcome to QDvGrab {}. \nHope you'll enjoy it. \nPlease report all bugs,"
