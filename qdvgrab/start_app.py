@@ -44,19 +44,17 @@ if __name__ == "__main__":
     enNativeLanguage = len(sys.argv) == 1
     if enNativeLanguage:
         locale = QLocale()
-        # translator.load(locale, "qdvgrab", ".")
-
     else:
         languageCountry = sys.argv[1]
     translators = []
-    for prefixeQm in ("qdvgrab.", "qt_", "qtbase_"):
+    for prefixQm in ("qdvgrab.", "qt_", "qtbase_"):
         translator = QTranslator()
         translators.append(translator)
         if enNativeLanguage:
-            translator.load(locale, prefixeQm)
+            translator.load(locale, prefixQm)
         else:
-            translator.load(prefixeQm+languageCountry)
-        application.installTranslator(translator)
+            translator.load(prefixQm+languageCountry)
+    application.installTranslator(translator)
 
     window = QdvGrab()
     window.show()
