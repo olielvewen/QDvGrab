@@ -155,8 +155,9 @@ class PreFerences(QDialog):
         run the Credits dialog
 
         """
-        self.windo = Credits()
-        self.windo.show()
+        dialog = Credits()
+        if dialog.exec_():
+            dialog.show()
 
     # ==================================================================================================================
     def dvgrabPath(self):
