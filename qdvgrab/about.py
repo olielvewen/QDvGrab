@@ -76,8 +76,9 @@ class About(QDialog):
 
         """
 
-        self.windo = Credits()
-        self.windo.exec_()
+        dialog = Credits()
+        if dialog.exec_():
+            self.windo.exec_()
 
     # ===================================================================================================================
 
