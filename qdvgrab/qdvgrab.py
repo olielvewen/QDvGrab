@@ -222,8 +222,9 @@ class QdvGrab(QMainWindow):
 
         """
 
-        self.windo = PreFerences()
-        self.windo.show()
+        dialog = PreFerences()
+        if dialog.exec_():
+            dialog.show()
 
     # ==================================================================================================================
     def closeEvent(self, event):
