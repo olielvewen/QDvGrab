@@ -84,7 +84,6 @@ class PreFerences(QDialog):
         self.ui.chkscene.setToolTip(self.tr(" Creation of a scene when acquisition is done "))
         self.ui.chkautomaticrecord.setToolTip(self.tr("  Stop acquisition if not enought free space disk "))
         self.ui.chkmanualrecord.setToolTip(self.tr(" Planning the time of acquisition "))
-        # self.ui.chkactivepreview.setToolTip(self.tr(" See in real time when acquisition is done "))
 
     # ==================================================================================================================
     def connectActions(self):
@@ -110,7 +109,6 @@ class PreFerences(QDialog):
         self.ui.chkmanualrecord.toggled.connect(self.captureExtraParameters)
         self.ui.lnehours.textChanged.connect(self.captureExtraParameters)
         self.ui.lneminutes.textChanged.connect(self.captureExtraParameters)
-        # self.ui.chkactivepreview.toggled.connect(self.runActivePreview)
 
     # ==================================================================================================================
     def updateUi(self):
@@ -122,7 +120,6 @@ class PreFerences(QDialog):
         self.ui.lbltranscode.setEnabled(False)
         self.ui.lnetranscode.setEnabled(False)
         self.ui.btntranscode.setEnabled(False)
-        # self.ui.chkactivepreview.setVisible(True)
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
@@ -136,7 +133,6 @@ class PreFerences(QDialog):
         self.ui.lneminutes.setEnabled(False)
         self.ui.label_4.setEnabled(False)
         self.ui.label_5.setEnabled(False)
-        # self.ui.chkactivepreview.setEnabled(False)
 
         # 2 tab
         self.ui.chkautomatic.setEnabled(False)
@@ -178,7 +174,7 @@ class PreFerences(QDialog):
             # clear the lineedit
             self.ui.lnedvgrab.clear()
             result = QDir(new_dvgrab_path).absolutePath()
-            #result = self.ui.lnedvgrab.text(base_repository)
+            # result = self.ui.lnedvgrab.text(base_repository)
             self.ui.lnedvgrab.setText(result)
 
     # ==================================================================================================================
@@ -340,15 +336,6 @@ class PreFerences(QDialog):
 
         """
         pass
-
-    # ==================================================================================================================
-    # def runActivePreview(self):
-    #
-    #     """
-    #     the user can run the active preview here
-    #
-    #     """
-    #     pass
 
     # ==================================================================================================================
     def captureExtraParameters(self):
