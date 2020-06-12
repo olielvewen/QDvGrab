@@ -2,16 +2,18 @@
 
 # Form implementation generated from reading ui file 'preferences.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.14.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(600, 700)
+        Dialog.resize(603, 700)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../images/camera-icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
@@ -203,13 +205,10 @@ class Ui_Dialog(object):
         self.verticalLayout_11.addWidget(self.gbocapture)
         self.gboplayer = QtWidgets.QGroupBox(self.tabcapture)
         self.gboplayer.setMinimumSize(QtCore.QSize(551, 151))
+        self.gboplayer.setTitle("")
         self.gboplayer.setObjectName("gboplayer")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.gboplayer)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        self.chkactivepreview = QtWidgets.QCheckBox(self.gboplayer)
-        self.chkactivepreview.setMinimumSize(QtCore.QSize(470, 25))
-        self.chkactivepreview.setObjectName("chkactivepreview")
-        self.verticalLayout_5.addWidget(self.chkactivepreview)
         self.verticalLayout_11.addWidget(self.gboplayer)
         self.tabWidget.addTab(self.tabcapture, "")
         self.verticalLayout_8.addWidget(self.tabWidget)
@@ -267,8 +266,6 @@ class Ui_Dialog(object):
         self.chkmanualrecord.setText(_translate("Dialog", "Record since"))
         self.label_4.setText(_translate("Dialog", "<html><head/><body><p>hours</p></body></html>"))
         self.label_5.setText(_translate("Dialog", "<html><head/><body><p>minutes</p></body></html>"))
-        self.gboplayer.setTitle(_translate("Dialog", "Player"))
-        self.chkactivepreview.setText(_translate("Dialog", "Active preview since recording"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabcapture), _translate("Dialog", "Capture"))
         self.btncredits.setText(_translate("Dialog", "Credits"))
         self.btncancel.setText(_translate("Dialog", "Close"))
@@ -282,4 +279,3 @@ if __name__ == "__main__":
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-

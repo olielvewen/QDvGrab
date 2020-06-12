@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
+    <width>603</width>
     <height>700</height>
    </rect>
   </property>
@@ -481,23 +481,9 @@
           </size>
          </property>
          <property name="title">
-          <string>Player</string>
+          <string/>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
-           <widget class="QCheckBox" name="chkactivepreview">
-            <property name="minimumSize">
-             <size>
-              <width>470</width>
-              <height>25</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Active preview since recording</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <layout class="QVBoxLayout" name="verticalLayout_5"/>
         </widget>
        </item>
       </layout>
