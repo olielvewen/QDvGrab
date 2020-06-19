@@ -55,13 +55,6 @@ class PreFerences(QDialog):
         else:
             QMessageBox.information(self, self.tr("QDvGrab"), self.tr("Dvgrab is not installed"))
 
-        # populate the transcode path
-        transcode_path = shutil.which('transcode')
-        if transcode_path is not None:
-            self.ui.lnetranscode.setText(transcode_path)
-        else:
-            QMessageBox.information(self, self.tr("QDvGrab"), self.tr("Transcode is not installed"))
-
     # ==================================================================================================================
     def setupUi(self):
 
@@ -72,7 +65,6 @@ class PreFerences(QDialog):
         self.ui.cmblanguages.setToolTip(self.tr(" Change languages here "))
         self.ui.btnchoosefile.setToolTip(self.tr(" Choose here another directory other than this one by default "))
         self.ui.btndvgrab.setToolTip(self.tr(" Choose here another path other than this one by default if this one has failed "))
-        self.ui.btntranscode.setToolTip(self.tr(" Choose here another path other than this one by default if this one has failed "))
         self.ui.btncredits.setToolTip(self.tr(" Set the Credits Screen "))
         self.ui.cmbformatcapture.setToolTip(self.tr(" Select another format than this one by default"))
         self.ui.chknone.setToolTip(self.tr(" Select no conversion when acquisition is done "))
@@ -93,7 +85,6 @@ class PreFerences(QDialog):
         """
         self.ui.btncredits.clicked.connect(self.creDits)
         self.ui.btndvgrab.clicked.connect(self.dvgrabPath)
-        self.ui.btntranscode.clicked.connect(self.transcodePath)
         self.ui.btnchoosefile.clicked.connect(self.outputPath)
         self.ui.cmblanguages.currentIndexChanged.connect(self.languageSelected)
         self.ui.cmbformatcapture.currentIndexChanged.connect(self.chooseFormatCapture)
@@ -117,9 +108,7 @@ class PreFerences(QDialog):
         Update the ui and desactive all widgets that we don't need for the moment
 
         """
-        self.ui.lbltranscode.setEnabled(False)
-        self.ui.lnetranscode.setEnabled(False)
-        self.ui.btntranscode.setEnabled(False)
+
         self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
@@ -176,27 +165,6 @@ class PreFerences(QDialog):
             result = QDir(new_dvgrab_path).absolutePath()
             # result = self.ui.lnedvgrab.text(base_repository)
             self.ui.lnedvgrab.setText(result)
-
-    # ==================================================================================================================
-    def transcodePath(self):
-
-        """
-        Display the new path of transcode if he is not displayed by default
-
-        """
-
-        # select this folder by default when the QFileDialog is opened
-        direct_repository = "/usr/bin"
-        base_repository = QDir(direct_repository).absolutePath()
-
-        new_transcode_path = QFileDialog.getOpenFileName(self, self.tr('QdvGrab - Choose a different path'), (QDir.rootPath() + base_repository))
-
-        if new_transcode_path is not None:
-            new_transcode_path = ""
-            # clear the lineedit
-            self.ui.lnetranscode.clear()
-            result = QDir(new_transcode_path).absolutePath()
-            self.ui.lnetranscode.setText(result)
 
     # ==================================================================================================================
     def outputPath(self):
