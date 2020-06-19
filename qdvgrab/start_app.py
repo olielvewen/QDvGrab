@@ -24,7 +24,7 @@ import os
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QTranslator, QLocale
 
-from qdvgrab import QdvGrab
+from windows.qdvgrab import QdvGrab
 
 app_name = "QDvGrab"
 app_version = "0.21"

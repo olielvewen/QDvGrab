@@ -28,7 +28,7 @@ from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QFileDialog
 from PyQt5.QtCore import QDir, QSettings, QLocale, QTimer
 
 from ui.preferencesui import Ui_Dialog
-from credits import Credits
+from windows.credits import Credits
 
 
 class PreFerences(QDialog):

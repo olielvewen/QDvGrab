@@ -31,7 +31,7 @@ from PyQt5.QtWidgets import QDialog
 
 # Used for call ui files
 from ui.aboutui import Ui_aboutscreen
-from credits import Credits
+from windows.credits import Credits
 
 app_name = "QDvGrab"
 app_version = "0.21"
@@ -56,7 +56,7 @@ class About(QDialog):
         self.ui = Ui_aboutscreen()
         self.ui.setupUi(self)
 
-        icon_path = os.path.join(os.path.dirname(__file__), "./images/tool-animator.png")
+        icon_path = os.path.join(os.path.dirname(__file__), "../images/tool-animator.png")
         self.ui.lblimageicon.setPixmap(QPixmap(icon_path))
         self.ui.lblimageicon.setMaximumSize(QSize(220, 340))
         self.ui.lblimageicon.setScaledContents(True)

@@ -35,8 +35,8 @@ from images import qdvgrabressources_rc
 
 # Used for calling ui files
 from ui.qdvgrabui import Ui_MainWindow
-from preferences import PreFerences
-from about import About
+from windows.preferences import PreFerences
+from windows.about import About
 
 Variables = {"Cmd":"",
              "CmdList":[],  # list commands to execute"
