@@ -25,21 +25,21 @@ Screenshots
 ### QDvGrab
 
 <p align="center">
-    <img src="qdvgrab/classes/qdvgrab.png" alt="QDvGrab" width="500">
+    <img src="qdvgrab/images/qdvgrab.png" alt="QDvGrab" width="500">
 </p>
 
 ### Preferences
 
 <p align="center">
-    <img src="qdvgrab/classes/preferences1.png" alt="Preferences" width="500">
+    <img src="qdvgrab/images/preferences1.png" alt="Preferences" width="500">
 </p>
 
 <p align="center">
-    <img src="qdvgrab/classes/preferences2.png" alt="Preferences" width="500">
+    <img src="qdvgrab/images/preferences2.png" alt="Preferences" width="500">
 </p>
 
 <p align="center">
-    <img src="qdvgrab/classes/preferences3.png" alt="Preferences" width="500">
+    <img src="qdvgrab/images/preferences3.png" alt="Preferences" width="500">
 </p>
 
 
