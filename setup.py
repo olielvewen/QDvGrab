@@ -13,7 +13,7 @@ setup(
     packages=['qdvgrab'],
     script_args=['qdvgrab/start_app'],
     data_files='data_files',
-    version='0.19',
+    version='0.20',
     description='GUI for Dvgrab',
     author='Olivier Girard',
     author_email='olivier@openshot.org',
