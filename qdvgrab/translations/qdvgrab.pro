@@ -1,2 +1,2 @@
-SOURCES += qdvgrab.py preferences.py about.py credits.py /../../qdvgrabui.py
-TRANSLATIONS += qdvgrab.fr_FR.ts qdvgrab.en_US.ts qdvgrab.de_De.ts qdvgrab.pt_BR.ts qdvgrab.es_ES.ts qdvgrab.it_IT.ts qdvgrab.nl_NL.ts
+SOURCES += ../windows/qdvgrab.py ../windows/preferences.py ../windows/about.py ../windows/credits.py ../ui/qdvgrabui.py ../ui/preferencesui.py ../ui/creditsui.py ../ui/aboutui.py
+TRANSLATIONS += ../translations/qdvgrab.fr_FR.ts ../translations/qdvgrab.en_US.ts ../translations/qdvgrab.de_De.ts ../translations/qdvgrab.pt_BR.ts ../translations/qdvgrab.es_ES.ts ../translations/qdvgrab.it_IT.ts ../translations/qdvgrab.nl_NL.ts
