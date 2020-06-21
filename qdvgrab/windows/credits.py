@@ -92,7 +92,7 @@ class Credits(QDialog):
     def showLicense(self):
         """Display the license"""
 
-        with open('../../LICENSE', 'r') as my_licence:
+        with open('../LICENSE', 'r') as my_licence:
             text = my_licence.read()
             self.ui.textBrowserlicense.setPlainText(text)
 
