@@ -1,146 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="../ui/preferencesui.py" line="236"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="245"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="238"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Languages:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Langues:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="239"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output File:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Fichier de Sortie:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="244"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="241"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name Camcorder:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nom du Camescope:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="242"/>
         <source>Dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Dépendances</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="243"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DvGrab:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DvGrab:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="246"/>
         <source>Format Capture</source>
-        <translation type="unfinished"></translation>
+        <translation>Format de Capture</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="247"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Format Capture:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Format de Capture:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="248"/>
         <source>Automatic Conversion in mpeg2</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversion automatique en mpeg2</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="249"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="250"/>
         <source>DvRaw</source>
-        <translation type="unfinished"></translation>
+        <translation>DvRaw</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="251"/>
         <source>DV 2</source>
-        <translation type="unfinished"></translation>
+        <translation>DV 2</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="252"/>
         <source>Hdv</source>
-        <translation type="unfinished"></translation>
+        <translation>Hdv</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="253"/>
         <source>Detection Scene</source>
-        <translation type="unfinished"></translation>
+        <translation>Détection des Scénes</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="254"/>
         <source>No detection automatic (1 file only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune détéction automatique (1 seul fichier)</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="255"/>
         <source>Automatic follow the hour and the date of camcording</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatique selon l&apos;heure et la date de l&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="256"/>
         <source>Create a scene every</source>
-        <translation type="unfinished"></translation>
+        <translation>Création d&apos;une scéne chaque</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="257"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes/seconds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes/secondes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="258"/>
         <source>Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversion</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="264"/>
         <source>Capture</source>
-        <translation type="unfinished"></translation>
+        <translation>Capture</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="260"/>
         <source>Stop automatically record if not enought free space disk</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopper automatiquement l&apos;enregistrement si pas assez d&apos;espace disque de libre</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="261"/>
         <source>Record since</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrement depuis</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="262"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;hours&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;heures&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="263"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="265"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Crédits</translation>
     </message>
     <message>
         <location filename="../ui/preferencesui.py" line="266"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
 </context>
 <context>
@@ -148,122 +149,122 @@
     <message>
         <location filename="../ui/qdvgrabui.py" line="211"/>
         <source>QDvGrab</source>
-        <translation type="unfinished">QDvGrab</translation>
+        <translation>QDvGrab</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DV Camecorder:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Camescope DV:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="213"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Montage point&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Point de Montage&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="214"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Free:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Libre:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="215"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Utilisé:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This Hard drive can get around &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ce Disque Dur peu contenir environ &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capture Name:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nom de la Capture:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="218"/>
         <source>DV Acquisition</source>
-        <translation type="unfinished"></translation>
+        <translation>Acquisition DV</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="219"/>
         <source>HDV Acquisition</source>
-        <translation type="unfinished"></translation>
+        <translation>Acquisition HDV</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="220"/>
         <source>Start Record</source>
-        <translation type="unfinished"></translation>
+        <translation>Démarrage de l&apos;enregistrement</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="231"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="237"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Aide</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="229"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitter</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="224"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="225"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="227"/>
         <source>Open Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir un répertoire</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="228"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="230"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="232"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="233"/>
         <source>About QDvGrab</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos de QDvGrab</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="234"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="235"/>
         <source>About Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos de Qt</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="236"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="238"/>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
 </context>
 <context>
@@ -507,22 +508,22 @@
     <message>
         <location filename="../ui/aboutui.py" line="72"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos de</translation>
     </message>
     <message>
         <location filename="../ui/aboutui.py" line="73"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gui for grabbing film from an DV or HDV &lt;/p&gt;&lt;p&gt;Camecorder in the simpliest way on the &lt;/p&gt;&lt;p&gt;Hard Drive.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;QDvGrab - &lt;a href=&quot;https://github.com/olielvewen/QDvGrab&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/olielvewen/QDvGrab&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Copyright 2014-2016- 2020 Olivier Girard&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://github.com/olielvewen/QDvGrab&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;License: GNU GPL v3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gui pour acquerir un film à partir d&apos;unCamescope DV or HDV &lt;/p&gt;&lt;p&gt;de la manière la plus simple sur le &lt;/p&gt;&lt;p&gt;Disque Dur.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;QDvGrab - &lt;a href=&quot;https://github.com/olielvewen/QDvGrab&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Page d&apos;accueil&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/olielvewen/QDvGrab&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;Copyright 2014-2016- 2020 Olivier Girard&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&quot;https://github.com/olielvewen/QDvGrab&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;License: GNU GPL v3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/aboutui.py" line="74"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Crédits</translation>
     </message>
     <message>
         <location filename="../ui/aboutui.py" line="75"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
 </context>
 <context>
@@ -530,32 +531,32 @@
     <message>
         <location filename="../ui/creditsui.py" line="71"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Crédits</translation>
     </message>
     <message>
         <location filename="../ui/creditsui.py" line="72"/>
         <source>Written by</source>
-        <translation type="unfinished"></translation>
+        <translation>Ecrit par</translation>
     </message>
     <message>
         <location filename="../ui/creditsui.py" line="73"/>
         <source>Documented by</source>
-        <translation type="unfinished"></translation>
+        <translation>Documenter par</translation>
     </message>
     <message>
         <location filename="../ui/creditsui.py" line="74"/>
         <source>Translated by</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduit par</translation>
     </message>
     <message>
         <location filename="../ui/creditsui.py" line="75"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../ui/creditsui.py" line="76"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
 </context>
 </TS>
