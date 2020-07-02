@@ -27,7 +27,7 @@ from PyQt5.QtCore import QTranslator, QLocale, QLibraryInfo
 from windows.qdvgrab import QdvGrab
 
 app_name = "QDvGrab"
-app_version = "0.21"
+app_version = "0.22"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
