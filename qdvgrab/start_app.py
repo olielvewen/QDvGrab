@@ -22,7 +22,7 @@ import sys
 import os
 
 from PyQt5.QtWidgets import QApplication
-from PyQt5.QtCore import QTranslator, QLocale
+from PyQt5.QtCore import QTranslator, QLocale, QLibraryInfo
 
 from windows.qdvgrab import QdvGrab
 
@@ -41,20 +41,29 @@ if __name__ == "__main__":
     application = QApplication(sys.argv)
 
     # Translate application
-    enNativeLanguage = len(sys.argv) == 1
-    if enNativeLanguage:
-        locale = QLocale()
-    else:
-        languageCountry = sys.argv[1]
-    translators = []
-    for prefixQm in ("qdvgrab.", "qt_", "qtbase_"):
-        translator = QTranslator()
-        translators.append(translator)
-        if enNativeLanguage:
-            translator.load(locale, prefixQm)
-        else:
-            translator.load(prefixQm+languageCountry)
-    application.installTranslator(translator)
+    locale = QLocale().system().name()
+    qt_path_locale = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
+    translator_qt = QTranslator()
+    if translator_qt.load("qt_%s" % locale, qt_path_locale):
+        application.installTranslator(translator_qt)
+
+    translator_custom = QTranslator()
+    if translator_custom.load("qdvgrab.%s" % locale, "translations"):
+        application.installTranslator(translator_custom)
+    # enNativeLanguage = len(sys.argv) == 1
+    # if enNativeLanguage:
+    #     locale = QLocale()
+    # else:
+    #     languageCountry = sys.argv[1]
+    # translators = []
+    # for prefixQm in ("qdvgrab.", "qt_", "qtbase_"):
+    #     translator = QTranslator()
+    #     translators.append(translator)
+    #     if enNativeLanguage:
+    #         translator.load(locale, prefixQm)
+    #     else:
+    #         translator.load(prefixQm+languageCountry)
+    # application.installTranslator(translator)
 
     window = QdvGrab()
     window.show()
