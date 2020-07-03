@@ -170,11 +170,10 @@ class PreFerences(QDialog):
         Display the output path by default and after this one choose by the user
 
         """
-        new_output_path = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
-        new_output_path = str(self.ui.lneoutputfile.text())
+        output_path = QFileDialog.getExistingDirectory(self, self.tr("QDvGab - Open a Directory"), os.path.join(QDir.homePath() + "/Videos/"))
 
-        if new_output_path:
-            self.ui.lneoutputfile.setText(new_output_path)
+        if output_path:
+            self.ui.lneoutputfile.setText(output_path)
 
     # ==================================================================================================================
     def languageSelected(self, value):
