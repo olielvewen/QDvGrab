@@ -167,7 +167,7 @@ class QdvGrab(QMainWindow):
     # ==================================================================================================================
     def updateUi(self):
 
-        self.ui.lnecapturename.setText(self.tr("My Awesome Movie"))
+        self.ui.lnecapturename.setText(self.tr("Movie-"))
         self.ui.lnecapturename.setFocus()
         self.ui.lnecapturename.selectAll()
 
