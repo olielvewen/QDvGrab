@@ -34,7 +34,7 @@ from ui.aboutui import Ui_aboutscreen
 from windows.credits import Credits
 
 app_name = "QDvGrab"
-app_version = "0.22"
+app_version = "0.23"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
