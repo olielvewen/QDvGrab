@@ -212,7 +212,7 @@ class QdvGrab(QMainWindow):
 
         """
 
-        application.quit()
+        self.quit()
 
     # ==================================================================================================================
     def run_preferences_screen(self):
