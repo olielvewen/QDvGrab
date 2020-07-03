@@ -1,5 +1,5 @@
 <RCC>
-  <qresource prefix="newPrefix">
+  <qresource prefix="images">
     <file>tool-animator.png</file>
     <file>EN.png</file>
     <file>folder-blue.png</file>

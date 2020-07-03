@@ -230,7 +230,7 @@ class Ui_MainWindow(object):
         self.actionAbout_Qt.setShortcut(_translate("MainWindow", "Ctrl+B"))
         self.actionHelp.setText(_translate("MainWindow", "Help"))
         self.actionHelp.setShortcut(_translate("MainWindow", "Ctrl+H"))
-import qdvgrabressources_rc
+from images import qdvgrabressources_rc
 
 
 if __name__ == "__main__":

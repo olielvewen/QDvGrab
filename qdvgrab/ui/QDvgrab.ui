@@ -58,7 +58,7 @@
         <item>
          <widget class="QLabel" name="label_5">
           <property name="pixmap">
-           <pixmap resource="../images/qdvgrabressources.qrc">:/newPrefix/drive-harddisk.png</pixmap>
+           <pixmap>:/newPrefix/drive-harddisk.png</pixmap>
           </property>
          </widget>
         </item>
@@ -185,7 +185,7 @@
              <string>DV Acquisition</string>
             </property>
             <property name="icon">
-             <iconset resource="../images/qdvgrabressources.qrc">
+             <iconset>
               <normaloff>:/newPrefix/media-optical-video.png</normaloff>:/newPrefix/media-optical-video.png</iconset>
             </property>
             <property name="iconSize">
@@ -217,7 +217,7 @@
              <string>HDV Acquisition</string>
             </property>
             <property name="icon">
-             <iconset resource="../images/qdvgrabressources.qrc">
+             <iconset>
               <normaloff>:/newPrefix/tools-media-optical-burn.png</normaloff>:/newPrefix/tools-media-optical-burn.png</iconset>
             </property>
             <property name="iconSize">
@@ -250,7 +250,7 @@
              <string>Start Record</string>
             </property>
             <property name="icon">
-             <iconset resource="../images/qdvgrabressources.qrc">
+             <iconset>
               <normaloff>:/newPrefix/media-tape.png</normaloff>:/newPrefix/media-tape.png</iconset>
             </property>
             <property name="iconSize">
@@ -286,7 +286,7 @@
              <string>Preferences</string>
             </property>
             <property name="icon">
-             <iconset resource="../images/qdvgrabressources.qrc">
+             <iconset>
               <normaloff>:/newPrefix/tools-wizard.png</normaloff>:/newPrefix/tools-wizard.png</iconset>
             </property>
             <property name="iconSize">
@@ -338,7 +338,7 @@
              <string>Help</string>
             </property>
             <property name="icon">
-             <iconset resource="../images/qdvgrabressources.qrc">
+             <iconset>
               <normaloff>:/newPrefix/system-help.png</normaloff>:/newPrefix/system-help.png</iconset>
             </property>
             <property name="iconSize">
@@ -374,7 +374,7 @@
              <string>Quit</string>
             </property>
             <property name="icon">
-             <iconset resource="../images/qdvgrabressources.qrc">
+             <iconset>
               <normaloff>:/newPrefix/application-exit.png</normaloff>:/newPrefix/application-exit.png</iconset>
             </property>
             <property name="iconSize">
