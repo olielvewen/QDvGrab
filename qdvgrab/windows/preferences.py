@@ -43,7 +43,7 @@ class PreFerences(QDialog):
 
         QTimer.singleShot(0, self.loadSettings)
 
-        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Dv (.avi)', 'Hdv (.m2t)', 'Mpeg 2 (.mpg)', 'Mov (.mov)']
+        format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Hdv (.m2t)', 'Mpeg 2 (.mpg)']
         for format in format_capture:
             self.ui.cmbformatcapture.addItem(format)
             self.ui.cmbformatcapture.setCurrentIndex(0)
@@ -209,7 +209,7 @@ class PreFerences(QDialog):
         new_output_path = settings.value('new_output_path', type=str)
         name_camcorder = settings.value('name_camcorder', type=str)
 
-        formats_choose = settings.value('formats_choose', True, type=str)
+        formats_choose = settings.value('formats_choose')
         automatic_conversion = settings.value('automatic_conversion', True, type=bool)
         detection_scene = settings.value('detection_scene', True, type=bool)
 
