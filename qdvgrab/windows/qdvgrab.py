@@ -31,7 +31,7 @@ from PyQt5.QtCore import QTimer, QDir, QSettings
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog, QWidget
 
 # need to display icon anywhere the program is called
-from images import qdvgrabressources_rc
+from images.qdvgrabressources_rc import *
 
 # Used for calling ui files
 from ui.qdvgrabui import Ui_MainWindow
@@ -167,7 +167,7 @@ class QdvGrab(QMainWindow):
     # ==================================================================================================================
     def updateUi(self):
 
-        self.ui.lnecapturename.setText(self.tr("My Awesome Movie"))
+        self.ui.lnecapturename.setText(self.tr("Movie-"))
         self.ui.lnecapturename.setFocus()
         self.ui.lnecapturename.selectAll()
 
@@ -212,7 +212,7 @@ class QdvGrab(QMainWindow):
 
         """
 
-        application.quit()
+        self.close()
 
     # ==================================================================================================================
     def run_preferences_screen(self):
