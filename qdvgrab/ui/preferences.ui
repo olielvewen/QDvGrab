@@ -37,23 +37,6 @@
           <string>General</string>
          </property>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="txtlanguagues">
-            <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Languages:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1" colspan="2">
-           <widget class="QComboBox" name="cmblanguages">
-            <property name="minimumSize">
-             <size>
-              <width>380</width>
-              <height>35</height>
-             </size>
-            </property>
-           </widget>
-          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="txtoutputfile">
             <property name="text">
@@ -93,6 +76,23 @@
           </item>
           <item row="2" column="1" colspan="2">
            <widget class="QLineEdit" name="lnenamecamcorder">
+            <property name="minimumSize">
+             <size>
+              <width>380</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="txtlanguagues">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Languages:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QComboBox" name="cmblanguages">
             <property name="minimumSize">
              <size>
               <width>380</width>
@@ -231,34 +231,23 @@
          <item>
           <widget class="QGroupBox" name="gboautomatic">
            <property name="title">
-            <string>Automatic Conversion in mpeg2</string>
+            <string>Time Capture</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="QCheckBox" name="chknone">
+             <widget class="QCheckBox" name="chkmanualrecord">
               <property name="text">
-               <string>None</string>
+               <string>Record since</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QCheckBox" name="chkdvraw">
-              <property name="text">
-               <string>DvRaw</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="chkdv2">
-              <property name="text">
-               <string>DV 2</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="chkhdv">
-              <property name="text">
-               <string>Hdv</string>
+             <widget class="QPushButton" name="chkdv2">
+              <property name="minimumSize">
+               <size>
+                <width>380</width>
+                <height>35</height>
+               </size>
               </property>
              </widget>
             </item>
@@ -391,69 +380,6 @@
               </property>
              </widget>
             </item>
-            <item>
-             <widget class="QCheckBox" name="chkmanualrecord">
-              <property name="minimumSize">
-               <size>
-                <width>470</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Record since</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLineEdit" name="lnehours">
-              <property name="minimumSize">
-               <size>
-                <width>110</width>
-                <height>25</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_4">
-              <property name="minimumSize">
-               <size>
-                <width>60</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;hours&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lneminutes">
-              <property name="minimumSize">
-               <size>
-                <width>110</width>
-                <height>25</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_5">
-              <property name="minimumSize">
-               <size>
-                <width>80</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-             </widget>
-            </item>
            </layout>
           </item>
          </layout>
@@ -479,19 +405,6 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QPushButton" name="btncredits">
-       <property name="minimumSize">
-        <size>
-         <width>160</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Credits</string>
-       </property>
-      </widget>
-     </item>
      <item>
       <widget class="QPushButton" name="btncancel_2">
        <property name="enabled">

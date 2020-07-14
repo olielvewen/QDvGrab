@@ -28,7 +28,6 @@ from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QFileDialog
 from PyQt5.QtCore import QDir, QSettings, QLocale, QTimer
 
 from ui.preferencesui import Ui_Dialog
-from windows.credits import Credits
 
 
 class PreFerences(QDialog):
@@ -65,12 +64,7 @@ class PreFerences(QDialog):
         self.ui.cmblanguages.setToolTip(self.tr(" Change languages here "))
         self.ui.btnchoosefile.setToolTip(self.tr(" Choose here another directory other than this one by default "))
         self.ui.btndvgrab.setToolTip(self.tr(" Choose here another path other than this one by default if this one has failed "))
-        self.ui.btncredits.setToolTip(self.tr(" Set the Credits Screen "))
         self.ui.cmbformatcapture.setToolTip(self.tr(" Select another format than this one by default"))
-        self.ui.chknone.setToolTip(self.tr(" Select no conversion when acquisition is done "))
-        self.ui.chkdvraw.setToolTip(self.tr(" Select Raw conversion when acquisition is done "))
-        self.ui.chkdv2.setToolTip(self.tr(" Select Dv2 conversion when acquisition is done "))
-        self.ui.chkhdv.setToolTip(self.tr(" Select Dv conversion when acquisition is done "))
         self.ui.chkdetection.setToolTip(self.tr(" Select only file when acquisition is done "))
         self.ui.chkautomatic.setToolTip(self.tr(" Set several files following hour and date when acquisition is done "))
         self.ui.chkscene.setToolTip(self.tr(" Creation of a scene when acquisition is done "))
@@ -83,23 +77,18 @@ class PreFerences(QDialog):
         """
         connection of all events
         """
-        self.ui.btncredits.clicked.connect(self.creDits)
         self.ui.btndvgrab.clicked.connect(self.dvgrabPath)
         self.ui.btnchoosefile.clicked.connect(self.outputPath)
         self.ui.cmblanguages.currentIndexChanged.connect(self.languageSelected)
         self.ui.cmbformatcapture.currentIndexChanged.connect(self.chooseFormatCapture)
-        self.ui.chknone.toggled.connect(self.chooseAutomaticConversion)
-        self.ui.chkdvraw.toggled.connect(self.chooseAutomaticConversion)
-        self.ui.chkdv2.toggled.connect(self.chooseAutomaticConversion)
-        self.ui.chkhdv.toggled.connect(self.chooseAutomaticConversion)
         self.ui.chkdetection.toggled.connect(self.chooseDetectionScene)
         self.ui.chkautomatic.toggled.connect(self.chooseDetectionScene)
         self.ui.chkscene.toggled.connect(self.chooseDetectionScene)
         self.ui.spbscene.valueChanged.connect(self.chooseDetectionScene)
         self.ui.chkautomaticrecord.toggled.connect(self.captureExtraParameters)
         self.ui.chkmanualrecord.toggled.connect(self.captureExtraParameters)
-        self.ui.lnehours.textChanged.connect(self.captureExtraParameters)
-        self.ui.lneminutes.textChanged.connect(self.captureExtraParameters)
+        # self.ui.lnehours.textChanged.connect(self.captureExtraParameters)
+        # self.ui.lneminutes.textChanged.connect(self.captureExtraParameters)
 
     # ==================================================================================================================
     def updateUi(self):
@@ -109,37 +98,21 @@ class PreFerences(QDialog):
 
         """
 
-        self.ui.chknone.setChecked(True)
         self.ui.chkdetection.setChecked(True)
         self.ui.chkautomaticrecord.setChecked(True)
 
         # 3 tab
         self.ui.chkmanualrecord.setEnabled(False)
-        self.ui.lnehours.setEnabled(False)
-        self.ui.lneminutes.setEnabled(False)
-        self.ui.label_4.setEnabled(False)
-        self.ui.label_5.setEnabled(False)
+        # self.ui.lnehours.setEnabled(False)
+        # self.ui.lneminutes.setEnabled(False)
+        # self.ui.label_4.setEnabled(False)
+        # self.ui.label_5.setEnabled(False)
 
         # 2 tab
         self.ui.chkautomatic.setEnabled(False)
         self.ui.chkscene.setEnabled(False)
         self.ui.spbscene.setEnabled(False)
         self.ui.label_3.setEnabled(False)
-
-        self.ui.chkdvraw.setEnabled(False)
-        self.ui.chkdv2.setEnabled(False)
-        self.ui.chkhdv.setEnabled(False)
-
-    # ==================================================================================================================
-    def creDits(self):
-
-        """
-        run the Credits dialog
-
-        """
-        dialog = Credits()
-        if dialog.exec_():
-            dialog.show()
 
     # ==================================================================================================================
     def dvgrabPath(self):
@@ -210,7 +183,7 @@ class PreFerences(QDialog):
         name_camcorder = settings.value('name_camcorder', type=str)
 
         formats_choose = settings.value('formats_choose')
-        automatic_conversion = settings.value('automatic_conversion', True, type=bool)
+
         detection_scene = settings.value('detection_scene', True, type=bool)
 
         automatic_record = settings.value('automatic_record', True, type=bool)
@@ -229,8 +202,6 @@ class PreFerences(QDialog):
             self.ui.cmbformatcapture.setCurrentText(format)
         else:
             self.ui.cmbformatcapture.setCurrentText(formats_choose)
-        if automatic_conversion:
-            self.ui.chknone.setChecked(True)
         if detection_scene:
             self.ui.chkdetection.setChecked(True)
         if automatic_record:
@@ -253,7 +224,6 @@ class PreFerences(QDialog):
         formats_choose = self.ui.cmbformatcapture.setCurrentIndex()
 
         # ConversionSettings
-        automatic_conversion = self.ui.chknone.isChecked()
         detection_scene = self.ui.chkdetection.isChecked()
 
         # CaptureSettings
@@ -274,7 +244,6 @@ class PreFerences(QDialog):
 
         settings.beginGroup('ConversionSettings')
         settings.setValue('formats_choose', formats_choose)
-        settings.setValue('automatic_conversion', automatic_conversion)
         settings.setValue('detection_scene', detection_scene)
         settings.endGroup()
 

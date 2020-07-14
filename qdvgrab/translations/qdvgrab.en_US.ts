@@ -3,265 +3,225 @@
 <context>
     <name>Dialog</name>
     <message>
-        <location filename="../ui/preferencesui.py" line="236"/>
+        <location filename="../ui/preferencesui.py" line="205"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="245"/>
+        <location filename="../ui/preferencesui.py" line="214"/>
         <source>General</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="238"/>
+        <location filename="../ui/preferencesui.py" line="210"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Languages:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="239"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output File:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="244"/>
+        <location filename="../ui/preferencesui.py" line="213"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="241"/>
+        <location filename="../ui/preferencesui.py" line="209"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name Camcorder:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="242"/>
+        <location filename="../ui/preferencesui.py" line="211"/>
         <source>Dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="243"/>
+        <location filename="../ui/preferencesui.py" line="212"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DvGrab:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="246"/>
+        <location filename="../ui/preferencesui.py" line="215"/>
         <source>Format Capture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="247"/>
+        <location filename="../ui/preferencesui.py" line="216"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Format Capture:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="248"/>
-        <source>Automatic Conversion in mpeg2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="249"/>
-        <source>None</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="250"/>
-        <source>DvRaw</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="251"/>
-        <source>DV 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="252"/>
-        <source>Hdv</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="253"/>
+        <location filename="../ui/preferencesui.py" line="219"/>
         <source>Detection Scene</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="254"/>
+        <location filename="../ui/preferencesui.py" line="220"/>
         <source>No detection automatic (1 file only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="255"/>
+        <location filename="../ui/preferencesui.py" line="221"/>
         <source>Automatic follow the hour and the date of camcording</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="256"/>
+        <location filename="../ui/preferencesui.py" line="222"/>
         <source>Create a scene every</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="257"/>
+        <location filename="../ui/preferencesui.py" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes/seconds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="258"/>
+        <location filename="../ui/preferencesui.py" line="224"/>
         <source>Conversion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="264"/>
+        <location filename="../ui/preferencesui.py" line="227"/>
         <source>Capture</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="260"/>
+        <location filename="../ui/preferencesui.py" line="226"/>
         <source>Stop automatically record if not enought free space disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="261"/>
+        <location filename="../ui/preferencesui.py" line="218"/>
         <source>Record since</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/preferencesui.py" line="262"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;hours&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="263"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minutes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="265"/>
-        <source>Credits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/preferencesui.py" line="266"/>
+        <location filename="../ui/preferencesui.py" line="228"/>
         <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/preferencesui.py" line="207"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output Folder:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/preferencesui.py" line="217"/>
+        <source>Time Capture</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="211"/>
+        <location filename="../ui/qdvgrabui.py" line="208"/>
         <source>QDvGrab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="212"/>
+        <location filename="../ui/qdvgrabui.py" line="209"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DV Camecorder:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qdvgrabui.py" line="213"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Montage point&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qdvgrabui.py" line="214"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Free:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qdvgrabui.py" line="215"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qdvgrabui.py" line="216"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This Hard drive can get around &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/qdvgrabui.py" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capture Name:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="218"/>
+        <location filename="../ui/qdvgrabui.py" line="210"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Free:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qdvgrabui.py" line="211"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qdvgrabui.py" line="212"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This Hard drive can get around &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qdvgrabui.py" line="214"/>
         <source>DV Acquisition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="219"/>
+        <location filename="../ui/qdvgrabui.py" line="215"/>
         <source>HDV Acquisition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="220"/>
+        <location filename="../ui/qdvgrabui.py" line="216"/>
         <source>Start Record</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="231"/>
+        <location filename="../ui/qdvgrabui.py" line="227"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="237"/>
+        <location filename="../ui/qdvgrabui.py" line="233"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="229"/>
+        <location filename="../ui/qdvgrabui.py" line="225"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="224"/>
+        <location filename="../ui/qdvgrabui.py" line="220"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="225"/>
+        <location filename="../ui/qdvgrabui.py" line="221"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="227"/>
+        <location filename="../ui/qdvgrabui.py" line="223"/>
         <source>Open Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="228"/>
+        <location filename="../ui/qdvgrabui.py" line="224"/>
         <source>Ctrl+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="230"/>
+        <location filename="../ui/qdvgrabui.py" line="226"/>
         <source>Ctrl+Q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="232"/>
+        <location filename="../ui/qdvgrabui.py" line="228"/>
         <source>Ctrl+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="233"/>
+        <location filename="../ui/qdvgrabui.py" line="229"/>
         <source>About QDvGrab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="234"/>
+        <location filename="../ui/qdvgrabui.py" line="230"/>
         <source>Ctrl+A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="235"/>
+        <location filename="../ui/qdvgrabui.py" line="231"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="236"/>
+        <location filename="../ui/qdvgrabui.py" line="232"/>
         <source>Ctrl+B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/qdvgrabui.py" line="238"/>
+        <location filename="../ui/qdvgrabui.py" line="234"/>
         <source>Ctrl+H</source>
         <translation type="unfinished"></translation>
     </message>
@@ -349,17 +309,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/preferences.py" line="115"/>
-        <source>My Awesome Movie</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../windows/preferences.py" line="159"/>
+        <location filename="../windows/preferences.py" line="156"/>
         <source>QdvGrab - Choose a different path </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../windows/preferences.py" line="176"/>
+        <location filename="../windows/preferences.py" line="173"/>
         <source>QDvGab - Open a Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -468,7 +423,7 @@
     </message>
     <message>
         <location filename="../windows/qdvgrab.py" line="170"/>
-        <source>My Awesome Movie</source>
+        <source>Movie-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
