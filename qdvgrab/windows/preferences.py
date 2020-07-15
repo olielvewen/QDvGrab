@@ -18,13 +18,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import sys
 import os
 import os.path
 import shutil
 
 # need for display gui
-from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox, QFileDialog
+from PyQt5.QtWidgets import QDialog, QMessageBox, QFileDialog
 from PyQt5.QtCore import QDir, QSettings, QLocale, QTimer
 
 from ui.preferencesui import Ui_Dialog
