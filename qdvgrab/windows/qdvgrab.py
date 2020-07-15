@@ -38,17 +38,6 @@ from ui.qdvgrabui import Ui_MainWindow
 from windows.preferences import PreFerences
 from windows.about import About
 
-Variables = {"Cmd":"",
-             "CmdList":[],  # list commands to execute"
-             "ConfigFolder":os.path.join(QDir.homePath(), ".qdvgrab"),
-             "ConfigFile":os.path.join(QDir.homePath(), ".qdvgrab/logfile"),
-             "FileNameOutput":"",  # filename output os.path.basename()
-             "DeviceOutput":"",  # Device name Camecorder
-             "DirectNameOutput":"",  # name of output folder os.path.direname()
-             "TempFolderName":"",  # name of temporary folder
-             "TempFolderOutput":"",  # name of folder output
-             "geometry_window":"", #
-             }
 
 # check if we are on Linux either exit
 if os.name != "posix":
@@ -56,8 +45,8 @@ if os.name != "posix":
     sys.exit(2)
 
 # check if the hidden project folder is created by default, if not it is created
-if not os.path.exists(Variables["ConfigFolder"]):
-    os.mkdir(Variables["ConfigFolder"])
+if not os.path.exists(HOME_PATH):
+    os.mkdir(HOME_PATH)
 
 
 class QdvGrab(QMainWindow):
