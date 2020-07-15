@@ -24,7 +24,7 @@ import shutil
 
 # need for display gui
 from PyQt5.QtWidgets import QDialog, QMessageBox, QFileDialog
-from PyQt5.QtCore import QDir, QSettings, QLocale, QTimer
+from PyQt5.QtCore import QDir, QSettings, QLocale
 
 from ui.preferencesui import Ui_Dialog
 
