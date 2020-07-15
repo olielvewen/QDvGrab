@@ -2,7 +2,6 @@
 # -*- coding: uft-8 -*-
 
 
-import qdvgrab
 from distutils.core import setup
 
 data_files = [('xdg/applications/', ['data/qdvgrab.desktop']),

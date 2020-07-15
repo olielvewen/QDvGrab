@@ -28,7 +28,7 @@ import webbrowser
 
 # need for display gui
 from PyQt5.QtCore import QTimer, QDir, QSettings
-from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog, QWidget
+from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog
 
 # need to display icon anywhere the program is called
 from images.qdvgrabressources_rc import *
@@ -51,7 +51,7 @@ Variables = {"Cmd":"",
              }
 
 # check if we are on Linux either exit
-if (os.name != "posix"):
+if os.name != "posix":
     print("You are not under Linux system")
     sys.exit(2)
 
