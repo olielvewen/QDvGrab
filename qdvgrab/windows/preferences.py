@@ -30,16 +30,14 @@ from ui.preferencesui import Ui_Dialog
 
 
 class PreFerences(QDialog):
-    def __init__(self, parent=None):
-        super(PreFerences, self).__init__()
-
-        self.parent = parent
+    def __init__(self, *args, **kwargs):
+        super(PreFerences, self).__init__(*args, **kwargs)
 
         self.setupUi()
         self.connectActions()
         self.updateUi()
 
-        QTimer.singleShot(0, self.loadSettings)
+        self.loadSettings()
 
         format_capture = ['Dv Raw (.dv)', 'DV 2 (.avi)', 'Hdv (.m2t)', 'Mpeg 2 (.mpg)']
         for format in format_capture:
