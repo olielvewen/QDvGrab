@@ -45,8 +45,8 @@ if os.name != "posix":
     sys.exit(2)
 
 # check if the hidden project folder is created by default, if not it is created
-if not os.path.exists(HOME_PATH):
-    os.mkdir(HOME_PATH)
+# if not os.path.exists(HOME_PATH):
+#     os.mkdir(HOME_PATH)
 
 
 class QdvGrab(QMainWindow):
@@ -221,12 +221,10 @@ class QdvGrab(QMainWindow):
         function run just before the mainwindow is closed and stop all work in progress and save settings
          """
 
-        self.PreFerences.saveSettings()
-
         event.accept()
 
     # ==================================================================================================================
-    def openDirectory(self,new_output_path):
+    def openDirectory(self, new_output_path):
 
         """
         Open the directory choose by the user either open this one by default
@@ -282,15 +280,6 @@ class QdvGrab(QMainWindow):
 
         """
         method for getting the size (free or not) of the hard drive
-
-        """
-        pass
-
-    # ==================================================================================================================
-    def getDevice(self):
-
-        """
-        method for getting the mounting point and the name (?) of the camcorder
 
         """
         pass
