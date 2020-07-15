@@ -27,7 +27,7 @@ import os.path
 import webbrowser
 
 # need for display gui
-from PyQt5.QtCore import QTimer, QDir, QSettings
+from PyQt5.QtCore import QDir, QSettings
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog
 
 # need to display icon anywhere the program is called
@@ -51,13 +51,12 @@ if not os.path.exists(HOME_PATH):
 
 class QdvGrab(QMainWindow):
 
-    def __init__(self, parent=None):
-        super(QdvGrab, self).__init__(parent)
+    def __init__(self, *args, **kwargs):
+        super(QdvGrab, self).__init__(*args, **kwargs)
         self.setupUi()
         self.connectActions()
         self.updateUi()
-
-        QTimer.singleShot(0, self.loadSettings)
+        self.loadSettings()
 
     def centerScreen(self):
         """
