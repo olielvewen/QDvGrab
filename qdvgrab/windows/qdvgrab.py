@@ -39,13 +39,6 @@ from windows.preferences import PreFerences
 from windows.about import About
 
 
-
-
-# check if the hidden project folder is created by default, if not it is created
-# if not os.path.exists(HOME_PATH):
-#     os.mkdir(HOME_PATH)
-
-
 class QdvGrab(QMainWindow):
 
     def __init__(self, *args, **kwargs):

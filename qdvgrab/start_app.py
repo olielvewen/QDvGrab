@@ -35,6 +35,10 @@ PATH = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
 HOME_PATH = os.path.join(os.path.expanduser("~"))
 USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
 
+# check if the hidden project folder is created by default, if not it is created
+if not os.path.exists(HOME_PATH):
+    os.mkdir(HOME_PATH)
+
 # check if we are on Linux either exit
 if os.name != "posix":
     print("You are not under Linux system")
