@@ -39,10 +39,7 @@ from windows.preferences import PreFerences
 from windows.about import About
 
 
-# check if we are on Linux either exit
-if os.name != "posix":
-    print("You are not under Linux system")
-    sys.exit(2)
+
 
 # check if the hidden project folder is created by default, if not it is created
 # if not os.path.exists(HOME_PATH):

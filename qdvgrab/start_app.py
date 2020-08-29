@@ -35,6 +35,11 @@ PATH = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
 HOME_PATH = os.path.join(os.path.expanduser("~"))
 USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
 
+# check if we are on Linux either exit
+if os.name != "posix":
+    print("You are not under Linux system")
+    sys.exit(2)
+
 if __name__ == "__main__":
     application = QApplication(sys.argv)
 
