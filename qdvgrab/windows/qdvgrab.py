@@ -27,8 +27,8 @@ import os.path
 import webbrowser
 
 # need for display gui
-from PyQt5.QtCore import QTimer, QDir, QSettings
-from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog, QWidget
+from PyQt5.QtCore import QDir, QSettings
+from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QMessageBox, QFileDialog
 
 # need to display icon anywhere the program is called
 from images.qdvgrabressources_rc import *
@@ -38,37 +38,15 @@ from ui.qdvgrabui import Ui_MainWindow
 from windows.preferences import PreFerences
 from windows.about import About
 
-Variables = {"Cmd":"",
-             "CmdList":[],  # list commands to execute"
-             "ConfigFolder":os.path.join(QDir.homePath(), ".qdvgrab"),
-             "ConfigFile":os.path.join(QDir.homePath(), ".qdvgrab/logfile"),
-             "FileNameOutput":"",  # filename output os.path.basename()
-             "DeviceOutput":"",  # Device name Camecorder
-             "DirectNameOutput":"",  # name of output folder os.path.direname()
-             "TempFolderName":"",  # name of temporary folder
-             "TempFolderOutput":"",  # name of folder output
-             "geometry_window":"", #
-             }
-
-# check if we are on Linux either exit
-if (os.name != "posix"):
-    print("You are not under Linux system")
-    sys.exit(2)
-
-# check if the hidden project folder is created by default, if not it is created
-if not os.path.exists(Variables["ConfigFolder"]):
-    os.mkdir(Variables["ConfigFolder"])
-
 
 class QdvGrab(QMainWindow):
 
-    def __init__(self, parent=None):
-        super(QdvGrab, self).__init__(parent)
+    def __init__(self, *args, **kwargs):
+        super(QdvGrab, self).__init__(*args, **kwargs)
         self.setupUi()
         self.connectActions()
         self.updateUi()
-
-        QTimer.singleShot(0, self.loadSettings)
+        self.loadSettings()
 
     def centerScreen(self):
         """
@@ -233,12 +211,10 @@ class QdvGrab(QMainWindow):
         function run just before the mainwindow is closed and stop all work in progress and save settings
          """
 
-        self.PreFerences.saveSettings()
-
         event.accept()
 
     # ==================================================================================================================
-    def openDirectory(self,new_output_path):
+    def openDirectory(self, new_output_path):
 
         """
         Open the directory choose by the user either open this one by default
@@ -294,15 +270,6 @@ class QdvGrab(QMainWindow):
 
         """
         method for getting the size (free or not) of the hard drive
-
-        """
-        pass
-
-    # ==================================================================================================================
-    def getDevice(self):
-
-        """
-        method for getting the mounting point and the name (?) of the camcorder
 
         """
         pass

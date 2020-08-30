@@ -2,7 +2,6 @@
 # -*- coding: uft-8 -*-
 
 
-import qdvgrab
 from distutils.core import setup
 
 data_files = [('xdg/applications/', ['data/qdvgrab.desktop']),
@@ -13,7 +12,7 @@ setup(
     packages=['qdvgrab'],
     script_args=['qdvgrab/start_app'],
     data_files='data_files',
-    version='0.25',
+    version='0.26',
     description='GUI for Dvgrab',
     author='Olivier Girard',
     author_email='olivier@openshot.org',

@@ -27,15 +27,22 @@ from PyQt5.QtCore import QTranslator, QLocale, QLibraryInfo
 from windows.qdvgrab import QdvGrab
 
 app_name = "QDvGrab"
-app_version = "0.25"
+app_version = "0.26"
 app_author = "Olivier Girard"
 author_mail = "olivier@openshot.org"
 
-SUPPORTED_LANGUAGES = ['English', 'French']
 PATH = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
 HOME_PATH = os.path.join(os.path.expanduser("~"))
 USER_PATH = os.path.join(HOME_PATH, ".qdvgrab")
-# TEMP_PATH = os.path.join(USER_PATH, "Temp")
+
+# check if the hidden project folder is created by default, if not it is created
+if not os.path.exists(HOME_PATH):
+    os.mkdir(HOME_PATH)
+
+# check if we are on Linux either exit
+if os.name != "posix":
+    print("You are not under Linux system")
+    sys.exit(2)
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)

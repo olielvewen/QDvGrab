@@ -227,7 +227,7 @@ class Ui_MainWindow(object):
         self.actionPreferences.setText(_translate("MainWindow", "Preferences"))
         self.actionPreferences.setShortcut(_translate("MainWindow", "Ctrl+P"))
         self.actionAbout_QdvGrab.setText(_translate("MainWindow", "About QDvGrab"))
-        self.actionAbout_QdvGrab.setShortcut(_translate("MainWindow", "Ctrl+A"))
+        self.actionAbout_QdvGrab.setShortcut(_translate("MainWindow", "Ctrl+W"))
         self.actionAbout_Qt.setText(_translate("MainWindow", "About Qt"))
         self.actionAbout_Qt.setShortcut(_translate("MainWindow", "Ctrl+B"))
         self.actionHelp.setText(_translate("MainWindow", "Help"))
