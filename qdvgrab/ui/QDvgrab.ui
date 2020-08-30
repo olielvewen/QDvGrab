@@ -471,7 +471,7 @@
     <string>About QDvGrab</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+H</string>
+    <string>Ctrl+W</string>
    </property>
   </action>
   <action name="actionAbout_Qt">
