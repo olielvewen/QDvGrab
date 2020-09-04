@@ -20,7 +20,7 @@
 
 import sys
 
-from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSignal, QRunnable
 
 
 class WorkerSignals(QObject):
@@ -30,4 +30,12 @@ class WorkerSignals(QObject):
     cancel = pyqtSignal()
     error = pyqtSignal()
     result = pyqtSignal(str)
+
+
+class SubProgressWorker(QRunnable):
+
+    def __init__(self):
+        super(SubProgressWorker, self).__init__()
+        # import WorkerSignals class
+        self.signals = WorkerSignals()
 
