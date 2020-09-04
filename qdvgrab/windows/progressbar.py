@@ -23,7 +23,7 @@ import sys
 from PyQt5.QtCore import QObject, pyqtSignal
 
 
-class WorkersSignals(QObject):
+class WorkerSignals(QObject):
 
     progress = pyqtSignal(int)
     finished = pyqtSignal()
@@ -31,4 +31,3 @@ class WorkersSignals(QObject):
     error = pyqtSignal()
     result = pyqtSignal(str)
 
-    
